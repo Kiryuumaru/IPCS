@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using MetroFramework;
 using IPCS;
 
 namespace MetroFramework.Forms
@@ -38,40 +37,28 @@ namespace MetroFramework.Forms
 
         #endregion
 
-        private bool CustomControlBox = true;
+        private bool customControlBox = true;
         [Category("Window Style"), Browsable(true)]
         [Description("Custom control box from CustomForm")]
-        public new bool ControlBox
+        public bool CustomControlBox
         {
-            get
-            {
-                Validate();
-                return CustomControlBox;
-            }
-            set
-            {
-                CustomControlBox = value;
-                Validate();
-            }
+            get { return customControlBox; }
+            set { customControlBox = value; }
         }
 
         #region Windows ControlBox
 
-        private enum WindowButtons
-        {
-            Minimize,
-            Maximize,
-            Close
-        }
-
-        private Controls.MetroLink windowClose = new Controls.MetroLink();
-        private Controls.MetroLink windowMaximize = new Controls.MetroLink();
-        private Controls.MetroLink windowMinimize = new Controls.MetroLink();
-        private Controls.MetroPanel CustomPanelWinControl = new Controls.MetroPanel();
+        private Controls.MetroLink windowClose;
+        private Controls.MetroLink windowMaximize;
+        private Controls.MetroLink windowMinimize;
+        private Controls.MetroPanel CustomPanelWinControl;
         private void AddControlBox()
         {
             if (!CustomControlBox) return;
-
+            windowClose = new Controls.MetroLink();
+            windowMaximize = new Controls.MetroLink();
+            windowMinimize = new Controls.MetroLink();
+            CustomPanelWinControl = new Controls.MetroPanel();
             // 
             // windowClose
             // 
@@ -83,6 +70,8 @@ namespace MetroFramework.Forms
             windowClose.Theme = Theme;
             windowClose.UseCustomBackColor = true;
             windowClose.UseSelectable = true;
+            windowClose.Image = global::IPCS.Properties.Resources.x_white;
+            windowClose.NoFocusImage = global::IPCS.Properties.Resources.x_white;
             // 
             // windowMaximize
             // 
@@ -105,6 +94,11 @@ namespace MetroFramework.Forms
             windowMinimize.Theme = Theme;
             windowMinimize.UseCustomBackColor = true;
             windowMinimize.UseSelectable = true;
+            windowMinimize.Image = global::IPCS.Properties.Resources.line_white;
+            windowMinimize.NoFocusImage = global::IPCS.Properties.Resources.line_white;
+            windowMinimize.MouseHover += WindowMinimize_MouseHover;
+            windowMinimize.MouseDown += WindowMinimize_MouseDown;
+            windowMinimize.MouseClick += WindowMinimize_MouseClick;
             // 
             // CustomPanelWinControl
             // 
@@ -113,7 +107,6 @@ namespace MetroFramework.Forms
             CustomPanelWinControl.Controls.Add(windowMinimize);
             CustomPanelWinControl.Controls.Add(windowMaximize);
             CustomPanelWinControl.Margin = new Padding(0);
-            CustomPanelWinControl.Name = "CustomPanelWinControl";
             CustomPanelWinControl.Size = new Size(135, 30);
             CustomPanelWinControl.TabIndex = 0;
 
@@ -122,19 +115,34 @@ namespace MetroFramework.Forms
             RefreshControlBox();
         }
 
+        private void WindowMinimize_MouseClick(object sender, MouseEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void WindowMinimize_MouseDown(object sender, MouseEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void WindowMinimize_MouseHover(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         private void RefreshControlBox()
         {
             if (!CustomControlBox) return;
 
             if (WindowState == FormWindowState.Maximized)
             {
-                windowMaximize.Image = Properties.Resources.maximize2_white;
-                windowMaximize.NoFocusImage = Properties.Resources.maximize2_white;
+                windowMaximize.Image = global::IPCS.Properties.Resources.drect_white;
+                windowMaximize.NoFocusImage = global::IPCS.Properties.Resources.drect_white;
             }
             else
             {
-                windowMaximize.Image = Properties.Resources.maximize1_white;
-                windowMaximize.NoFocusImage = Properties.Resources.maximize1_white;
+                windowMaximize.Image = global::IPCS.Properties.Resources.rect_white;
+                windowMaximize.NoFocusImage = global::IPCS.Properties.Resources.rect_white;
             }
             Color colorTheme = ColorMethods.AdjustBrightness(ColorMethods.ToSystemColor(Style), -0.5);
             windowClose.BackColor = colorTheme;
@@ -142,7 +150,7 @@ namespace MetroFramework.Forms
             windowMinimize.BackColor = colorTheme;
             CustomPanelWinControl.Location = new Point(ClientSize.Width - 135, 0);
         }
-
+        
         #endregion
     }
 }

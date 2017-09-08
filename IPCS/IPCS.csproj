@@ -70,13 +70,14 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -93,18 +94,43 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Icons\Windows box\drect-black.png" />
-    <Content Include="Resources\Icons\Windows box\drect-gray.png" />
-    <Content Include="Resources\Icons\Windows box\drect-white.png" />
-    <Content Include="Resources\Icons\Windows box\line-black.png" />
-    <Content Include="Resources\Icons\Windows box\line-gray.png" />
-    <Content Include="Resources\Icons\Windows box\line-white.png" />
-    <Content Include="Resources\Icons\Windows box\rect-black.png" />
-    <Content Include="Resources\Icons\Windows box\rect-gray.png" />
-    <Content Include="Resources\Icons\Windows box\rect-white.png" />
-    <Content Include="Resources\Icons\Windows box\x-black.png" />
-    <Content Include="Resources\Icons\Windows box\x-gray.png" />
-    <Content Include="Resources\Icons\Windows box\x-white.png" />
+    <None Include="Resources\drect-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drect-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drect-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drect-black1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
