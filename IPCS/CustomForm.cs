@@ -64,14 +64,14 @@ namespace MetroFramework.Forms
             Close
         }
 
+        private Controls.MetroLink windowClose = new Controls.MetroLink();
+        private Controls.MetroLink windowMaximize = new Controls.MetroLink();
+        private Controls.MetroLink windowMinimize = new Controls.MetroLink();
+        private Controls.MetroPanel CustomPanelWinControl = new Controls.MetroPanel();
         private void AddControlBox()
         {
             if (!CustomControlBox) return;
 
-            Controls.MetroLink windowClose = new Controls.MetroLink();
-            Controls.MetroLink windowMaximize = new Controls.MetroLink();
-            Controls.MetroLink windowMinimize = new Controls.MetroLink();
-            Controls.MetroPanel CustomPanelWinControl = new Controls.MetroPanel();
             // 
             // windowClose
             // 
@@ -124,24 +124,23 @@ namespace MetroFramework.Forms
 
         private void RefreshControlBox()
         {
-            //if (DesignMode) return;
-            //if (!CustomControlBox) return;
+            if (!CustomControlBox) return;
 
-            //if (WindowState == FormWindowState.Maximized)
-            //{
-            //    windowMaximize.Image = Properties.Resources.maximize2_white;
-            //    windowMaximize.NoFocusImage = Properties.Resources.maximize2_white;
-            //}
-            //else
-            //{
-            //    windowMaximize.Image = Properties.Resources.maximize1_white;
-            //    windowMaximize.NoFocusImage = Properties.Resources.maximize1_white;
-            //}
-            //Color colorTheme = ColorMethods.AdjustBrightness(ColorMethods.ToSystemColor(Style), -0.5);
-            //windowClose.BackColor = colorTheme;
-            //windowMaximize.BackColor = colorTheme;
-            //windowMinimize.BackColor = colorTheme;
-            //CustomPanelWinControl.Location = new Point(ClientSize.Width - 135, 0);
+            if (WindowState == FormWindowState.Maximized)
+            {
+                windowMaximize.Image = Properties.Resources.maximize2_white;
+                windowMaximize.NoFocusImage = Properties.Resources.maximize2_white;
+            }
+            else
+            {
+                windowMaximize.Image = Properties.Resources.maximize1_white;
+                windowMaximize.NoFocusImage = Properties.Resources.maximize1_white;
+            }
+            Color colorTheme = ColorMethods.AdjustBrightness(ColorMethods.ToSystemColor(Style), -0.5);
+            windowClose.BackColor = colorTheme;
+            windowMaximize.BackColor = colorTheme;
+            windowMinimize.BackColor = colorTheme;
+            CustomPanelWinControl.Location = new Point(ClientSize.Width - 135, 0);
         }
 
         #endregion

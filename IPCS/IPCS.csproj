@@ -92,5 +92,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Icons\Windows box\drect-black.png" />
+    <Content Include="Resources\Icons\Windows box\drect-gray.png" />
+    <Content Include="Resources\Icons\Windows box\drect-white.png" />
+    <Content Include="Resources\Icons\Windows box\line-black.png" />
+    <Content Include="Resources\Icons\Windows box\line-gray.png" />
+    <Content Include="Resources\Icons\Windows box\line-white.png" />
+    <Content Include="Resources\Icons\Windows box\rect-black.png" />
+    <Content Include="Resources\Icons\Windows box\rect-gray.png" />
+    <Content Include="Resources\Icons\Windows box\rect-white.png" />
+    <Content Include="Resources\Icons\Windows box\x-black.png" />
+    <Content Include="Resources\Icons\Windows box\x-gray.png" />
+    <Content Include="Resources\Icons\Windows box\x-white.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
