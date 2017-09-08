@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace IPCS
 {
-    public partial class MainForm : Form
+    public partial class MainForm : CustomForm
     {
         public MainForm()
         {
