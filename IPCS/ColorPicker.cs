@@ -16,10 +16,14 @@ namespace IPCS
 {
     public partial class ColorPicker : MetroForm
     {
-        public ColorPicker(MetroStyleManager style)
+        MetroStyleManager metroStyleManager;
+        public ColorPicker(MetroStyleManager styleManager)
         {
             InitializeComponent();
-            metroStyleManagerPicker = style;
+            metroStyleManager = styleManager;
+            metroStyleManagerPicker.Theme = metroStyleManager.Theme;
+            metroStyleManagerPicker.Style = metroStyleManager.Style;
+            if (styleManager.Theme == MetroThemeStyle.Dark) metroToggle.CheckState = CheckState.Checked;
         }
 
         public MetroStyleManager GetStyleManager
@@ -30,7 +34,8 @@ namespace IPCS
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            metroStyleManagerPicker.Update();
+            metroStyleManager.Theme = metroStyleManagerPicker.Theme;
+            metroStyleManager.Style = metroStyleManagerPicker.Style;
         }
 
         private void Tile_MouseClick(object sender, EventArgs e)

@@ -146,7 +146,7 @@
             this.tileBrown.UseSelectable = true;
             this.tileBrown.Tag = MetroFramework.MetroColorStyle.Brown;
             this.tileBrown.UseCustomBackColor = true;
-            this.tileBrown.BackColor = MetroFramework.MetroColors.Blue;
+            this.tileBrown.BackColor = MetroFramework.MetroColors.Brown;
             this.tileBrown.TabStop = false;
             this.tileBrown.Click += new System.EventHandler(this.Tile_MouseClick);
             // 

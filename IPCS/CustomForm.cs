@@ -23,10 +23,19 @@ namespace MetroFramework.Forms
 
         #region Paint Method
 
+        SolidBrush brush;
+        Pen pen;
         protected override void OnPaint(PaintEventArgs e)
         {
-            SolidBrush brush = new SolidBrush(ColorMethods.AdjustBrightness(ColorMethods.ToSystemColor(Style), -0.5));
-            Pen pen = new Pen(brush, 3);
+            if (Theme == MetroThemeStyle.Dark)
+            {
+                brush = new SolidBrush(ColorMethods.AdjustBrightness(ColorMethods.ToSystemColor(Style), -0.5));
+            }
+            else
+            {
+                brush = new SolidBrush(ColorMethods.ToSystemColor(Style));
+            }
+            pen = new Pen(brush, 3);
             if (NotificationBox)
             {
                 e.Graphics.FillRectangle(brush, 0, Height - 30, Width, 30);
@@ -224,7 +233,14 @@ namespace MetroFramework.Forms
         private void WindowButton_MouseEnter(object sender, EventArgs e)
         {
             Controls.MetroLink button = (Controls.MetroLink)sender;
-            button.BackColor = ColorMethods.AdjustBrightness(ColorMethods.ToSystemColor(Style), -0.5);
+            if (Theme == MetroThemeStyle.Dark)
+            {
+                button.BackColor = ColorMethods.AdjustBrightness(ColorMethods.ToSystemColor(Style), -0.5);
+            }
+            else
+            {
+                button.BackColor = ColorMethods.ToSystemColor(Style);
+            }
         }
 
         private void WindowButton_MouseLeave(object sender, EventArgs e)
@@ -284,7 +300,14 @@ namespace MetroFramework.Forms
             windowClose.BackColor = Color.Transparent;
             windowMaximize.BackColor = Color.Transparent;
             windowTray.BackColor = Color.Transparent;
-            notifLabel.BackColor = ColorMethods.AdjustBrightness(ColorMethods.ToSystemColor(Style), -0.5);
+            if (Theme == MetroThemeStyle.Dark)
+            {
+                notifLabel.BackColor = ColorMethods.AdjustBrightness(ColorMethods.ToSystemColor(Style), -0.5);
+            }
+            else
+            {
+                notifLabel.BackColor = ColorMethods.ToSystemColor(Style);
+            }
             notifLabel.ForeColor = MetroColors.White;
             notifLabel.Location = new Point(5, Height - 25);
         }
