@@ -16,7 +16,6 @@ namespace MetroFramework.Forms
         public CustomForm()
         {
             base.ControlBox = false;
-            base.DisplayHeader = false;
             AddControlBox();
         }
 
@@ -28,8 +27,19 @@ namespace MetroFramework.Forms
         {
             SolidBrush brush = new SolidBrush(ColorMethods.AdjustBrightness(ColorMethods.ToSystemColor(Style), -0.5));
             Pen pen = new Pen(brush, 3);
-            e.Graphics.FillRectangle(brush, 0, 0, Width, 30);
-            e.Graphics.DrawRectangle(pen, 0, 0, Width - 1, Height - 1);
+            if (NotificationBox)
+            {
+                e.Graphics.FillRectangle(brush, 0, Height - 30, Width, 30);
+            }
+
+            switch (BorderStyle)
+            {
+                case MetroFormBorderStyle.None:
+                    break;
+                case MetroFormBorderStyle.FixedSingle:
+                    if (WindowState == FormWindowState.Normal) e.Graphics.DrawRectangle(pen, 0, 0, Width - 1, Height - 1);
+                    break;
+            }
             RefreshControlBox();
         }
 
@@ -49,6 +59,30 @@ namespace MetroFramework.Forms
             set { _ControlBox = value; }
         }
 
+        private bool _NotifBox = true;
+        [Category("Metro Appearance")]
+        public bool NotificationBox
+        {
+            get { return _NotifBox; }
+            set { _NotifBox = value; }
+        }
+
+        public new Padding Padding
+        {
+            get { return base.Padding; }
+            set
+            {
+                value.Top = Math.Max(value.Top, ControlBox ? 35 : 5);
+                value.Bottom = Math.Max(value.Bottom, NotificationBox ? 35 : 5);
+                base.Padding = value;
+            }
+        }
+
+        protected override Padding DefaultPadding
+        {
+            get { return new Padding(5, ControlBox ? 35 : 5, 5, NotificationBox ? 35 : 5); }
+        }
+
         #region Windows ControlBox
 
         private enum WindowsButton
@@ -59,6 +93,7 @@ namespace MetroFramework.Forms
         private Controls.MetroLink windowClose;
         private Controls.MetroLink windowMaximize;
         private Controls.MetroLink windowTray;
+        private Controls.MetroLabel notifLabel;
         private Controls.MetroPanel CustomPanelWinControl;
         private void AddControlBox()
         {
@@ -66,6 +101,7 @@ namespace MetroFramework.Forms
             windowClose = new Controls.MetroLink();
             windowMaximize = new Controls.MetroLink();
             windowTray = new Controls.MetroLink();
+            notifLabel = new Controls.MetroLabel();
             CustomPanelWinControl = new Controls.MetroPanel();
             // 
             // windowClose
@@ -116,6 +152,16 @@ namespace MetroFramework.Forms
             windowTray.MouseLeave += WindowButton_MouseLeave;
             windowTray.Tag = WindowsButton.tray;
             // 
+            // notifLabel
+            // 
+            notifLabel.Text = "Ready";
+            //notifLabel.FontWeight = MetroLabelWeight.Bold;
+            notifLabel.UseSelectable = true;
+            notifLabel.UseSelectable = true;
+            notifLabel.UseCustomBackColor = true;
+            notifLabel.UseCustomForeColor = true;
+            Controls.Add(notifLabel);
+            // 
             // CustomPanelWinControl
             // 
             CustomPanelWinControl.Anchor = (AnchorStyles.Top | AnchorStyles.Right);
@@ -156,67 +202,69 @@ namespace MetroFramework.Forms
         private void WindowButton_MouseEnter(object sender, EventArgs e)
         {
             Controls.MetroLink button = (Controls.MetroLink)sender;
-            WindowsButton buttonType = (WindowsButton)button.Tag;
-            switch (buttonType)
-            {
-                case WindowsButton.close:
-                    button.BackColor = ColorMethods.AdjustBrightness(ColorMethods.ToSystemColor(Style), -0.7);
-                    break;
-                case WindowsButton.maximized:
-                    button.BackColor = ColorMethods.AdjustBrightness(ColorMethods.ToSystemColor(Style), -0.7);
-                    break;
-                case WindowsButton.minimized:
-                    button.BackColor = ColorMethods.AdjustBrightness(ColorMethods.ToSystemColor(Style), -0.7);
-                    break;
-                case WindowsButton.tray:
-                    button.BackColor = ColorMethods.AdjustBrightness(ColorMethods.ToSystemColor(Style), -0.7);
-                    break;
-            }
+            button.BackColor = ColorMethods.AdjustBrightness(ColorMethods.ToSystemColor(Style), -0.5);
         }
 
         private void WindowButton_MouseLeave(object sender, EventArgs e)
         {
             Controls.MetroLink button = (Controls.MetroLink)sender;
-            WindowsButton buttonType = (WindowsButton)button.Tag;
-            switch (buttonType)
-            {
-                case WindowsButton.close:
-                    button.BackColor = colorTheme;
-                    break;
-                case WindowsButton.maximized:
-                    button.BackColor = colorTheme;
-                    break;
-                case WindowsButton.minimized:
-                    button.BackColor = colorTheme;
-                    break;
-                case WindowsButton.tray:
-                    button.BackColor = colorTheme;
-                    break;
-            }
+            button.BackColor = Color.Transparent;
         }
-
-        private Color colorTheme;
+        
         private void RefreshControlBox()
         {
             if (!ControlBox) return;
 
             if (WindowState == FormWindowState.Maximized)
             {
-                windowMaximize.Image = global::IPCS.Properties.Resources.drect_white;
-                windowMaximize.NoFocusImage = global::IPCS.Properties.Resources.drect_white;
+                if(Theme == MetroThemeStyle.Light)
+                {
+                    windowMaximize.Image = IPCS.Properties.Resources.drect_black;
+                    windowMaximize.NoFocusImage = IPCS.Properties.Resources.drect_black;
+                }
+                else
+                {
+                    windowMaximize.Image = IPCS.Properties.Resources.drect_white;
+                    windowMaximize.NoFocusImage = IPCS.Properties.Resources.drect_white;
+                }
                 windowMaximize.Tag = WindowsButton.maximized;
+                CustomPanelWinControl.Location = new Point(ClientSize.Width - 135, 0);
             }
             else
             {
-                windowMaximize.Image = global::IPCS.Properties.Resources.rect_white;
-                windowMaximize.NoFocusImage = global::IPCS.Properties.Resources.rect_white;
+                if (Theme == MetroThemeStyle.Light)
+                {
+                    windowMaximize.Image = IPCS.Properties.Resources.rect_black;
+                    windowMaximize.NoFocusImage = IPCS.Properties.Resources.rect_black;
+                }
+                else
+                {
+                    windowMaximize.Image = IPCS.Properties.Resources.rect_white;
+                    windowMaximize.NoFocusImage = IPCS.Properties.Resources.rect_white;
+                }
                 windowMaximize.Tag = WindowsButton.minimized;
+                CustomPanelWinControl.Location = new Point(ClientSize.Width - 137, 2);
             }
-            colorTheme = ColorMethods.AdjustBrightness(ColorMethods.ToSystemColor(Style), -0.5);
-            windowClose.BackColor = colorTheme;
-            windowMaximize.BackColor = colorTheme;
-            windowTray.BackColor = colorTheme;
-            CustomPanelWinControl.Location = new Point(ClientSize.Width - 135, 0);
+            if (Theme == MetroThemeStyle.Light)
+            {
+                windowClose.Image = IPCS.Properties.Resources.x_black;
+                windowClose.NoFocusImage = IPCS.Properties.Resources.x_black;
+                windowTray.Image = IPCS.Properties.Resources.line_black;
+                windowTray.NoFocusImage = IPCS.Properties.Resources.line_black;
+            }
+            else
+            {
+                windowClose.Image = IPCS.Properties.Resources.x_white;
+                windowClose.NoFocusImage = IPCS.Properties.Resources.x_white;
+                windowTray.Image = IPCS.Properties.Resources.line_white;
+                windowTray.NoFocusImage = IPCS.Properties.Resources.line_white;
+            }
+            windowClose.BackColor = Color.Transparent;
+            windowMaximize.BackColor = Color.Transparent;
+            windowTray.BackColor = Color.Transparent;
+            notifLabel.BackColor = ColorMethods.AdjustBrightness(ColorMethods.ToSystemColor(Style), -0.5);
+            notifLabel.ForeColor = MetroColors.White;
+            notifLabel.Location = new Point(5, Height - 25);
         }
         
         #endregion

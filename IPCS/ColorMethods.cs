@@ -30,6 +30,15 @@ namespace IPCS
                 default: return MetroColors.Blue;
             }
         }
+        public static System.Drawing.Color ToSystemColor(MetroThemeStyle style)
+        {
+            switch (style)
+            {
+                case MetroThemeStyle.Light: return MetroColors.White;
+                case MetroThemeStyle.Dark: return MetroColors.Black;
+                default : return MetroColors.White;
+            }
+        }
 
         public static System.Drawing.Color AdjustBrightness(System.Drawing.Color c1, double factor)
         {
