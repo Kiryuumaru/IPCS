@@ -32,7 +32,7 @@
             this.btnLogIn = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtPassword = new MetroFramework.Controls.MetroTextBox();
-            this.txUsername = new MetroFramework.Controls.MetroTextBox();
+            this.txtUsername = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,6 +45,7 @@
             this.btnLogIn.TabIndex = 11;
             this.btnLogIn.Text = "&Login";
             this.btnLogIn.UseSelectable = true;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // pictureBox1
             // 
@@ -94,40 +95,40 @@
             this.txtPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // txUsername
+            // txtUsername
             // 
-            this.txUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
             // 
             // 
             // 
-            this.txUsername.CustomButton.Image = null;
-            this.txUsername.CustomButton.Location = new System.Drawing.Point(253, 2);
-            this.txUsername.CustomButton.Name = "";
-            this.txUsername.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.txUsername.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txUsername.CustomButton.TabIndex = 1;
-            this.txUsername.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txUsername.CustomButton.UseSelectable = true;
-            this.txUsername.CustomButton.Visible = false;
-            this.txUsername.DisplayIcon = true;
-            this.txUsername.Icon = ((System.Drawing.Image)(resources.GetObject("txUsername.Icon")));
-            this.txUsername.Lines = new string[0];
-            this.txUsername.Location = new System.Drawing.Point(132, 118);
-            this.txUsername.MaxLength = 32767;
-            this.txUsername.Name = "txUsername";
-            this.txUsername.PasswordChar = '\0';
-            this.txUsername.PromptText = "Username";
-            this.txUsername.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txUsername.SelectedText = "";
-            this.txUsername.SelectionLength = 0;
-            this.txUsername.SelectionStart = 0;
-            this.txUsername.ShortcutsEnabled = true;
-            this.txUsername.Size = new System.Drawing.Size(279, 28);
-            this.txUsername.TabIndex = 9;
-            this.txUsername.UseSelectable = true;
-            this.txUsername.WaterMark = "Username";
-            this.txUsername.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txUsername.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtUsername.CustomButton.Image = null;
+            this.txtUsername.CustomButton.Location = new System.Drawing.Point(253, 2);
+            this.txtUsername.CustomButton.Name = "";
+            this.txtUsername.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.txtUsername.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtUsername.CustomButton.TabIndex = 1;
+            this.txtUsername.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtUsername.CustomButton.UseSelectable = true;
+            this.txtUsername.CustomButton.Visible = false;
+            this.txtUsername.DisplayIcon = true;
+            this.txtUsername.Icon = ((System.Drawing.Image)(resources.GetObject("txtUsername.Icon")));
+            this.txtUsername.Lines = new string[0];
+            this.txtUsername.Location = new System.Drawing.Point(132, 118);
+            this.txtUsername.MaxLength = 32767;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.PasswordChar = '\0';
+            this.txtUsername.PromptText = "Username";
+            this.txtUsername.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtUsername.SelectedText = "";
+            this.txtUsername.SelectionLength = 0;
+            this.txtUsername.SelectionStart = 0;
+            this.txtUsername.ShortcutsEnabled = true;
+            this.txtUsername.Size = new System.Drawing.Size(279, 28);
+            this.txtUsername.TabIndex = 9;
+            this.txtUsername.UseSelectable = true;
+            this.txtUsername.WaterMark = "Username";
+            this.txtUsername.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtUsername.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // LoginForm
             // 
@@ -138,14 +139,14 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txUsername);
+            this.Controls.Add(this.txtUsername);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoginForm";
             this.NotificationBox = false;
             this.Resizable = false;
             this.Text = "Sign in";
-            this.Controls.SetChildIndex(this.txUsername, 0);
+            this.Controls.SetChildIndex(this.txtUsername, 0);
             this.Controls.SetChildIndex(this.txtPassword, 0);
             this.Controls.SetChildIndex(this.btnLogIn, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
@@ -158,7 +159,7 @@
 
         private MetroFramework.Controls.MetroButton btnLogIn;
         private MetroFramework.Controls.MetroTextBox txtPassword;
-        private MetroFramework.Controls.MetroTextBox txUsername;
+        private MetroFramework.Controls.MetroTextBox txtUsername;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

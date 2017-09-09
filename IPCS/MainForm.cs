@@ -18,8 +18,11 @@ namespace IPCS
         public MetroForm()
         {
             InitializeComponent();
+
             LoginForm form = new LoginForm();
             form.ShowDialog();
+            Text += " - " + Program.name;
+            RefreshComponents();
         }
 
         private void buttonOpenColor_Click(object sender, EventArgs e)

@@ -20,9 +20,10 @@ namespace IPCS
             Application.Run(new MetroForm());
         }
 
-        public static void Login()
+        public static string name;
+        public static void Login(string username, string pass)
         {
-
+            name = username;
         }
     }
 }

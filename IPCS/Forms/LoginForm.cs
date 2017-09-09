@@ -18,5 +18,11 @@ namespace IPCS.Forms
         {
             InitializeComponent();
         }
+
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+            Program.Login(txtUsername.Text, txtPassword.Text);
+            Dispose();
+        }
     }
 }

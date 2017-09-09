@@ -242,7 +242,7 @@ namespace IPCS.Forms
             button.BackColor = Color.Transparent;
         }
 
-        private void RefreshComponents()
+        public void RefreshComponents()
         {
             if (!ControlBox) return;
 
