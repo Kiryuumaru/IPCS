@@ -30,10 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.metroStyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.buttonTheme = new MetroFramework.Controls.MetroButton();
-            this.buttonColor = new MetroFramework.Controls.MetroButton();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.buttonOpenColor = new MetroFramework.Controls.MetroButton();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
@@ -44,28 +43,6 @@
             // metroStyleManager
             // 
             this.metroStyleManager.Owner = this;
-            // 
-            // buttonTheme
-            // 
-            this.buttonTheme.Location = new System.Drawing.Point(36, 32);
-            this.buttonTheme.Name = "buttonTheme";
-            this.buttonTheme.Size = new System.Drawing.Size(75, 23);
-            this.buttonTheme.TabIndex = 1;
-            this.buttonTheme.TabStop = false;
-            this.buttonTheme.Text = "theme";
-            this.buttonTheme.UseSelectable = true;
-            this.buttonTheme.Click += new System.EventHandler(this.buttonTheme_Click);
-            // 
-            // buttonColor
-            // 
-            this.buttonColor.Location = new System.Drawing.Point(104, 3);
-            this.buttonColor.Name = "buttonColor";
-            this.buttonColor.Size = new System.Drawing.Size(75, 23);
-            this.buttonColor.TabIndex = 2;
-            this.buttonColor.TabStop = false;
-            this.buttonColor.Text = "color";
-            this.buttonColor.UseSelectable = true;
-            this.buttonColor.Click += new System.EventHandler(this.buttonColor_Click);
             // 
             // metroTabControl1
             // 
@@ -83,8 +60,7 @@
             // 
             // metroTabPage1
             // 
-            this.metroTabPage1.Controls.Add(this.buttonColor);
-            this.metroTabPage1.Controls.Add(this.buttonTheme);
+            this.metroTabPage1.Controls.Add(this.buttonOpenColor);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.HorizontalScrollbarSize = 10;
@@ -96,6 +72,16 @@
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
+            // 
+            // buttonOpenColor
+            // 
+            this.buttonOpenColor.Location = new System.Drawing.Point(170, 54);
+            this.buttonOpenColor.Name = "buttonOpenColor";
+            this.buttonOpenColor.Size = new System.Drawing.Size(84, 23);
+            this.buttonOpenColor.TabIndex = 3;
+            this.buttonOpenColor.Text = "Change style";
+            this.buttonOpenColor.UseSelectable = true;
+            this.buttonOpenColor.Click += new System.EventHandler(this.buttonOpenColor_Click);
             // 
             // metroTabPage2
             // 
@@ -140,19 +126,17 @@
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private MetroFramework.Components.MetroStyleManager metroStyleManager;
-        private MetroFramework.Controls.MetroButton buttonColor;
-        private MetroFramework.Controls.MetroButton buttonTheme;
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
         private MetroFramework.Controls.MetroTabPage metroTabPage3;
+        private MetroFramework.Controls.MetroButton buttonOpenColor;
     }
 }
 

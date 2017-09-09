@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MetroFramework;
 using MetroFramework.Forms;
+using MetroFramework.Components;
 
 namespace IPCS
 {
@@ -18,17 +19,10 @@ namespace IPCS
             InitializeComponent();
         }
 
-        private void buttonTheme_Click(object sender, EventArgs e)
+        private void buttonOpenColor_Click(object sender, EventArgs e)
         {
-            if (metroStyleManager.Theme == MetroFramework.MetroThemeStyle.Light) metroStyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
-            else metroStyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
-        }
-
-        private void buttonColor_Click(object sender, EventArgs e)
-        {
-            var m = new Random();
-            int next = m.Next(0, 13);
-            metroStyleManager.Style = (MetroColorStyle)next;
+            ColorPicker form = new ColorPicker(metroStyleManager);
+            form.ShowDialog();
         }
     }
 }

@@ -40,7 +40,7 @@ namespace MetroFramework.Forms
                     if (WindowState == FormWindowState.Normal) e.Graphics.DrawRectangle(pen, 0, 0, Width - 1, Height - 1);
                     break;
             }
-            RefreshControlBox();
+            RefreshComponents();
         }
 
         protected override void OnLoad(EventArgs e)
@@ -49,6 +49,8 @@ namespace MetroFramework.Forms
         }
 
         #endregion
+
+        #region Fields
 
         private bool _ControlBox = true;
         [Category("Window Style"), Browsable(true)]
@@ -83,6 +85,14 @@ namespace MetroFramework.Forms
             get { return new Padding(5, ControlBox ? 35 : 5, 5, NotificationBox ? 35 : 5); }
         }
 
+        public void NotifText(string text)
+        {
+            notifLabel.Text = text;
+            RefreshComponents();
+        }
+
+        #endregion
+
         #region Windows ControlBox
 
         private enum WindowsButton
@@ -94,6 +104,7 @@ namespace MetroFramework.Forms
         private Controls.MetroLink windowMaximize;
         private Controls.MetroLink windowTray;
         private Controls.MetroLabel notifLabel;
+        private Controls.MetroLabel titleLabel;
         private Controls.MetroPanel CustomPanelWinControl;
         private void AddControlBox()
         {
@@ -102,6 +113,7 @@ namespace MetroFramework.Forms
             windowMaximize = new Controls.MetroLink();
             windowTray = new Controls.MetroLink();
             notifLabel = new Controls.MetroLabel();
+            titleLabel = new Controls.MetroLabel();
             CustomPanelWinControl = new Controls.MetroPanel();
             // 
             // windowClose
@@ -154,13 +166,23 @@ namespace MetroFramework.Forms
             // 
             // notifLabel
             // 
-            notifLabel.Text = "Ready";
-            //notifLabel.FontWeight = MetroLabelWeight.Bold;
+            notifLabel.Text = "null";
             notifLabel.UseSelectable = true;
             notifLabel.UseSelectable = true;
             notifLabel.UseCustomBackColor = true;
             notifLabel.UseCustomForeColor = true;
             Controls.Add(notifLabel);
+            // 
+            // notifLabel
+            // 
+            titleLabel.Text = Name;
+            titleLabel.UseSelectable = true;
+            titleLabel.UseSelectable = true;
+            titleLabel.UseCustomForeColor = true;
+            titleLabel.FontWeight = MetroLabelWeight.Regular;
+            titleLabel.ForeColor = Color.FromArgb(100, 100, 100);
+            titleLabel.Location = new Point(7, 7);
+            Controls.Add(titleLabel);
             // 
             // CustomPanelWinControl
             // 
@@ -175,7 +197,7 @@ namespace MetroFramework.Forms
 
             Controls.Add(CustomPanelWinControl);
 
-            RefreshControlBox();
+            RefreshComponents();
         }
 
         private void WindowButton_MouseClick(object sender, MouseEventArgs e)
@@ -211,7 +233,7 @@ namespace MetroFramework.Forms
             button.BackColor = Color.Transparent;
         }
         
-        private void RefreshControlBox()
+        private void RefreshComponents()
         {
             if (!ControlBox) return;
 

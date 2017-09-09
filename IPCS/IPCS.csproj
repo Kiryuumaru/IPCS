@@ -58,6 +58,12 @@
     <Compile Include="CustomForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ColorPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorPicker.Designer.cs">
+      <DependentUpon>ColorPicker.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ColorPicker.resx">
+      <DependentUpon>ColorPicker.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
