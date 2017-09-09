@@ -1,6 +1,6 @@
 ﻿namespace IPCS
 {
-    partial class MainForm
+    partial class MetroForm
     {
         /// <summary>
         /// Required designer variable.
@@ -54,7 +54,7 @@
             this.metroTabControl1.Multiline = true;
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(828, 314);
+            this.metroTabControl1.Size = new System.Drawing.Size(901, 411);
             this.metroTabControl1.TabIndex = 3;
             this.metroTabControl1.UseSelectable = true;
             // 
@@ -66,7 +66,7 @@
             this.metroTabPage1.HorizontalScrollbarSize = 10;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(820, 272);
+            this.metroTabPage1.Size = new System.Drawing.Size(893, 369);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "metroTabPage1";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
@@ -111,14 +111,14 @@
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 10;
             // 
-            // MainForm
+            // MetroForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(838, 384);
+            this.ClientSize = new System.Drawing.Size(911, 481);
             this.Controls.Add(this.metroTabControl1);
-            this.Name = "MainForm";
+            this.Name = "MetroForm";
             this.StyleManager = this.metroStyleManager;
             this.Text = "IPCS";
             this.Controls.SetChildIndex(this.metroTabControl1, 0);

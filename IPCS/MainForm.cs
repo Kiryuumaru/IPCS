@@ -9,14 +9,17 @@ using System.Threading.Tasks;
 using MetroFramework;
 using MetroFramework.Forms;
 using MetroFramework.Components;
+using IPCS.Forms;
 
 namespace IPCS
 {
-    public partial class MainForm : CustomForm
+    public partial class MetroForm : CustomForm
     {
-        public MainForm()
+        public MetroForm()
         {
             InitializeComponent();
+            LoginForm form = new LoginForm();
+            form.ShowDialog();
         }
 
         private void buttonOpenColor_Click(object sender, EventArgs e)

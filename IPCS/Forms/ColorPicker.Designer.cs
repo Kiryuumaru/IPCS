@@ -1,4 +1,4 @@
-﻿namespace IPCS
+﻿namespace IPCS.Forms
 {
     partial class ColorPicker
     {
@@ -44,7 +44,6 @@
             this.tileYellow = new MetroFramework.Controls.MetroTile();
             this.metroToggle = new MetroFramework.Controls.MetroToggle();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerPicker)).BeginInit();
             this.SuspendLayout();
             // 
@@ -240,23 +239,12 @@
             this.metroLabel1.TabIndex = 13;
             this.metroLabel1.Text = "Night mode";
             // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(23, 37);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(91, 19);
-            this.metroLabel2.TabIndex = 14;
-            this.metroLabel2.Text = "Choose color:";
-            // 
             // ColorPicker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(366, 279);
-            this.StyleManager = metroStyleManagerPicker;
-            this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroToggle);
             this.Controls.Add(this.tileYellow);
@@ -271,13 +259,29 @@
             this.Controls.Add(this.tileGreen);
             this.Controls.Add(this.tileBlue);
             this.Controls.Add(this.tileSilver);
-            this.DisplayHeader = false;
+            this.DisplayHeader = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ColorPicker";
-            this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
+            this.NotificationBox = false;
+            this.Padding = new System.Windows.Forms.Padding(20, 35, 20, 35);
             this.Resizable = false;
+            this.StyleManager = this.metroStyleManagerPicker;
             this.Text = "Color Picker";
+            this.Controls.SetChildIndex(this.tileSilver, 0);
+            this.Controls.SetChildIndex(this.tileBlue, 0);
+            this.Controls.SetChildIndex(this.tileGreen, 0);
+            this.Controls.SetChildIndex(this.tileLime, 0);
+            this.Controls.SetChildIndex(this.tileTeal, 0);
+            this.Controls.SetChildIndex(this.tileOrange, 0);
+            this.Controls.SetChildIndex(this.tileBrown, 0);
+            this.Controls.SetChildIndex(this.tilePink, 0);
+            this.Controls.SetChildIndex(this.tileMagenta, 0);
+            this.Controls.SetChildIndex(this.tilePurple, 0);
+            this.Controls.SetChildIndex(this.tileRed, 0);
+            this.Controls.SetChildIndex(this.tileYellow, 0);
+            this.Controls.SetChildIndex(this.metroToggle, 0);
+            this.Controls.SetChildIndex(this.metroLabel1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerPicker)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -301,6 +305,5 @@
         private MetroFramework.Controls.MetroTile tileSilver;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroToggle metroToggle;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
     }
 }

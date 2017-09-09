@@ -63,6 +63,16 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap _67ba8ec362b2ca9c9dff7b759a790ad45c6287c5f8017684e8ed10bba71d1b2f {
+            get {
+                object obj = ResourceManager.GetObject("67ba8ec362b2ca9c9dff7b759a790ad45c6287c5f8017684e8ed10bba71d1b2f", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap drect_black {
             get {
                 object obj = ResourceManager.GetObject("drect-black", resourceCulture);

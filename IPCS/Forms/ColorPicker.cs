@@ -12,9 +12,9 @@ using MetroFramework.Forms;
 using MetroFramework.Controls;
 using MetroFramework.Components;
 
-namespace IPCS
+namespace IPCS.Forms
 {
-    public partial class ColorPicker : MetroForm
+    public partial class ColorPicker : CustomForm
     {
         MetroStyleManager metroStyleManager;
         public ColorPicker(MetroStyleManager styleManager)
