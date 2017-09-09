@@ -298,17 +298,5 @@ namespace IPCS.Forms
         }
 
         #endregion
-
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // CustomForm
-            // 
-            this.ClientSize = new System.Drawing.Size(300, 300);
-            this.Name = "CustomForm";
-            this.ResumeLayout(false);
-
-        }
     }
 }
