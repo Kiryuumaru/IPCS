@@ -59,6 +59,7 @@ namespace IPCS.Forms
                 if (MaximizeBox) AddControlButton(windowMaximize);
                 AddControlButton(windowClose);
             }
+            this.FocusMe();
         }
 
         #endregion
@@ -178,6 +179,8 @@ namespace IPCS.Forms
             // 
             // notifLabel
             // 
+            notifLabel.AutoSize = true;
+            notifLabel.Anchor = AnchorStyles.Left;
             notifLabel.Text = "null desu";
             notifLabel.UseSelectable = true;
             notifLabel.UseCustomBackColor = true;
@@ -187,6 +190,8 @@ namespace IPCS.Forms
             // 
             // titleLabel
             // 
+            titleLabel.AutoSize = true;
+            titleLabel.Anchor = AnchorStyles.Left;
             titleLabel.UseSelectable = true;
             titleLabel.UseCustomForeColor = true;
             titleLabel.FontWeight = MetroLabelWeight.Regular;
@@ -222,7 +227,7 @@ namespace IPCS.Forms
             switch (buttonType)
             {
                 case WindowsButton.close:
-                    this.Dispose();
+                    this.Close();
                     break;
                 case WindowsButton.maximized:
                     WindowState = FormWindowState.Normal;

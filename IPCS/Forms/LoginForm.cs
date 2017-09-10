@@ -17,13 +17,15 @@ namespace IPCS.Forms
         public LoginForm()
         {
             InitializeComponent();
+            NotifText = "Initializeing Server";
+            Program.InitializeServer();
             NotifText = "Server Ready";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Program.Login(txtUsername.Text, txtPassword.Text);
-
+            new MainForm().ShowDialog();
             Dispose();
         }
 

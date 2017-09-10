@@ -1,4 +1,6 @@
-﻿namespace IPCS
+﻿using System.ComponentModel;
+
+namespace IPCS
 {
     partial class MainForm
     {
@@ -36,7 +38,6 @@
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.buttonOpenColor = new MetroFramework.Controls.MetroButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.linkUserAccount = new MetroFramework.Controls.MetroLink();
             this.metroProgressSpinner1 = new MetroFramework.Controls.MetroProgressSpinner();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
@@ -115,7 +116,6 @@
             // 
             // metroPanel1
             // 
-            this.metroPanel1.Controls.Add(this.metroLink1);
             this.metroPanel1.Controls.Add(this.buttonOpenColor);
             this.metroPanel1.Controls.Add(this.linkUserAccount);
             this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -130,26 +130,16 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // metroLink1
-            // 
-            this.metroLink1.Location = new System.Drawing.Point(597, 3);
-            this.metroLink1.Name = "metroLink1";
-            this.metroLink1.Size = new System.Drawing.Size(75, 23);
-            this.metroLink1.TabIndex = 6;
-            this.metroLink1.Text = "metroLink1";
-            this.metroLink1.UseSelectable = true;
-            // 
             // linkUserAccount
             // 
-            this.linkUserAccount.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.linkUserAccount.AutoSize = true;
-            this.linkUserAccount.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.linkUserAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.linkUserAccount.Location = new System.Drawing.Point(757, 4);
-            this.linkUserAccount.MaximumSize = new System.Drawing.Size(500, 23);
+            this.linkUserAccount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkUserAccount.Dock = System.Windows.Forms.DockStyle.Right;
+            this.linkUserAccount.Location = new System.Drawing.Point(810, 0);
+            this.linkUserAccount.MaximumSize = new System.Drawing.Size(500, 30);
             this.linkUserAccount.Name = "linkUserAccount";
-            this.linkUserAccount.Size = new System.Drawing.Size(89, 23);
+            this.linkUserAccount.Size = new System.Drawing.Size(91, 30);
             this.linkUserAccount.TabIndex = 5;
+            this.linkUserAccount.TabStop = false;
             this.linkUserAccount.Text = "Anatawa dare?";
             this.linkUserAccount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.linkUserAccount.UseSelectable = true;
@@ -182,8 +172,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).EndInit();
             this.metroTabControl1.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
-            this.metroPanel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -198,7 +188,6 @@
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroLink linkUserAccount;
         private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner1;
-        private MetroFramework.Controls.MetroLink metroLink1;
     }
 }
 

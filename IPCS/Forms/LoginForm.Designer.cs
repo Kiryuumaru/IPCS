@@ -63,6 +63,9 @@
             // txtPassword
             // 
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            // 
+            // 
+            // 
             this.txtPassword.CustomButton.Image = null;
             this.txtPassword.CustomButton.Location = new System.Drawing.Point(253, 2);
             this.txtPassword.CustomButton.Name = "";
@@ -96,6 +99,9 @@
             // txtUsername
             // 
             this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
+            // 
+            // 
+            // 
             this.txtUsername.CustomButton.Image = null;
             this.txtUsername.CustomButton.Location = new System.Drawing.Point(253, 2);
             this.txtUsername.CustomButton.Name = "";
@@ -119,7 +125,7 @@
             this.txtUsername.SelectionStart = 0;
             this.txtUsername.ShortcutsEnabled = true;
             this.txtUsername.Size = new System.Drawing.Size(279, 28);
-            this.txtUsername.TabIndex = 9;
+            this.txtUsername.TabIndex = 0;
             this.txtUsername.UseSelectable = true;
             this.txtUsername.WaterMark = "Username";
             this.txtUsername.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));

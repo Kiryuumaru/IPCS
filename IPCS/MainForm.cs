@@ -5,10 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 using MetroFramework;
 using MetroFramework.Forms;
-using MetroFramework.Components;
+using MetroFramework.Controls;
 using IPCS.Forms;
 
 namespace IPCS
@@ -18,9 +18,12 @@ namespace IPCS
         public MainForm()
         {
             InitializeComponent();
-            Program.InitializeServer();
-            LoginForm form = new LoginForm();
-            form.ShowDialog();
+            UpdateComponents();
+        }
+
+        public void UpdateComponents()
+        {
+            linkUserAccount.Width = (int)CreateGraphics().MeasureString(Program.name + "WWW", Font).Width;
             linkUserAccount.Text = Program.name;
             RefreshComponents();
         }
