@@ -21,14 +21,18 @@ namespace IPCS
             Program.InitializeServer();
             LoginForm form = new LoginForm();
             form.ShowDialog();
-            Text += " - " + Program.name;
+            linkUserAccount.Text = Program.name;
             RefreshComponents();
         }
 
         private void buttonOpenColor_Click(object sender, EventArgs e)
         {
-            ColorPicker form = new ColorPicker(metroStyleManager);
-            form.ShowDialog();
+            new ColorPicker(metroStyleManager).ShowDialog();
+        }
+
+        private void UserAccount_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

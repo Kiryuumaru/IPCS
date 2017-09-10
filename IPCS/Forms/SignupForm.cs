@@ -7,29 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MetroFramework;
-using MetroFramework.Forms;
 
 namespace IPCS.Forms
 {
-    public partial class LoginForm : CustomForm
+    public partial class SignupForm : CustomForm
     {
-        public LoginForm()
+        public SignupForm()
         {
             InitializeComponent();
-            NotifText = "Server Ready";
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            Program.Login(txtUsername.Text, txtPassword.Text);
-
-            Dispose();
         }
 
         private void btnSignup_Click(object sender, EventArgs e)
         {
-            new SignupForm().ShowDialog();
+
         }
     }
 }

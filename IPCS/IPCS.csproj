@@ -85,6 +85,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColorMethods.cs" />
+    <Compile Include="DataManager\User.cs" />
+    <Compile Include="DataManager\UserData.cs" />
     <Compile Include="Forms\CustomForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +101,12 @@
     </Compile>
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SignupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SignupForm.Designer.cs">
+      <DependentUpon>SignupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -116,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SignupForm.resx">
+      <DependentUpon>SignupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -145,48 +156,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\drect-black.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\drect-gray.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\drect-white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\line-black.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\line-gray.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\line-white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rect-black.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rect-gray.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rect-white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\x-black.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\x-gray.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\x-white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\drect-black1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\67ba8ec362b2ca9c9dff7b759a790ad45c6287c5f8017684e8ed10bba71d1b2f.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="FodyWeavers.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -200,6 +169,54 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drect-black.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drect-gray.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drect-white.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line-black.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line-gray.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line-white.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o-black.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o-gray.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o-white.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect-black.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect-gray.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect-white.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-black.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-gray.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IPCSLogo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-white.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Costura.Fody.1.6.2\build\dotnet\Costura.Fody.targets" Condition="Exists('packages\Costura.Fody.1.6.2\build\dotnet\Costura.Fody.targets')" />

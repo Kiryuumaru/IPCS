@@ -142,8 +142,8 @@ namespace IPCS.Forms
             windowClose.Theme = Theme;
             windowClose.UseCustomBackColor = true;
             windowClose.UseSelectable = true;
-            windowClose.Image = Properties.Resources.x_white;
-            windowClose.NoFocusImage = Properties.Resources.x_white;
+            windowClose.Image = Properties.Resources.x_white.ToBitmap();
+            windowClose.NoFocusImage = Properties.Resources.x_white.ToBitmap();
             windowClose.MouseEnter += WindowButton_MouseEnter;
             windowClose.MouseClick += WindowButton_MouseClick;
             windowClose.MouseLeave += WindowButton_MouseLeave;
@@ -256,13 +256,13 @@ namespace IPCS.Forms
             {
                 if (Theme == MetroThemeStyle.Light)
                 {
-                    windowMaximize.Image = Properties.Resources.drect_black;
-                    windowMaximize.NoFocusImage = Properties.Resources.drect_black;
+                    windowMaximize.Image = Properties.Resources.drect_black.ToBitmap();
+                    windowMaximize.NoFocusImage = Properties.Resources.drect_black.ToBitmap();
                 }
                 else
                 {
-                    windowMaximize.Image = Properties.Resources.drect_white;
-                    windowMaximize.NoFocusImage = Properties.Resources.drect_white;
+                    windowMaximize.Image = Properties.Resources.drect_white.ToBitmap();
+                    windowMaximize.NoFocusImage = Properties.Resources.drect_white.ToBitmap();
                 }
                 windowMaximize.Tag = WindowsButton.maximized;
                 CustomPanelWinControl.Location = new Point(ClientSize.Width - controlBoxSpace, 0);
@@ -271,30 +271,30 @@ namespace IPCS.Forms
             {
                 if (Theme == MetroThemeStyle.Light)
                 {
-                    windowMaximize.Image = Properties.Resources.rect_black;
-                    windowMaximize.NoFocusImage = Properties.Resources.rect_black;
+                    windowMaximize.Image = Properties.Resources.rect_black.ToBitmap();
+                    windowMaximize.NoFocusImage = Properties.Resources.rect_black.ToBitmap();
                 }
                 else
                 {
-                    windowMaximize.Image = Properties.Resources.rect_white;
-                    windowMaximize.NoFocusImage = Properties.Resources.rect_white;
+                    windowMaximize.Image = Properties.Resources.rect_white.ToBitmap();
+                    windowMaximize.NoFocusImage = Properties.Resources.rect_white.ToBitmap();
                 }
                 windowMaximize.Tag = WindowsButton.minimized;
                 CustomPanelWinControl.Location = new Point(ClientSize.Width - controlBoxSpace - 2, 2);
             }
             if (Theme == MetroThemeStyle.Light)
             {
-                windowClose.Image = Properties.Resources.x_black;
-                windowClose.NoFocusImage = Properties.Resources.x_black;
-                windowTray.Image = Properties.Resources.line_black;
-                windowTray.NoFocusImage = Properties.Resources.line_black;
+                windowClose.Image = Properties.Resources.x_black.ToBitmap();
+                windowClose.NoFocusImage = Properties.Resources.x_black.ToBitmap();
+                windowTray.Image = Properties.Resources.line_black.ToBitmap();
+                windowTray.NoFocusImage = Properties.Resources.line_black.ToBitmap();
             }
             else
             {
-                windowClose.Image = Properties.Resources.x_white;
-                windowClose.NoFocusImage = Properties.Resources.x_white;
-                windowTray.Image = Properties.Resources.line_white;
-                windowTray.NoFocusImage = Properties.Resources.line_white;
+                windowClose.Image = Properties.Resources.x_white.ToBitmap();
+                windowClose.NoFocusImage = Properties.Resources.x_white.ToBitmap();
+                windowTray.Image = Properties.Resources.line_white.ToBitmap();
+                windowTray.NoFocusImage = Properties.Resources.line_white.ToBitmap();
             }
             windowClose.BackColor = Color.Transparent;
             windowTray.BackColor = Color.Transparent;
