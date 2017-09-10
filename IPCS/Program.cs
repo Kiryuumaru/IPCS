@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 using IPCS.Forms;
 
 namespace IPCS
@@ -17,7 +18,12 @@ namespace IPCS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MetroForm());
+            Application.Run(new MainForm());
+        }
+
+        public static void InitializeServer()
+        {
+
         }
 
         public static string name;

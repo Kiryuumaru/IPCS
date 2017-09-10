@@ -13,12 +13,12 @@ using IPCS.Forms;
 
 namespace IPCS
 {
-    public partial class MetroForm : CustomForm
+    public partial class MainForm : CustomForm
     {
-        public MetroForm()
+        public MainForm()
         {
             InitializeComponent();
-
+            Program.InitializeServer();
             LoginForm form = new LoginForm();
             form.ShowDialog();
             Text += " - " + Program.name;

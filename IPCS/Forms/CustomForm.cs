@@ -33,7 +33,7 @@ namespace IPCS.Forms
             pen = new Pen(brush, 3);
             if (NotificationBox)
             {
-                e.Graphics.FillRectangle(brush, 0, Height - 30, Width, 30);
+                e.Graphics.FillRectangle(brush, 0, Height - 25, Width, 25);
             }
 
             switch (BorderStyle)
@@ -97,11 +97,15 @@ namespace IPCS.Forms
         {
             get { return new Padding(5, ControlBox ? 35 : 5, 5, NotificationBox ? 35 : 5); }
         }
-
-        public void NotifText(string text)
+        
+        public string NotifText
         {
-            notifLabel.Text = text;
-            RefreshComponents();
+            get { return notifLabel.Text; }
+            set
+            {
+                notifLabel.Text = value;
+                RefreshComponents();
+            }
         }
 
         #endregion
@@ -178,6 +182,8 @@ namespace IPCS.Forms
             notifLabel.UseSelectable = true;
             notifLabel.UseCustomBackColor = true;
             notifLabel.UseCustomForeColor = true;
+            notifLabel.FontWeight = MetroLabelWeight.Regular;
+            notifLabel.FontSize = MetroLabelSize.Small;
             // 
             // titleLabel
             // 
@@ -294,7 +300,7 @@ namespace IPCS.Forms
             windowTray.BackColor = Color.Transparent;
             notifLabel.BackColor = ColorMethods.ToSystemColor(Style);
             notifLabel.ForeColor = MetroColors.White;
-            notifLabel.Location = new Point(5, Height - 25);
+            notifLabel.Location = new Point(3, Height - 21);
         }
 
         #endregion

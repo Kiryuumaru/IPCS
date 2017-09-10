@@ -1,6 +1,6 @@
 ﻿namespace IPCS
 {
-    partial class MetroForm
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -90,7 +90,7 @@
             this.metroTabPage2.HorizontalScrollbarSize = 10;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(820, 272);
+            this.metroTabPage2.Size = new System.Drawing.Size(893, 369);
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "metroTabPage2";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
@@ -104,21 +104,21 @@
             this.metroTabPage3.HorizontalScrollbarSize = 10;
             this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(820, 272);
+            this.metroTabPage3.Size = new System.Drawing.Size(893, 369);
             this.metroTabPage3.TabIndex = 2;
             this.metroTabPage3.Text = "metroTabPage3";
             this.metroTabPage3.VerticalScrollbarBarColor = true;
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 10;
             // 
-            // MetroForm
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(911, 481);
             this.Controls.Add(this.metroTabControl1);
-            this.Name = "MetroForm";
+            this.Name = "MainForm";
             this.StyleManager = this.metroStyleManager;
             this.Text = "IPCS";
             this.Controls.SetChildIndex(this.metroTabControl1, 0);

@@ -135,15 +135,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(545, 250);
+            this.ClientSize = new System.Drawing.Size(545, 268);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "LoginForm";
-            this.NotificationBox = false;
+            this.Padding = new System.Windows.Forms.Padding(5, 35, 5, 5);
             this.Resizable = false;
             this.Text = "Sign in";
             this.Controls.SetChildIndex(this.txtUsername, 0);
