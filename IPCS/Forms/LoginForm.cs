@@ -17,21 +17,36 @@ namespace IPCS.Forms
         public LoginForm()
         {
             InitializeComponent();
-            NotifText = "Initializeing Server";
+            NotifText = "Initializeing Server...";
             Program.InitializeServer();
             NotifText = "Server Ready";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            btnLogin.Enabled = false;
+            btnSignup.Enabled = false;
+            NotifText = "Signing in...";
             Program.Login(txtUsername.Text, txtPassword.Text);
-            new MainForm().ShowDialog();
-            Dispose();
+            if (Program.User.Online)
+            {
+                NotifText = Program.User.Username + " is signed in";
+                Dispose();
+            }
+            else
+            {
+                NotifText = "User doesn`t exist";
+            }
+            btnLogin.Enabled = true;
+            btnSignup.Enabled = true;
         }
 
         private void btnSignup_Click(object sender, EventArgs e)
         {
+            Hide();
             new SignupForm().ShowDialog();
+            Show();
+            FocusMe();
         }
     }
 }

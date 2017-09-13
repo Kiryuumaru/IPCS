@@ -14,26 +14,39 @@ using MetroFramework.Components;
 
 namespace IPCS.Forms
 {
-    public partial class ColorPicker : CustomForm
+    public partial class AccountSettings : CustomForm
     {
         MetroStyleManager metroStyleManager;
-        public ColorPicker(MetroStyleManager styleManager)
+        public AccountSettings(MetroStyleManager styleManager)
         {
             InitializeComponent();
+            UpdateComponents();
             metroStyleManager = styleManager;
-            metroStyleManagerPicker.Theme = metroStyleManager.Theme;
-            metroStyleManagerPicker.Style = metroStyleManager.Style;
-            if (styleManager.Theme == MetroThemeStyle.Dark) metroToggle.CheckState = CheckState.Checked;
         }
 
-        public MetroStyleManager GetStyleManager
+        public void UpdateComponents()
         {
-            get { return metroStyleManagerPicker; }
+            tileYellow.Tag = MetroColorStyle.Yellow;
+            tileRed.Tag = MetroColorStyle.Red;
+            tilePurple.Tag = MetroColorStyle.Purple;
+            tileMagenta.Tag = MetroColorStyle.Magenta;
+            tilePink.Tag = MetroColorStyle.Pink;
+            tileOrange.Tag = MetroColorStyle.Orange;
+            tileBrown.Tag = MetroColorStyle.Brown;
+            tileTeal.Tag = MetroColorStyle.Teal;
+            tileSilver.Tag = MetroColorStyle.Silver;
+            tileBlue.Tag = MetroColorStyle.Blue;
+            tileGreen.Tag = MetroColorStyle.Green;
+            tileLime.Tag = MetroColorStyle.Lime;
+            if (metroStyleManagerPicker.Theme == MetroThemeStyle.Dark) metroToggle.CheckState = CheckState.Checked;
+            RefreshComponents();
         }
 
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
+            Program.StyleManager.Theme = metroStyleManagerPicker.Theme;
+            Program.StyleManager.Style = metroStyleManagerPicker.Style;
             metroStyleManager.Theme = metroStyleManagerPicker.Theme;
             metroStyleManager.Style = metroStyleManagerPicker.Style;
         }

@@ -82,19 +82,24 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Transitions, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\dot-net-transitions.1.2.1.0\lib\net40-full\Transitions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColorMethods.cs" />
-    <Compile Include="DataManager\User.cs" />
-    <Compile Include="DataManager\UserData.cs" />
+    <Compile Include="Data\Inventory.cs" />
+    <Compile Include="Data\Product.cs" />
+    <Compile Include="DatabaseManager\TestDatabase.cs" />
+    <Compile Include="DatabaseManager\User.cs" />
     <Compile Include="Forms\CustomForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ColorPicker.cs">
+    <Compile Include="Forms\AccountSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ColorPicker.Designer.cs">
-      <DependentUpon>ColorPicker.cs</DependentUpon>
+    <Compile Include="Forms\AccountSettings.Designer.cs">
+      <DependentUpon>AccountSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
@@ -116,8 +121,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\ColorPicker.resx">
-      <DependentUpon>ColorPicker.cs</DependentUpon>
+    <Compile Include="DatabaseManager\StringCypher.cs" />
+    <EmbeddedResource Include="Forms\AccountSettings.resx">
+      <DependentUpon>AccountSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomForm.resx">
       <DependentUpon>CustomForm.cs</DependentUpon>

@@ -18,7 +18,7 @@ namespace IPCS.Forms
         public CustomForm()
         {
             base.ControlBox = false;
-            AddControlBox();
+            AddComponents();
         }
 
         #endregion
@@ -35,7 +35,6 @@ namespace IPCS.Forms
             {
                 e.Graphics.FillRectangle(brush, 0, Height - 25, Width, 25);
             }
-
             switch (BorderStyle)
             {
                 case MetroFormBorderStyle.None:
@@ -47,18 +46,26 @@ namespace IPCS.Forms
             RefreshComponents();
         }
 
+        protected override void OnCreateControl()
+        {
+            base.OnCreateControl();
+            titleLabel.Text = Text;
+            if (NotificationBox) Controls.Add(notifLabel);
+            if (DisplayHeader)
+            {
+                if (DisplayTitle) Controls.Add(titleLabel);
+                if (ControlBox)
+                {
+                    if (MinimizeBox) AddControlButton(windowTray);
+                    if (MaximizeBox) AddControlButton(windowMaximize);
+                    AddControlButton(windowClose);
+                }
+            }
+        }
+
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            titleLabel.Text = Text;
-            if(NotificationBox) Controls.Add(notifLabel);
-            if(DisplayHeader) Controls.Add(titleLabel);
-            if (ControlBox)
-            {
-                if (MinimizeBox) AddControlButton(windowTray);
-                if (MaximizeBox) AddControlButton(windowMaximize);
-                AddControlButton(windowClose);
-            }
             this.FocusMe();
         }
 
@@ -81,6 +88,14 @@ namespace IPCS.Forms
         {
             get { return _NotifBox; }
             set { _NotifBox = value; }
+        }
+
+        private bool _DisplayTitle = true;
+        [Category("Metro Appearance")]
+        public bool DisplayTitle
+        {
+            get { return _DisplayTitle; }
+            set { _DisplayTitle = value; }
         }
 
         public new Padding Padding
@@ -111,7 +126,7 @@ namespace IPCS.Forms
 
         #endregion
 
-        #region Windows ControlBox
+        #region Windows Components
 
         private enum WindowsButton
         {
@@ -124,7 +139,7 @@ namespace IPCS.Forms
         private MetroLabel notifLabel;
         private MetroLabel titleLabel;
         private MetroPanel CustomPanelWinControl;
-        private void AddControlBox()
+        private void AddComponents()
         {
             if (!ControlBox) return;
             windowClose = new MetroLink();

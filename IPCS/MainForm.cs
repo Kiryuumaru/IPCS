@@ -17,25 +17,34 @@ namespace IPCS
     {
         public MainForm()
         {
+            new LoginForm().ShowDialog();
             InitializeComponent();
             UpdateComponents();
         }
 
         public void UpdateComponents()
         {
-            linkUserAccount.Width = (int)CreateGraphics().MeasureString(Program.name + "WWW", Font).Width;
-            linkUserAccount.Text = Program.name;
+            linkUserAccount.Text = Program.User.Username;
+            metroToolTip.SetToolTip(linkUserAccount, Program.User.Username + " is signed in");
+            metroStyleManager.Theme = Program.StyleManager.Theme;
+            metroStyleManager.Style = Program.StyleManager.Style;
             RefreshComponents();
-        }
-
-        private void buttonOpenColor_Click(object sender, EventArgs e)
-        {
-            new ColorPicker(metroStyleManager).ShowDialog();
         }
 
         private void UserAccount_Click(object sender, EventArgs e)
         {
+            new AccountSettings(metroStyleManager).ShowDialog();
+        }
 
+        private void UserAccount_MouseEnter(object sender, EventArgs e)
+        {
+            if (metroStyleManager.Theme == MetroThemeStyle.Light) linkUserAccount.ForeColor = Color.FromArgb(0, 0, 0);
+            else linkUserAccount.ForeColor = Color.FromArgb(255, 255, 255);
+        }
+
+        private void UserAccount_MouseLeave(object sender, EventArgs e)
+        {
+            linkUserAccount.ForeColor = SystemColors.ControlDarkDark;
         }
     }
 }

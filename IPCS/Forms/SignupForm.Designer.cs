@@ -33,7 +33,8 @@
             this.btnSignup = new MetroFramework.Controls.MetroButton();
             this.txtPassword = new MetroFramework.Controls.MetroTextBox();
             this.txtUsername = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.txtConfirmPassword = new MetroFramework.Controls.MetroTextBox();
+            this.btnCancel = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,10 +42,10 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(96, 59);
+            this.pictureBox1.Image = global::IPCS.Properties.Resources.IPCSLogo;
+            this.pictureBox1.Location = new System.Drawing.Point(113, 41);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(83, 188);
+            this.pictureBox1.Size = new System.Drawing.Size(279, 77);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
@@ -52,11 +53,11 @@
             // btnSignup
             // 
             this.btnSignup.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSignup.Location = new System.Drawing.Point(365, 284);
+            this.btnSignup.Location = new System.Drawing.Point(295, 228);
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(97, 33);
-            this.btnSignup.TabIndex = 15;
-            this.btnSignup.Text = "&Create Account";
+            this.btnSignup.TabIndex = 3;
+            this.btnSignup.Text = "Create Account";
             this.btnSignup.UseSelectable = true;
             this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             // 
@@ -78,7 +79,7 @@
             this.txtPassword.DisplayIcon = true;
             this.txtPassword.Icon = ((System.Drawing.Image)(resources.GetObject("txtPassword.Icon")));
             this.txtPassword.Lines = new string[0];
-            this.txtPassword.Location = new System.Drawing.Point(230, 136);
+            this.txtPassword.Location = new System.Drawing.Point(113, 160);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
@@ -89,7 +90,7 @@
             this.txtPassword.SelectionStart = 0;
             this.txtPassword.ShortcutsEnabled = true;
             this.txtPassword.Size = new System.Drawing.Size(279, 28);
-            this.txtPassword.TabIndex = 14;
+            this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSelectable = true;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.WaterMark = "Password";
@@ -114,7 +115,7 @@
             this.txtUsername.DisplayIcon = true;
             this.txtUsername.Icon = ((System.Drawing.Image)(resources.GetObject("txtUsername.Icon")));
             this.txtUsername.Lines = new string[0];
-            this.txtUsername.Location = new System.Drawing.Point(230, 102);
+            this.txtUsername.Location = new System.Drawing.Point(113, 126);
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
@@ -125,55 +126,67 @@
             this.txtUsername.SelectionStart = 0;
             this.txtUsername.ShortcutsEnabled = true;
             this.txtUsername.Size = new System.Drawing.Size(279, 28);
-            this.txtUsername.TabIndex = 13;
+            this.txtUsername.TabIndex = 0;
             this.txtUsername.UseSelectable = true;
             this.txtUsername.WaterMark = "Username";
             this.txtUsername.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtUsername.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroTextBox1
+            // txtConfirmPassword
             // 
-            this.metroTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtConfirmPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(253, 2);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.DisplayIcon = true;
-            this.metroTextBox1.Icon = ((System.Drawing.Image)(resources.GetObject("metroTextBox1.Icon")));
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(230, 170);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '●';
-            this.metroTextBox1.PromptText = "Confirm Password";
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(279, 28);
-            this.metroTextBox1.TabIndex = 17;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.UseSystemPasswordChar = true;
-            this.metroTextBox1.WaterMark = "Confirm Password";
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtConfirmPassword.CustomButton.Image = null;
+            this.txtConfirmPassword.CustomButton.Location = new System.Drawing.Point(253, 2);
+            this.txtConfirmPassword.CustomButton.Name = "";
+            this.txtConfirmPassword.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.txtConfirmPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtConfirmPassword.CustomButton.TabIndex = 1;
+            this.txtConfirmPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtConfirmPassword.CustomButton.UseSelectable = true;
+            this.txtConfirmPassword.CustomButton.Visible = false;
+            this.txtConfirmPassword.DisplayIcon = true;
+            this.txtConfirmPassword.Icon = ((System.Drawing.Image)(resources.GetObject("txtConfirmPassword.Icon")));
+            this.txtConfirmPassword.Lines = new string[0];
+            this.txtConfirmPassword.Location = new System.Drawing.Point(113, 194);
+            this.txtConfirmPassword.MaxLength = 32767;
+            this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.PasswordChar = '●';
+            this.txtConfirmPassword.PromptText = "Confirm Password";
+            this.txtConfirmPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtConfirmPassword.SelectedText = "";
+            this.txtConfirmPassword.SelectionLength = 0;
+            this.txtConfirmPassword.SelectionStart = 0;
+            this.txtConfirmPassword.ShortcutsEnabled = true;
+            this.txtConfirmPassword.Size = new System.Drawing.Size(279, 28);
+            this.txtConfirmPassword.TabIndex = 2;
+            this.txtConfirmPassword.UseSelectable = true;
+            this.txtConfirmPassword.UseSystemPasswordChar = true;
+            this.txtConfirmPassword.WaterMark = "Confirm Password";
+            this.txtConfirmPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtConfirmPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCancel.Location = new System.Drawing.Point(113, 228);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(97, 33);
+            this.btnCancel.TabIndex = 18;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseSelectable = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // SignupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(645, 452);
-            this.Controls.Add(this.metroTextBox1);
+            this.ClientSize = new System.Drawing.Size(500, 300);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.txtConfirmPassword);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSignup);
             this.Controls.Add(this.txtPassword);
@@ -186,9 +199,11 @@
             this.Controls.SetChildIndex(this.txtPassword, 0);
             this.Controls.SetChildIndex(this.btnSignup, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
-            this.Controls.SetChildIndex(this.metroTextBox1, 0);
+            this.Controls.SetChildIndex(this.txtConfirmPassword, 0);
+            this.Controls.SetChildIndex(this.btnCancel, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -198,6 +213,7 @@
         private MetroFramework.Controls.MetroButton btnSignup;
         private MetroFramework.Controls.MetroTextBox txtPassword;
         private MetroFramework.Controls.MetroTextBox txtUsername;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox txtConfirmPassword;
+        private MetroFramework.Controls.MetroButton btnCancel;
     }
 }

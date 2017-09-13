@@ -43,8 +43,8 @@
             this.btnLogin.Location = new System.Drawing.Point(292, 204);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(97, 33);
-            this.btnLogin.TabIndex = 11;
-            this.btnLogin.Text = "&Login";
+            this.btnLogin.TabIndex = 2;
+            this.btnLogin.Text = "Login";
             this.btnLogin.UseSelectable = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -52,7 +52,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::IPCS.Properties.Resources.IPCSLogo;
             this.pictureBox1.Location = new System.Drawing.Point(110, 56);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(279, 74);
@@ -89,7 +89,7 @@
             this.txtPassword.SelectionStart = 0;
             this.txtPassword.ShortcutsEnabled = true;
             this.txtPassword.Size = new System.Drawing.Size(279, 28);
-            this.txtPassword.TabIndex = 10;
+            this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSelectable = true;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.WaterMark = "Password";
@@ -138,13 +138,12 @@
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(97, 33);
             this.btnSignup.TabIndex = 13;
-            this.btnSignup.Text = "&Create account";
+            this.btnSignup.Text = "Create account";
             this.btnSignup.UseSelectable = true;
             this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             // 
             // LoginForm
             // 
-            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
@@ -166,6 +165,7 @@
             this.Controls.SetChildIndex(this.btnSignup, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

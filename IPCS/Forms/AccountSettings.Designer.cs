@@ -1,6 +1,6 @@
 ﻿namespace IPCS.Forms
 {
-    partial class ColorPicker
+    partial class AccountSettings
     {
         /// <summary>
         /// Required designer variable.
@@ -59,7 +59,6 @@
             this.tileSilver.Size = new System.Drawing.Size(75, 57);
             this.tileSilver.TabIndex = 0;
             this.tileSilver.UseSelectable = true;
-            this.tileSilver.Tag = MetroFramework.MetroColorStyle.Silver;
             this.tileSilver.UseCustomBackColor = true;
             this.tileSilver.BackColor = MetroFramework.MetroColors.Silver;
             this.tileSilver.TabStop = false;
@@ -73,7 +72,6 @@
             this.tileBlue.Size = new System.Drawing.Size(75, 57);
             this.tileBlue.TabIndex = 1;
             this.tileBlue.UseSelectable = true;
-            this.tileBlue.Tag = MetroFramework.MetroColorStyle.Blue;
             this.tileBlue.UseCustomBackColor = true;
             this.tileBlue.BackColor = MetroFramework.MetroColors.Blue;
             this.tileBlue.TabStop = false;
@@ -87,7 +85,6 @@
             this.tileGreen.Size = new System.Drawing.Size(75, 57);
             this.tileGreen.TabIndex = 2;
             this.tileGreen.UseSelectable = true;
-            this.tileGreen.Tag = MetroFramework.MetroColorStyle.Green;
             this.tileGreen.UseCustomBackColor = true;
             this.tileGreen.BackColor = MetroFramework.MetroColors.Green;
             this.tileGreen.TabStop = false;
@@ -101,7 +98,6 @@
             this.tileLime.Size = new System.Drawing.Size(75, 57);
             this.tileLime.TabIndex = 3;
             this.tileLime.UseSelectable = true;
-            this.tileLime.Tag = MetroFramework.MetroColorStyle.Lime;
             this.tileLime.UseCustomBackColor = true;
             this.tileLime.BackColor = MetroFramework.MetroColors.Lime;
             this.tileLime.TabStop = false;
@@ -115,7 +111,6 @@
             this.tileTeal.Size = new System.Drawing.Size(75, 57);
             this.tileTeal.TabIndex = 4;
             this.tileTeal.UseSelectable = true;
-            this.tileTeal.Tag = MetroFramework.MetroColorStyle.Teal;
             this.tileTeal.UseCustomBackColor = true;
             this.tileTeal.BackColor = MetroFramework.MetroColors.Teal;
             this.tileTeal.TabStop = false;
@@ -129,7 +124,6 @@
             this.tileOrange.Size = new System.Drawing.Size(75, 57);
             this.tileOrange.TabIndex = 5;
             this.tileOrange.UseSelectable = true;
-            this.tileOrange.Tag = MetroFramework.MetroColorStyle.Orange;
             this.tileOrange.UseCustomBackColor = true;
             this.tileOrange.BackColor = MetroFramework.MetroColors.Orange;
             this.tileOrange.TabStop = false;
@@ -143,7 +137,6 @@
             this.tileBrown.Size = new System.Drawing.Size(75, 57);
             this.tileBrown.TabIndex = 6;
             this.tileBrown.UseSelectable = true;
-            this.tileBrown.Tag = MetroFramework.MetroColorStyle.Brown;
             this.tileBrown.UseCustomBackColor = true;
             this.tileBrown.BackColor = MetroFramework.MetroColors.Brown;
             this.tileBrown.TabStop = false;
@@ -157,7 +150,6 @@
             this.tilePink.Size = new System.Drawing.Size(75, 57);
             this.tilePink.TabIndex = 7;
             this.tilePink.UseSelectable = true;
-            this.tilePink.Tag = MetroFramework.MetroColorStyle.Pink;
             this.tilePink.UseCustomBackColor = true;
             this.tilePink.BackColor = MetroFramework.MetroColors.Pink;
             this.tilePink.TabStop = false;
@@ -171,7 +163,6 @@
             this.tileMagenta.Size = new System.Drawing.Size(75, 57);
             this.tileMagenta.TabIndex = 8;
             this.tileMagenta.UseSelectable = true;
-            this.tileMagenta.Tag = MetroFramework.MetroColorStyle.Magenta;
             this.tileMagenta.UseCustomBackColor = true;
             this.tileMagenta.BackColor = MetroFramework.MetroColors.Magenta;
             this.tileMagenta.TabStop = false;
@@ -185,7 +176,6 @@
             this.tilePurple.Size = new System.Drawing.Size(75, 57);
             this.tilePurple.TabIndex = 9;
             this.tilePurple.UseSelectable = true;
-            this.tilePurple.Tag = MetroFramework.MetroColorStyle.Purple;
             this.tilePurple.UseCustomBackColor = true;
             this.tilePurple.BackColor = MetroFramework.MetroColors.Purple;
             this.tilePurple.TabStop = false;
@@ -199,7 +189,6 @@
             this.tileRed.Size = new System.Drawing.Size(75, 57);
             this.tileRed.TabIndex = 10;
             this.tileRed.UseSelectable = true;
-            this.tileRed.Tag = MetroFramework.MetroColorStyle.Red;
             this.tileRed.UseCustomBackColor = true;
             this.tileRed.BackColor = MetroFramework.MetroColors.Red;
             this.tileRed.TabStop = false;
@@ -213,7 +202,6 @@
             this.tileYellow.Size = new System.Drawing.Size(75, 57);
             this.tileYellow.TabIndex = 11;
             this.tileYellow.UseSelectable = true;
-            this.tileYellow.Tag = MetroFramework.MetroColorStyle.Yellow;
             this.tileYellow.UseCustomBackColor = true;
             this.tileYellow.BackColor = MetroFramework.MetroColors.Yellow;
             this.tileYellow.TabStop = false;
