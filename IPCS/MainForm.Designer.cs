@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace IPCS
 {
@@ -18,6 +19,7 @@ namespace IPCS
             if (disposing && (components != null))
             {
                 components.Dispose();
+                Application.Exit();
             }
             base.Dispose(disposing);
         }
@@ -71,7 +73,7 @@ namespace IPCS
             this.linkUserAccount.Size = new System.Drawing.Size(88, 15);
             this.linkUserAccount.TabIndex = 4;
             this.linkUserAccount.Text = "Anatawa dare?";
-            this.linkUserAccount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkUserAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.linkUserAccount.UseCustomForeColor = true;
             this.linkUserAccount.Click += new System.EventHandler(this.UserAccount_Click);
             this.linkUserAccount.MouseEnter += new System.EventHandler(this.UserAccount_MouseEnter);

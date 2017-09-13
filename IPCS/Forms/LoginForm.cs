@@ -31,7 +31,8 @@ namespace IPCS.Forms
             if (Program.User.Online)
             {
                 NotifText = Program.User.Username + " is signed in";
-                Dispose();
+                new MainForm().Show();
+                Hide();
             }
             else
             {

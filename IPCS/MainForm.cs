@@ -17,14 +17,13 @@ namespace IPCS
     {
         public MainForm()
         {
-            new LoginForm().ShowDialog();
             InitializeComponent();
             UpdateComponents();
         }
 
         public void UpdateComponents()
         {
-            linkUserAccount.Text = Program.User.Username;
+            linkUserAccount.Text = Program.User.Username + "   ";
             metroToolTip.SetToolTip(linkUserAccount, Program.User.Username + " is signed in");
             metroStyleManager.Theme = Program.StyleManager.Theme;
             metroStyleManager.Style = Program.StyleManager.Style;

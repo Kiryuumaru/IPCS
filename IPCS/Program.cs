@@ -21,20 +21,22 @@ namespace IPCS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new LoginForm());
         }
 
         #endregion
 
         #region Fields
 
-        public static MetroFramework.Components.MetroStyleManager StyleManager {
-            get { return StyleManager; }
-            set
+        private static MetroFramework.Components.MetroStyleManager _StyleManager;
+        public static MetroFramework.Components.MetroStyleManager StyleManager
+        {
+            get
             {
-                value.Owner = null;
-                StyleManager = value;
+                _StyleManager.Owner = null;
+                return _StyleManager;
             }
+            set{ _StyleManager = value; }
         }
 
         public static TestDatabase Database { get; set; }
