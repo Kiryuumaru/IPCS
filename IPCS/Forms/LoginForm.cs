@@ -36,7 +36,7 @@ namespace IPCS.Forms
             }
             else
             {
-                NotifText = "User doesn`t exist";
+                NotifText = "Either username or password is wrong";
             }
             btnLogin.Enabled = true;
             btnSignup.Enabled = true;

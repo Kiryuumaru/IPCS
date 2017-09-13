@@ -7,7 +7,7 @@ using MetroFramework;
 
 namespace IPCS
 {
-    public class ColorMethods
+    public class StyleMethods
     {
         public static System.Drawing.Color ToSystemColor(MetroColorStyle style)
         {

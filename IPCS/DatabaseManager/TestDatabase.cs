@@ -48,14 +48,14 @@ namespace IPCS.DatabaseManager
             User user;
             try
             {
-                string data = GetData(username, password);
+                string data = GetData(username);
                 user = (User)StringCipher.StringToObject(data);
-                user.Online = true;
+                if (user.CheckPassword(password)) user.Online = true;
+                else user.Online = false;
             }
             catch (Exception)
             {
                 user = new User(username, password);
-                user.Online = false;
             }
             return user;
         }
@@ -84,7 +84,7 @@ namespace IPCS.DatabaseManager
             File.WriteAllLines(FILEPATH, newData);
         }
 
-        private string GetData(string username, string password)
+        private string GetData(string username)
         {
             string[] data = File.ReadAllLines(FILEPATH);
             for (int i = 0; i < data.Length; i++)

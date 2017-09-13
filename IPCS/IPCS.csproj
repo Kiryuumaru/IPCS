@@ -87,7 +87,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ColorMethods.cs" />
+    <Compile Include="StyleMethods.cs" />
     <Compile Include="Data\Inventory.cs" />
     <Compile Include="Data\Product.cs" />
     <Compile Include="DatabaseManager\TestDatabase.cs" />

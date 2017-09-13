@@ -64,5 +64,11 @@ namespace IPCS.Forms
             if (state == CheckState.Unchecked) metroStyleManagerPicker.Theme = MetroThemeStyle.Light;
             if (state == CheckState.Indeterminate) metroStyleManagerPicker.Theme = MetroThemeStyle.Default;
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Program.Logout();
+            Application.Restart();
+        }
     }
 }

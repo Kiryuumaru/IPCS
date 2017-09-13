@@ -41,6 +41,12 @@ namespace IPCS.DatabaseManager
         }
 
         private string _Password;
+        public bool CheckPassword(string password)
+        {
+            if (password.Equals(_Password)) return true;
+            return false;
+        }
+
         private string _Username;
         public string Username
         {

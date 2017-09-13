@@ -29,7 +29,7 @@ namespace IPCS.Forms
         Pen pen;
         protected override void OnPaint(PaintEventArgs e)
         {
-            brush = new SolidBrush(ColorMethods.ToSystemColor(Style));
+            brush = new SolidBrush(StyleMethods.ToSystemColor(Style));
             pen = new Pen(brush, 3);
             if (NotificationBox)
             {
@@ -259,7 +259,7 @@ namespace IPCS.Forms
         private void WindowButton_MouseEnter(object sender, EventArgs e)
         {
             MetroLink button = (MetroLink)sender;
-            button.BackColor = ColorMethods.ToSystemColor(Style);
+            button.BackColor = StyleMethods.ToSystemColor(Style);
         }
 
         private void WindowButton_MouseLeave(object sender, EventArgs e)
@@ -318,7 +318,7 @@ namespace IPCS.Forms
             }
             windowClose.BackColor = Color.Transparent;
             windowTray.BackColor = Color.Transparent;
-            notifLabel.BackColor = ColorMethods.ToSystemColor(Style);
+            notifLabel.BackColor = StyleMethods.ToSystemColor(Style);
             notifLabel.ForeColor = MetroColors.White;
             notifLabel.Location = new Point(3, Height - 21);
         }
