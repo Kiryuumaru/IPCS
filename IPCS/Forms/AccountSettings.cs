@@ -45,8 +45,7 @@ namespace IPCS.Forms
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            Program.StyleManager.Theme = metroStyleManagerPicker.Theme;
-            Program.StyleManager.Style = metroStyleManagerPicker.Style;
+            Program.StyleManager = metroStyleManagerPicker;
             metroStyleManager.Theme = metroStyleManagerPicker.Theme;
             metroStyleManager.Style = metroStyleManagerPicker.Style;
         }
