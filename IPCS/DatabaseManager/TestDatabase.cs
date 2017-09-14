@@ -28,6 +28,8 @@ namespace IPCS.DatabaseManager
 
         #endregion
 
+        #region Threads
+
         public bool CreateUser(User user)
         {
             if (GetData(user.Username) != null) return false;
@@ -79,6 +81,8 @@ namespace IPCS.DatabaseManager
             }
             return user;
         }
+
+        #endregion
 
         #region FileManager
 

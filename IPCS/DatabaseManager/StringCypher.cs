@@ -16,7 +16,7 @@ namespace IPCS.DatabaseManager
         // This constant determines the number of iterations for the password bytes generation function.
         private const int DerivationIterations = 1000;
 
-        #region Custom
+        #region Extension
 
         public static string ObjectToString(object obj)
         {
