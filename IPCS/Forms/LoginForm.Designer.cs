@@ -46,13 +46,12 @@
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseSelectable = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.Click += new System.EventHandler(this.Login_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::IPCS.Properties.Resources.IPCSLogo;
             this.pictureBox1.Location = new System.Drawing.Point(110, 56);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(279, 74);
@@ -140,7 +139,7 @@
             this.btnSignup.TabIndex = 13;
             this.btnSignup.Text = "Create account";
             this.btnSignup.UseSelectable = true;
-            this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
+            this.btnSignup.Click += new System.EventHandler(this.Signup_Click);
             // 
             // LoginForm
             // 

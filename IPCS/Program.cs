@@ -7,6 +7,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using IPCS.Forms;
 using IPCS.DatabaseManager;
+using MetroFramework;
+using MetroFramework.Components;
 
 namespace IPCS
 {
@@ -30,23 +32,14 @@ namespace IPCS
 
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            PrintDebug("something went wrong");
+            PrintDebug("something went wrong \n" + e.ToString());
         }
 
         #endregion
 
         #region Fields
 
-        private static MetroFramework.Components.MetroStyleManager _StyleManager;
-        public static MetroFramework.Components.MetroStyleManager StyleManager
-        {
-            get
-            {
-                _StyleManager.Owner = null;
-                return _StyleManager;
-            }
-            set{ _StyleManager = value; }
-        }
+        public static MetroFramework.Components.MetroStyleManager MainStyleManager { get; set; }
 
         public static TestDatabase Database { get; set; }
         
@@ -54,9 +47,10 @@ namespace IPCS
 
         #endregion
 
+        #region Threads
+
         public static void InitializeServer()
         {
-            StyleManager = new MetroFramework.Components.MetroStyleManager();
             Database = new TestDatabase();
         }
 
@@ -65,7 +59,9 @@ namespace IPCS
             Data.Product prod = new Data.Product(0, "testName", 100, 99, 10);
             Data.Inventory inv = new Data.Inventory();
             inv.NewProduct(prod);
+            MetroStyleManager manager = new MetroStyleManager();
             User user = new User(username, password, inv);
+            user.StyleManager = manager;
             Database.CreateUser(user);
             return true;
         }
@@ -73,6 +69,7 @@ namespace IPCS
         public static bool Login(string username, string password)
         {
             User = Database.GetUser(username, password);
+            MainStyleManager = User.StyleManager;
             return User.Online;
         }
 
@@ -81,6 +78,10 @@ namespace IPCS
             User = null;
             return true;
         }
+
+        #endregion
+
+        #region Debug Methods
 
         public static void PrintDebug(string[] data)
         {
@@ -96,5 +97,8 @@ namespace IPCS
         {
             MessageBox.Show(data);
         }
+
+        #endregion
+
     }
 }

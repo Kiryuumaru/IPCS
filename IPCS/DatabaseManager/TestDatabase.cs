@@ -43,6 +43,25 @@ namespace IPCS.DatabaseManager
             return true;
         }
 
+        public bool UpdateUser(User user)
+        {
+            string serializedString = StringCipher.ObjectToString(user);
+            try
+            {
+                string[] data = new string[4];
+                data[0] = ">>STARTUSER";
+                data[1] = user.Username;
+                data[2] = serializedString;
+                data[3] = ">>ENDUSER";
+                UpdateData(data);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
+        }
+
         public User GetUser(string username, string password)
         {
             User user;
@@ -66,6 +85,25 @@ namespace IPCS.DatabaseManager
         private const string ENDLINE = ">>END";
 
         private void NewData(string[] data)
+        {
+            if (!File.Exists(FILEPATH))
+            {
+                TextWriter tw = new StreamWriter(FILEPATH);
+                tw.WriteLine(STARTLINE + Environment.NewLine + ENDLINE);
+                tw.Close();
+            }
+            if (data.Length == 0) return;
+            string[] oldData = File.ReadAllLines(FILEPATH);
+            oldData = oldData.Skip(Array.LastIndexOf(oldData, STARTLINE) + 1).Take(Array.IndexOf(oldData, ENDLINE) - 1).ToArray();
+            oldData = oldData.Concat(data).ToArray();
+            string[] newData = new string[oldData.Length + 2];
+            Array.Copy(oldData, 0, newData, 1, oldData.Length);
+            newData[0] = STARTLINE;
+            newData[newData.Length - 1] = ENDLINE;
+            File.WriteAllLines(FILEPATH, newData);
+        }
+
+        private void UpdateData(string[] data)
         {
             if (!File.Exists(FILEPATH))
             {

@@ -22,7 +22,7 @@ namespace IPCS.Forms
             NotifText = "Server Ready";
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void Login_Click(object sender, EventArgs e)
         {
             btnLogin.Enabled = false;
             btnSignup.Enabled = false;
@@ -42,7 +42,7 @@ namespace IPCS.Forms
             btnSignup.Enabled = true;
         }
 
-        private void btnSignup_Click(object sender, EventArgs e)
+        private void Signup_Click(object sender, EventArgs e)
         {
             Hide();
             new SignupForm().ShowDialog();

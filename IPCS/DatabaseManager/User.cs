@@ -17,7 +17,7 @@ namespace IPCS.DatabaseManager
             _Username = username;
             _Password = password;
             _Data = new Inventory();
-            //StyleManager = Program.StyleManager;
+            StyleManager = new MetroFramework.Components.MetroStyleManager();
         }
 
         public User(string username, string password, Inventory data)
@@ -25,6 +25,7 @@ namespace IPCS.DatabaseManager
             _Username = username;
             _Password = password;
             _Data = data;
+            StyleManager = new MetroFramework.Components.MetroStyleManager();
         }
 
         #endregion
@@ -52,10 +53,21 @@ namespace IPCS.DatabaseManager
         {
             get { return _Username; }
         }
-        
+
+        public string _StyleManager;
+        public MetroFramework.Components.MetroStyleManager StyleManager
+        {
+            get
+            {
+                return StyleMethods.ToManager(_StyleManager);
+            }
+            set
+            {
+                _StyleManager = StyleMethods.ToString(value);
+            }
+        }
+
         public bool Online { get; set; }
-        
-        //public MetroFramework.Components.MetroStyleManager StyleManager { get; set; }
 
         #endregion
     }

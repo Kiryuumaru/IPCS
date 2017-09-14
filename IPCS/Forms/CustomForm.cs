@@ -103,15 +103,15 @@ namespace IPCS.Forms
             get { return base.Padding; }
             set
             {
-                value.Top = Math.Max(value.Top, ControlBox ? 35 : 5);
-                value.Bottom = Math.Max(value.Bottom, NotificationBox ? 35 : 5);
+                value.Top = Math.Max(value.Top, ControlBox ? 35 : 2);
+                value.Bottom = Math.Max(value.Bottom, NotificationBox ? 23 : 2);
                 base.Padding = value;
             }
         }
 
         protected override Padding DefaultPadding
         {
-            get { return new Padding(5, ControlBox ? 35 : 5, 5, NotificationBox ? 35 : 5); }
+            get { return new Padding(2, ControlBox ? 35 : 2, 2, NotificationBox ? 23 : 2); }
         }
         
         public string NotifText

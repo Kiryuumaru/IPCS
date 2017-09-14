@@ -87,6 +87,47 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\PnlHelp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\PnlHelp.Designer.cs">
+      <DependentUpon>PnlHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\PnlMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\PnlMain.Designer.cs">
+      <DependentUpon>PnlMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\PnlManageInventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\PnlManageInventory.Designer.cs">
+      <DependentUpon>PnlManageInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\PnlSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\PnlSettings.Designer.cs">
+      <DependentUpon>PnlSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\PnlStartCashiering.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\PnlStartCashiering.Designer.cs">
+      <DependentUpon>PnlStartCashiering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="StyleMethods.cs" />
     <Compile Include="Data\Inventory.cs" />
     <Compile Include="Data\Product.cs" />
@@ -94,12 +135,6 @@
     <Compile Include="DatabaseManager\User.cs" />
     <Compile Include="Forms\CustomForm.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AccountSettings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AccountSettings.Designer.cs">
-      <DependentUpon>AccountSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
@@ -113,18 +148,9 @@
     <Compile Include="Forms\SignupForm.Designer.cs">
       <DependentUpon>SignupForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DatabaseManager\StringCypher.cs" />
-    <EmbeddedResource Include="Forms\AccountSettings.resx">
-      <DependentUpon>AccountSettings.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomForm.resx">
       <DependentUpon>CustomForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,16 +163,26 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Panels\PnlHelp.resx">
+      <DependentUpon>PnlHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\PnlMain.resx">
+      <DependentUpon>PnlMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\PnlManageInventory.resx">
+      <DependentUpon>PnlManageInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\PnlSettings.resx">
+      <DependentUpon>PnlSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\PnlStartCashiering.resx">
+      <DependentUpon>PnlStartCashiering.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -217,9 +253,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\x-gray.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\IPCSLogo.bmp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\x-white.ico" />

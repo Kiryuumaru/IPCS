@@ -3,12 +3,77 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
 using MetroFramework;
+using MetroFramework.Forms;
+using MetroFramework.Components;
 
 namespace IPCS
 {
     public class StyleMethods
     {
+        public static string ToString(MetroStyleManager manager)
+        {
+            string output = "";
+
+            switch (manager.Theme)
+            {
+                case MetroThemeStyle.Dark: output += "Dark"; break;
+                case MetroThemeStyle.Light: output += "Light"; break;
+                default: output += "Light"; break;
+            }
+            output += ":";
+            switch (manager.Style)
+            {
+                case MetroColorStyle.Black: output += "Black"; break;
+                case MetroColorStyle.Blue: output += "Blue"; break;
+                case MetroColorStyle.Brown: output += "Brown"; break;
+                case MetroColorStyle.Green: output += "Green"; break;
+                case MetroColorStyle.Lime: output += "Lime"; break;
+                case MetroColorStyle.Magenta: output += "Magenta"; break;
+                case MetroColorStyle.Orange: output += "Orange"; break;
+                case MetroColorStyle.Pink: output += "Pink"; break;
+                case MetroColorStyle.Purple: output += "Purple"; break;
+                case MetroColorStyle.Red: output += "Red"; break;
+                case MetroColorStyle.Silver: output += "Silver"; break;
+                case MetroColorStyle.Teal: output += "Teal"; break;
+                case MetroColorStyle.White: output += "White"; break;
+                case MetroColorStyle.Yellow: output += "Yellow"; break;
+                default: output += "Blue"; break;
+            }
+
+            return output;
+        }
+
+        public static MetroStyleManager ToManager(string output)
+        {
+            MetroStyleManager manager = new MetroStyleManager();
+            string theme = output.Substring(0, output.IndexOf(':'));
+            string style = output.Substring(output.IndexOf(':')+1);
+
+            if (theme.Equals("Dark")) manager.Theme = MetroThemeStyle.Dark;
+            else if (theme.Equals("Light")) manager.Theme = MetroThemeStyle.Light;
+            else manager.Theme = MetroThemeStyle.Light;
+
+            if (style.Equals("Black")) manager.Style = MetroColorStyle.Black;
+            else if (style.Equals("Blue")) manager.Style = MetroColorStyle.Blue;
+            else if (style.Equals("Brown")) manager.Style = MetroColorStyle.Brown;
+            else if (style.Equals("Green")) manager.Style = MetroColorStyle.Green;
+            else if (style.Equals("Lime")) manager.Style = MetroColorStyle.Lime;
+            else if (style.Equals("Magenta")) manager.Style = MetroColorStyle.Magenta;
+            else if (style.Equals("Orange")) manager.Style = MetroColorStyle.Orange;
+            else if (style.Equals("Pink")) manager.Style = MetroColorStyle.Pink;
+            else if (style.Equals("Purple")) manager.Style = MetroColorStyle.Purple;
+            else if (style.Equals("Red")) manager.Style = MetroColorStyle.Red;
+            else if (style.Equals("Silver")) manager.Style = MetroColorStyle.Silver;
+            else if (style.Equals("Teal")) manager.Style = MetroColorStyle.Teal;
+            else if (style.Equals("White")) manager.Style = MetroColorStyle.White;
+            else if (style.Equals("Yellow")) manager.Style = MetroColorStyle.Yellow;
+            else manager.Style = MetroColorStyle.Blue;
+
+            return manager;
+        }
+
         public static System.Drawing.Color ToSystemColor(MetroColorStyle style)
         {
             switch (style)
@@ -30,9 +95,10 @@ namespace IPCS
                 default: return MetroColors.Blue;
             }
         }
-        public static System.Drawing.Color ToSystemColor(MetroThemeStyle style)
+
+        public static System.Drawing.Color ToSystemColor(MetroThemeStyle theme)
         {
-            switch (style)
+            switch (theme)
             {
                 case MetroThemeStyle.Light: return MetroColors.White;
                 case MetroThemeStyle.Dark: return MetroColors.Black;
