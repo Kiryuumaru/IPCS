@@ -31,6 +31,12 @@
             this.pnlMetro = new MetroFramework.Controls.MetroPanel();
             this.pnlCenter = new MetroFramework.Controls.MetroPanel();
             this.pnlTab = new MetroFramework.Controls.MetroPanel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lnkHome = new MetroFramework.Controls.MetroLink();
             this.pnlProfile = new MetroFramework.Controls.MetroPanel();
             this.lblUsername = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -38,11 +44,17 @@
             this.lnkSettings = new MetroFramework.Controls.MetroLink();
             this.lnkStartCashiering = new MetroFramework.Controls.MetroLink();
             this.lnkManageInventory = new MetroFramework.Controls.MetroLink();
-            this.lnkHome = new MetroFramework.Controls.MetroLink();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pnlMetro.SuspendLayout();
             this.pnlTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMetro
@@ -77,6 +89,12 @@
             // 
             // pnlTab
             // 
+            this.pnlTab.Controls.Add(this.pictureBox7);
+            this.pnlTab.Controls.Add(this.pictureBox6);
+            this.pnlTab.Controls.Add(this.pictureBox5);
+            this.pnlTab.Controls.Add(this.pictureBox4);
+            this.pnlTab.Controls.Add(this.pictureBox3);
+            this.pnlTab.Controls.Add(this.pictureBox2);
             this.pnlTab.Controls.Add(this.lnkHome);
             this.pnlTab.Controls.Add(this.pnlProfile);
             this.pnlTab.Controls.Add(this.lnkHelp);
@@ -95,8 +113,84 @@
             this.pnlTab.VerticalScrollbarHighlightOnWheel = false;
             this.pnlTab.VerticalScrollbarSize = 10;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox6.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.pictureBox6.Location = new System.Drawing.Point(3, 263);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox6.TabIndex = 12;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.pictureBox5.Location = new System.Drawing.Point(3, 222);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.pictureBox4.Location = new System.Drawing.Point(3, 181);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox4.TabIndex = 10;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 140);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 99);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lnkHome
+            // 
+            this.lnkHome.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lnkHome.FontSize = MetroFramework.MetroLinkSize.Medium;
+            this.lnkHome.FontWeight = MetroFramework.MetroLinkWeight.Regular;
+            this.lnkHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lnkHome.Location = new System.Drawing.Point(42, 99);
+            this.lnkHome.Name = "lnkHome";
+            this.lnkHome.Size = new System.Drawing.Size(138, 35);
+            this.lnkHome.TabIndex = 8;
+            this.lnkHome.Text = "Home";
+            this.lnkHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lnkHome.UseSelectable = true;
+            this.lnkHome.Click += new System.EventHandler(this.Tab_Click);
+            // 
             // pnlProfile
             // 
+            this.pnlProfile.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.pnlProfile.Controls.Add(this.lblUsername);
             this.pnlProfile.Controls.Add(this.pictureBox1);
             this.pnlProfile.Dock = System.Windows.Forms.DockStyle.Top;
@@ -113,6 +207,7 @@
             // 
             // lblUsername
             // 
+            this.lblUsername.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.lblUsername.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblUsername.Location = new System.Drawing.Point(0, 54);
             this.lblUsername.Name = "lblUsername";
@@ -134,6 +229,7 @@
             // 
             // lnkHelp
             // 
+            this.lnkHelp.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.lnkHelp.FontSize = MetroFramework.MetroLinkSize.Medium;
             this.lnkHelp.FontWeight = MetroFramework.MetroLinkWeight.Regular;
             this.lnkHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -148,6 +244,7 @@
             // 
             // lnkSettings
             // 
+            this.lnkSettings.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.lnkSettings.FontSize = MetroFramework.MetroLinkSize.Medium;
             this.lnkSettings.FontWeight = MetroFramework.MetroLinkWeight.Regular;
             this.lnkSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,6 +259,7 @@
             // 
             // lnkStartCashiering
             // 
+            this.lnkStartCashiering.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.lnkStartCashiering.FontSize = MetroFramework.MetroLinkSize.Medium;
             this.lnkStartCashiering.FontWeight = MetroFramework.MetroLinkWeight.Regular;
             this.lnkStartCashiering.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -176,6 +274,7 @@
             // 
             // lnkManageInventory
             // 
+            this.lnkManageInventory.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.lnkManageInventory.FontSize = MetroFramework.MetroLinkSize.Medium;
             this.lnkManageInventory.FontWeight = MetroFramework.MetroLinkWeight.Regular;
             this.lnkManageInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -188,19 +287,17 @@
             this.lnkManageInventory.UseSelectable = true;
             this.lnkManageInventory.Click += new System.EventHandler(this.Tab_Click);
             // 
-            // lnkHome
+            // pictureBox7
             // 
-            this.lnkHome.FontSize = MetroFramework.MetroLinkSize.Medium;
-            this.lnkHome.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.lnkHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lnkHome.Location = new System.Drawing.Point(42, 99);
-            this.lnkHome.Name = "lnkHome";
-            this.lnkHome.Size = new System.Drawing.Size(138, 35);
-            this.lnkHome.TabIndex = 8;
-            this.lnkHome.Text = "Home";
-            this.lnkHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lnkHome.UseSelectable = true;
-            this.lnkHome.Click += new System.EventHandler(this.Tab_Click);
+            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox7.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.pictureBox7.Location = new System.Drawing.Point(20, 345);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(143, 71);
+            this.pictureBox7.TabIndex = 13;
+            this.pictureBox7.TabStop = false;
             // 
             // PnlMain
             // 
@@ -211,8 +308,14 @@
             this.Size = new System.Drawing.Size(890, 435);
             this.pnlMetro.ResumeLayout(false);
             this.pnlTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlProfile.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -230,5 +333,11 @@
         private MetroFramework.Controls.MetroLink lnkHelp;
         private MetroFramework.Controls.MetroPanel pnlCenter;
         private MetroFramework.Controls.MetroLink lnkHome;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }
