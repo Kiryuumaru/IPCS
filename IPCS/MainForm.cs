@@ -33,7 +33,7 @@ namespace IPCS
         protected override void OnClosing(CancelEventArgs e)
         {
             base.OnClosing(e);
-            //Program.S
+            Program.Logout();
             Application.Exit();
         }
     }

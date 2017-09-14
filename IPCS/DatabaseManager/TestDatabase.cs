@@ -26,6 +26,7 @@ namespace IPCS.DatabaseManager
 
         public bool CreateUser(User user)
         {
+            if (GetData(user.Username) != null) return false;
             string serializedString = StringCipher.ObjectToString(user);
             try
             {
@@ -53,7 +54,7 @@ namespace IPCS.DatabaseManager
                 data[1] = user.Username;
                 data[2] = serializedString;
                 data[3] = ">>ENDUSER";
-                UpdateData(data);
+                UpdateData(user.Username, data);
             }
             catch (Exception)
             {
@@ -83,53 +84,60 @@ namespace IPCS.DatabaseManager
 
         private const string STARTLINE = ">>START";
         private const string ENDLINE = ">>END";
+        private const string USERSTARTLINE = ">>STARTUSER";
+        private const string USERENDLINE = ">>ENDUSER";
 
         private void NewData(string[] data)
         {
-            if (!File.Exists(FILEPATH))
-            {
-                TextWriter tw = new StreamWriter(FILEPATH);
-                tw.WriteLine(STARTLINE + Environment.NewLine + ENDLINE);
-                tw.Close();
-            }
+            CreateSourceFile();
             if (data.Length == 0) return;
             string[] oldData = File.ReadAllLines(FILEPATH);
-            oldData = oldData.Skip(Array.LastIndexOf(oldData, STARTLINE) + 1).Take(Array.IndexOf(oldData, ENDLINE) - 1).ToArray();
+            oldData = Extension.SubArray(oldData, Array.IndexOf(oldData, STARTLINE)+1, Array.IndexOf(oldData, ENDLINE) - 1);
             oldData = oldData.Concat(data).ToArray();
             string[] newData = new string[oldData.Length + 2];
-            Array.Copy(oldData, 0, newData, 1, oldData.Length);
             newData[0] = STARTLINE;
             newData[newData.Length - 1] = ENDLINE;
+            Array.Copy(oldData, 0, newData, 1, oldData.Length);
             File.WriteAllLines(FILEPATH, newData);
         }
 
-        private void UpdateData(string[] data)
+        private void UpdateData(string username, string[] data)
         {
-            if (!File.Exists(FILEPATH))
-            {
-                TextWriter tw = new StreamWriter(FILEPATH);
-                tw.WriteLine(STARTLINE + Environment.NewLine + ENDLINE);
-                tw.Close();
-            }
+            CreateSourceFile();
             if (data.Length == 0) return;
             string[] oldData = File.ReadAllLines(FILEPATH);
-            oldData = oldData.Skip(Array.LastIndexOf(oldData, STARTLINE) + 1).Take(Array.IndexOf(oldData, ENDLINE) - 1).ToArray();
-            oldData = oldData.Concat(data).ToArray();
+            oldData = Extension.SubArray(oldData, Array.IndexOf(oldData, STARTLINE) + 1, Array.IndexOf(oldData, ENDLINE) - 1);
+            string[] leftData = Extension.SubArray(oldData, 0, Array.IndexOf(oldData, username));
+            string[] severedData = Extension.SubArray(oldData, Array.IndexOf(oldData, username)+1);
+            string[] rightData = Extension.SubArray(severedData, Array.IndexOf(severedData, USERENDLINE)+1);
+            leftData = leftData.Concat(data).ToArray();
+            oldData = rightData.Concat(leftData).ToArray();
             string[] newData = new string[oldData.Length + 2];
-            Array.Copy(oldData, 0, newData, 1, oldData.Length);
             newData[0] = STARTLINE;
             newData[newData.Length - 1] = ENDLINE;
+            Array.Copy(oldData, 0, newData, 1, oldData.Length);
             File.WriteAllLines(FILEPATH, newData);
         }
 
         private string GetData(string username)
         {
+            CreateSourceFile();
             string[] data = File.ReadAllLines(FILEPATH);
             for (int i = 0; i < data.Length; i++)
             {
                 if (data[i].Equals(username)) return data[i + 1];
             }
             return null;
+        }
+
+        private void CreateSourceFile()
+        {
+            if (!File.Exists(FILEPATH))
+            {
+                TextWriter tw = new StreamWriter(FILEPATH);
+                tw.WriteLine(STARTLINE + Environment.NewLine + ENDLINE);
+                tw.Close();
+            }
         }
 
         #endregion

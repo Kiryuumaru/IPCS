@@ -39,7 +39,7 @@ namespace IPCS
 
         #region Fields
 
-        public static MetroFramework.Components.MetroStyleManager MainStyleManager { get; set; }
+        public static MetroStyleManager MainStyleManager { get; set; }
 
         public static TestDatabase Database { get; set; }
         
@@ -54,14 +54,18 @@ namespace IPCS
             Database = new TestDatabase();
         }
 
+        public static void UpdateUser()
+        {
+            User.StyleManager = MainStyleManager;
+            Database.UpdateUser(User);
+        }
+
         public static bool Signup(string username, string password)
         {
             Data.Product prod = new Data.Product(0, "testName", 100, 99, 10);
             Data.Inventory inv = new Data.Inventory();
             inv.NewProduct(prod);
-            MetroStyleManager manager = new MetroStyleManager();
             User user = new User(username, password, inv);
-            user.StyleManager = manager;
             Database.CreateUser(user);
             return true;
         }
@@ -75,6 +79,7 @@ namespace IPCS
 
         public static bool Logout()
         {
+            UpdateUser();
             User = null;
             return true;
         }
