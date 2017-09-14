@@ -10,16 +10,20 @@ namespace IPCS.DatabaseManager
 {
     public class TestDatabase
     {
+        #region Constructor
+
         public TestDatabase()
         {
             FileInfo file = new FileInfo(FILEPATH);
             file.Directory.Create();
         }
 
+        #endregion
+
         #region Properties
 
         private const string FILEDIR = "Data\\";
-        private const string FILENAME = "IPCSData.txt";
+        private const string FILENAME = "IPCSData.bin";
         private const string FILEPATH = FILEDIR + FILENAME;
 
         #endregion
@@ -30,11 +34,9 @@ namespace IPCS.DatabaseManager
             string serializedString = StringCipher.ObjectToString(user);
             try
             {
-                string[] data = new string[4];
-                data[0] = ">>STARTUSER";
-                data[1] = user.Username;
-                data[2] = serializedString;
-                data[3] = ">>ENDUSER";
+                string[] data = new string[2];
+                data[0] = user.Username;
+                data[1] = serializedString;
                 NewData(data);
             }
             catch (Exception)
@@ -49,11 +51,9 @@ namespace IPCS.DatabaseManager
             string serializedString = StringCipher.ObjectToString(user);
             try
             {
-                string[] data = new string[4];
-                data[0] = ">>STARTUSER";
-                data[1] = user.Username;
-                data[2] = serializedString;
-                data[3] = ">>ENDUSER";
+                string[] data = new string[2];
+                data[0] = user.Username;
+                data[1] = serializedString;
                 UpdateData(user.Username, data);
             }
             catch (Exception)
@@ -91,9 +91,13 @@ namespace IPCS.DatabaseManager
         {
             CreateSourceFile();
             if (data.Length == 0) return;
+            string[] modData = new string[data.Length+2];
+            Array.Copy(data, 0, modData, 1, data.Length);
+            modData[0] = USERSTARTLINE;
+            modData[modData.Length - 1] = USERENDLINE;
             string[] oldData = File.ReadAllLines(FILEPATH);
             oldData = Extension.SubArray(oldData, Array.IndexOf(oldData, STARTLINE)+1, Array.IndexOf(oldData, ENDLINE) - 1);
-            oldData = oldData.Concat(data).ToArray();
+            oldData = oldData.Concat(modData).ToArray();
             string[] newData = new string[oldData.Length + 2];
             newData[0] = STARTLINE;
             newData[newData.Length - 1] = ENDLINE;
@@ -105,12 +109,16 @@ namespace IPCS.DatabaseManager
         {
             CreateSourceFile();
             if (data.Length == 0) return;
+            string[] modData = new string[data.Length + 2];
+            Array.Copy(data, 0, modData, 1, data.Length);
+            modData[0] = USERSTARTLINE;
+            modData[modData.Length - 1] = USERENDLINE;
             string[] oldData = File.ReadAllLines(FILEPATH);
             oldData = Extension.SubArray(oldData, Array.IndexOf(oldData, STARTLINE) + 1, Array.IndexOf(oldData, ENDLINE) - 1);
-            string[] leftData = Extension.SubArray(oldData, 0, Array.IndexOf(oldData, username));
+            string[] leftData = Extension.SubArray(oldData, 0, Array.IndexOf(oldData, username)-1);
             string[] severedData = Extension.SubArray(oldData, Array.IndexOf(oldData, username)+1);
             string[] rightData = Extension.SubArray(severedData, Array.IndexOf(severedData, USERENDLINE)+1);
-            leftData = leftData.Concat(data).ToArray();
+            leftData = leftData.Concat(modData).ToArray();
             oldData = rightData.Concat(leftData).ToArray();
             string[] newData = new string[oldData.Length + 2];
             newData[0] = STARTLINE;
