@@ -38,6 +38,7 @@
             this.lnkSettings = new MetroFramework.Controls.MetroLink();
             this.lnkStartCashiering = new MetroFramework.Controls.MetroLink();
             this.lnkManageInventory = new MetroFramework.Controls.MetroLink();
+            this.lnkHome = new MetroFramework.Controls.MetroLink();
             this.pnlMetro.SuspendLayout();
             this.pnlTab.SuspendLayout();
             this.pnlProfile.SuspendLayout();
@@ -76,6 +77,7 @@
             // 
             // pnlTab
             // 
+            this.pnlTab.Controls.Add(this.lnkHome);
             this.pnlTab.Controls.Add(this.pnlProfile);
             this.pnlTab.Controls.Add(this.lnkHelp);
             this.pnlTab.Controls.Add(this.lnkSettings);
@@ -135,7 +137,7 @@
             this.lnkHelp.FontSize = MetroFramework.MetroLinkSize.Medium;
             this.lnkHelp.FontWeight = MetroFramework.MetroLinkWeight.Regular;
             this.lnkHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lnkHelp.Location = new System.Drawing.Point(39, 225);
+            this.lnkHelp.Location = new System.Drawing.Point(42, 263);
             this.lnkHelp.Name = "lnkHelp";
             this.lnkHelp.Size = new System.Drawing.Size(138, 35);
             this.lnkHelp.TabIndex = 7;
@@ -149,7 +151,7 @@
             this.lnkSettings.FontSize = MetroFramework.MetroLinkSize.Medium;
             this.lnkSettings.FontWeight = MetroFramework.MetroLinkWeight.Regular;
             this.lnkSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lnkSettings.Location = new System.Drawing.Point(39, 184);
+            this.lnkSettings.Location = new System.Drawing.Point(42, 222);
             this.lnkSettings.Name = "lnkSettings";
             this.lnkSettings.Size = new System.Drawing.Size(138, 35);
             this.lnkSettings.TabIndex = 6;
@@ -163,7 +165,7 @@
             this.lnkStartCashiering.FontSize = MetroFramework.MetroLinkSize.Medium;
             this.lnkStartCashiering.FontWeight = MetroFramework.MetroLinkWeight.Regular;
             this.lnkStartCashiering.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lnkStartCashiering.Location = new System.Drawing.Point(39, 102);
+            this.lnkStartCashiering.Location = new System.Drawing.Point(42, 140);
             this.lnkStartCashiering.Name = "lnkStartCashiering";
             this.lnkStartCashiering.Size = new System.Drawing.Size(138, 35);
             this.lnkStartCashiering.TabIndex = 5;
@@ -177,7 +179,7 @@
             this.lnkManageInventory.FontSize = MetroFramework.MetroLinkSize.Medium;
             this.lnkManageInventory.FontWeight = MetroFramework.MetroLinkWeight.Regular;
             this.lnkManageInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lnkManageInventory.Location = new System.Drawing.Point(39, 143);
+            this.lnkManageInventory.Location = new System.Drawing.Point(42, 181);
             this.lnkManageInventory.Name = "lnkManageInventory";
             this.lnkManageInventory.Size = new System.Drawing.Size(138, 35);
             this.lnkManageInventory.TabIndex = 4;
@@ -185,6 +187,20 @@
             this.lnkManageInventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lnkManageInventory.UseSelectable = true;
             this.lnkManageInventory.Click += new System.EventHandler(this.Tab_Click);
+            // 
+            // lnkHome
+            // 
+            this.lnkHome.FontSize = MetroFramework.MetroLinkSize.Medium;
+            this.lnkHome.FontWeight = MetroFramework.MetroLinkWeight.Regular;
+            this.lnkHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lnkHome.Location = new System.Drawing.Point(42, 99);
+            this.lnkHome.Name = "lnkHome";
+            this.lnkHome.Size = new System.Drawing.Size(138, 35);
+            this.lnkHome.TabIndex = 8;
+            this.lnkHome.Text = "Home";
+            this.lnkHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lnkHome.UseSelectable = true;
+            this.lnkHome.Click += new System.EventHandler(this.Tab_Click);
             // 
             // PnlMain
             // 
@@ -213,5 +229,6 @@
         private MetroFramework.Controls.MetroLink lnkSettings;
         private MetroFramework.Controls.MetroLink lnkHelp;
         private MetroFramework.Controls.MetroPanel pnlCenter;
+        private MetroFramework.Controls.MetroLink lnkHome;
     }
 }
