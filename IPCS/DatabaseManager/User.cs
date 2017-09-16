@@ -78,8 +78,6 @@ namespace IPCS.DatabaseManager
 
         public Image ProfilePic { get; set; }
 
-        public bool Online { get; set; }
-
         #endregion
 
     }

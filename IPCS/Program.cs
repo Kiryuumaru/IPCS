@@ -67,8 +67,7 @@ namespace IPCS
             Data.Inventory inv = new Data.Inventory();
             inv.NewProduct(prod);
             User user = new User(username, password, recoveryKey, profilePic, inv);
-            Database.CreateUser(user);
-            return true;
+            return Database.CreateUser(user);
         }
 
         public static bool Login(string username, string password)
@@ -79,11 +78,10 @@ namespace IPCS
             return true;
         }
 
-        public static bool Logout()
+        public static void Logout()
         {
             UpdateUser();
             User = null;
-            return true;
         }
 
         public static bool UserReady()

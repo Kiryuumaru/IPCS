@@ -24,7 +24,11 @@ namespace IPCS.Forms
             if (txtPassword.Text.Equals(txtConfirmPassword.Text))
             {
                 NotifText = "Creating Account...";
-                if (!Program.Signup(txtUsername.Text, txtPassword.Text, txtRecoveryKey.Text, profilePicture.Image)) return;
+                if (!Program.Signup(txtUsername.Text, txtPassword.Text, txtRecoveryKey.Text, profilePicture.Image))
+                {
+                    NotifText = "Account alreadu exist";
+                    return;
+                }
                 NotifText = "Username " + txtUsername.Text + " is ready";
                 MetroMessageBox.Show(this, "You successfully created your account!", "Create Account", MessageBoxButtons.OK, 150);
                 Dispose();

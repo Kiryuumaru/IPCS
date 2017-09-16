@@ -27,10 +27,8 @@ namespace IPCS.Forms
             btnLogin.Enabled = false;
             btnSignup.Enabled = false;
             NotifText = "Signing in...";
-            Program.Login(txtUsername.Text, txtPassword.Text);
-            if (Program.UserReady())
+            if (Program.Login(txtUsername.Text, txtPassword.Text))
             {
-                NotifText = Program.User.Username + " is signed in";
                 new MainForm().Show();
                 Hide();
             }

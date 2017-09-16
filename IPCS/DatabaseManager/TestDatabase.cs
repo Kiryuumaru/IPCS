@@ -30,7 +30,7 @@ namespace IPCS.DatabaseManager
 
         public bool CreateUser(User user)
         {
-            if (GetData(user.Username) != null) return false;
+            if (UserExist(user.Username)) return false;
             string serializedString = Extension.ObjectToString(user);
             try
             {
@@ -65,17 +65,11 @@ namespace IPCS.DatabaseManager
 
         public User GetUser(string username, string password)
         {
-            User user;
-            try
-            {
-                string data = GetData(username);
-                user = (User)Extension.StringToObject(data);
-                if (user.CheckPassword(password)) user.Online = true;
-                else user.Online = false;
-            }
-            catch (Exception) {
-                return null;
-            }
+            if (!UserExist(username)) return null;
+            string data = GetData(username);
+            User user = (User)Extension.StringToObject(data);
+            if (user == null) return null;
+            if (!user.CheckPassword(password)) return null;
             return user;
         }
 
@@ -128,6 +122,17 @@ namespace IPCS.DatabaseManager
             newData[newData.Length - 1] = ENDLINE;
             Array.Copy(oldData, 0, newData, 1, oldData.Length);
             File.WriteAllLines(FILEPATH, newData);
+        }
+
+        private bool UserExist(string username)
+        {
+            CreateSourceFile();
+            string[] data = File.ReadAllLines(FILEPATH);
+            for (int i = 0; i < data.Length; i++)
+            {
+                if (data[i].Equals(username)) return true;
+            }
+            return false;
         }
 
         private string GetData(string username)
