@@ -31,17 +31,12 @@ namespace IPCS.Panels
         {
             lblUsername.Text = Program.User.Username;
             profilePicture.Image = Program.User.ProfilePic;
-            PnlHome pnlHome = new PnlHome();
-            PnlStartCashiering pnlStartCashiering = new PnlStartCashiering();
-            PnlManageInventory pnlManageInventory = new PnlManageInventory();
-            PnlSettings pnlSettings = new PnlSettings();
-            PnlHelp pnlHelp = new PnlHelp();
 
-            pnlCenter.Controls.Add(pnlHome);
-            pnlCenter.Controls.Add(pnlStartCashiering);
-            pnlCenter.Controls.Add(pnlManageInventory);
-            pnlCenter.Controls.Add(pnlSettings);
-            pnlCenter.Controls.Add(pnlHelp);
+            pnlCenter.Controls.Add(new PnlHome());
+            pnlCenter.Controls.Add(new PnlStartCashiering());
+            pnlCenter.Controls.Add(new PnlManageInventory());
+            pnlCenter.Controls.Add(new PnlSettings());
+            pnlCenter.Controls.Add(new PnlHelp());
         }
 
         private void Tab_Click(object sender, EventArgs e)

@@ -42,7 +42,7 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(0, 0);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(707, 435);
+            this.metroPanel1.Size = new System.Drawing.Size(696, 442);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -64,8 +64,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.metroPanel1);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "PnlHome";
-            this.Size = new System.Drawing.Size(707, 435);
+            this.Size = new System.Drawing.Size(696, 442);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
             this.ResumeLayout(false);

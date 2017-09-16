@@ -74,7 +74,6 @@
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
-            this.txtPassword.PromptText = "Password";
             this.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtPassword.SelectedText = "";
             this.txtPassword.SelectionLength = 0;
@@ -110,7 +109,6 @@
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
-            this.txtUsername.PromptText = "Username";
             this.txtUsername.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtUsername.SelectedText = "";
             this.txtUsername.SelectionLength = 0;
@@ -145,7 +143,6 @@
             this.txtConfirmPassword.MaxLength = 32767;
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '●';
-            this.txtConfirmPassword.PromptText = "Confirm Password";
             this.txtConfirmPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtConfirmPassword.SelectedText = "";
             this.txtConfirmPassword.SelectionLength = 0;
@@ -220,7 +217,6 @@
             this.txtRecoveryKey.MaxLength = 32767;
             this.txtRecoveryKey.Name = "txtRecoveryKey";
             this.txtRecoveryKey.PasswordChar = '\0';
-            this.txtRecoveryKey.PromptText = "Recovery key (for recovering lost pass)";
             this.txtRecoveryKey.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtRecoveryKey.SelectedText = "";
             this.txtRecoveryKey.SelectionLength = 0;

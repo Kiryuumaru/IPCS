@@ -38,6 +38,7 @@
             this.pnlMain.HorizontalScrollbarHighlightOnWheel = false;
             this.pnlMain.HorizontalScrollbarSize = 10;
             this.pnlMain.Location = new System.Drawing.Point(2, 35);
+            this.pnlMain.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(896, 442);
             this.pnlMain.TabIndex = 3;

@@ -31,13 +31,13 @@
             this.pnlMetro = new MetroFramework.Controls.MetroPanel();
             this.pnlCenter = new MetroFramework.Controls.MetroPanel();
             this.pnlTab = new MetroFramework.Controls.MetroPanel();
-            this.pnlProfile = new MetroFramework.Controls.MetroPanel();
-            this.lblUsername = new MetroFramework.Controls.MetroLabel();
             this.tabHelp = new IPCS.Panels.PnlTab();
             this.tabSettings = new IPCS.Panels.PnlTab();
             this.tabManageInventory = new IPCS.Panels.PnlTab();
             this.tabStartCashiering = new IPCS.Panels.PnlTab();
             this.tabHome = new IPCS.Panels.PnlTab();
+            this.pnlProfile = new MetroFramework.Controls.MetroPanel();
+            this.lblUsername = new MetroFramework.Controls.MetroLabel();
             this.profilePicture = new System.Windows.Forms.PictureBox();
             this.pnlMetro.SuspendLayout();
             this.pnlTab.SuspendLayout();
@@ -55,7 +55,7 @@
             this.pnlMetro.HorizontalScrollbarSize = 10;
             this.pnlMetro.Location = new System.Drawing.Point(0, 0);
             this.pnlMetro.Name = "pnlMetro";
-            this.pnlMetro.Size = new System.Drawing.Size(890, 435);
+            this.pnlMetro.Size = new System.Drawing.Size(896, 442);
             this.pnlMetro.TabIndex = 0;
             this.pnlMetro.VerticalScrollbarBarColor = true;
             this.pnlMetro.VerticalScrollbarHighlightOnWheel = false;
@@ -68,8 +68,9 @@
             this.pnlCenter.HorizontalScrollbarHighlightOnWheel = false;
             this.pnlCenter.HorizontalScrollbarSize = 10;
             this.pnlCenter.Location = new System.Drawing.Point(200, 0);
+            this.pnlCenter.Margin = new System.Windows.Forms.Padding(0);
             this.pnlCenter.Name = "pnlCenter";
-            this.pnlCenter.Size = new System.Drawing.Size(690, 435);
+            this.pnlCenter.Size = new System.Drawing.Size(696, 442);
             this.pnlCenter.TabIndex = 4;
             this.pnlCenter.VerticalScrollbarBarColor = true;
             this.pnlCenter.VerticalScrollbarHighlightOnWheel = false;
@@ -89,39 +90,11 @@
             this.pnlTab.HorizontalScrollbarSize = 10;
             this.pnlTab.Location = new System.Drawing.Point(0, 0);
             this.pnlTab.Name = "pnlTab";
-            this.pnlTab.Size = new System.Drawing.Size(200, 435);
+            this.pnlTab.Size = new System.Drawing.Size(200, 442);
             this.pnlTab.TabIndex = 3;
             this.pnlTab.VerticalScrollbarBarColor = true;
             this.pnlTab.VerticalScrollbarHighlightOnWheel = false;
             this.pnlTab.VerticalScrollbarSize = 10;
-            // 
-            // pnlProfile
-            // 
-            this.pnlProfile.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.pnlProfile.Controls.Add(this.lblUsername);
-            this.pnlProfile.Controls.Add(this.profilePicture);
-            this.pnlProfile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlProfile.HorizontalScrollbarBarColor = true;
-            this.pnlProfile.HorizontalScrollbarHighlightOnWheel = false;
-            this.pnlProfile.HorizontalScrollbarSize = 10;
-            this.pnlProfile.Location = new System.Drawing.Point(0, 0);
-            this.pnlProfile.Name = "pnlProfile";
-            this.pnlProfile.Size = new System.Drawing.Size(200, 73);
-            this.pnlProfile.TabIndex = 4;
-            this.pnlProfile.VerticalScrollbarBarColor = true;
-            this.pnlProfile.VerticalScrollbarHighlightOnWheel = false;
-            this.pnlProfile.VerticalScrollbarSize = 10;
-            // 
-            // lblUsername
-            // 
-            this.lblUsername.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblUsername.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblUsername.Location = new System.Drawing.Point(0, 54);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(200, 19);
-            this.lblUsername.TabIndex = 4;
-            this.lblUsername.Text = "Anatawa dare?";
-            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabHelp
             // 
@@ -188,6 +161,34 @@
             this.tabHome.Tag = "Home";
             this.tabHome.Click += new System.EventHandler(this.Tab_Click);
             // 
+            // pnlProfile
+            // 
+            this.pnlProfile.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.pnlProfile.Controls.Add(this.lblUsername);
+            this.pnlProfile.Controls.Add(this.profilePicture);
+            this.pnlProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlProfile.HorizontalScrollbarBarColor = true;
+            this.pnlProfile.HorizontalScrollbarHighlightOnWheel = false;
+            this.pnlProfile.HorizontalScrollbarSize = 10;
+            this.pnlProfile.Location = new System.Drawing.Point(0, 0);
+            this.pnlProfile.Name = "pnlProfile";
+            this.pnlProfile.Size = new System.Drawing.Size(200, 73);
+            this.pnlProfile.TabIndex = 4;
+            this.pnlProfile.VerticalScrollbarBarColor = true;
+            this.pnlProfile.VerticalScrollbarHighlightOnWheel = false;
+            this.pnlProfile.VerticalScrollbarSize = 10;
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblUsername.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblUsername.Location = new System.Drawing.Point(0, 54);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(200, 19);
+            this.lblUsername.TabIndex = 4;
+            this.lblUsername.Text = "Anatawa dare?";
+            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // profilePicture
             // 
             this.profilePicture.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -209,7 +210,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlMetro);
             this.Name = "PnlMain";
-            this.Size = new System.Drawing.Size(890, 435);
+            this.Size = new System.Drawing.Size(896, 442);
             this.pnlMetro.ResumeLayout(false);
             this.pnlTab.ResumeLayout(false);
             this.pnlProfile.ResumeLayout(false);

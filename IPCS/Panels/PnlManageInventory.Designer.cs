@@ -42,7 +42,7 @@
             this.pnlMetro.HorizontalScrollbarSize = 10;
             this.pnlMetro.Location = new System.Drawing.Point(0, 0);
             this.pnlMetro.Name = "pnlMetro";
-            this.pnlMetro.Size = new System.Drawing.Size(707, 435);
+            this.pnlMetro.Size = new System.Drawing.Size(696, 442);
             this.pnlMetro.TabIndex = 0;
             this.pnlMetro.VerticalScrollbarBarColor = true;
             this.pnlMetro.VerticalScrollbarHighlightOnWheel = false;
@@ -64,8 +64,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlMetro);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "PnlManageInventory";
-            this.Size = new System.Drawing.Size(707, 435);
+            this.Size = new System.Drawing.Size(696, 442);
             this.pnlMetro.ResumeLayout(false);
             this.pnlMetro.PerformLayout();
             this.ResumeLayout(false);

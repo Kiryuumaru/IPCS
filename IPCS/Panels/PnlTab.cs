@@ -14,7 +14,6 @@ namespace IPCS.Panels
 {
     public partial class PnlTab : UserControl
     {
-
         #region Constructor
 
         public PnlTab()

@@ -11,23 +11,20 @@ using IPCS.Forms;
 
 namespace IPCS
 {
-
     public partial class MainForm : CustomForm
     {
         public MainForm()
         {
-            Program.MainStyleManager.Owner = this;
             InitializeComponent();
             UpdateComponents();
-            Panels.PnlMain panel = new Panels.PnlMain();
-            panel.Parent = this;
-            pnlMain.Controls.Add(panel);
         }
 
         public void UpdateComponents()
         {
+            Program.MainStyleManager.Owner = this;
             StyleManager = Program.MainStyleManager;
-            RefreshComponents();
+            pnlMain.Controls.Add(new Panels.PnlMain());
+            StyleManager.Update();
         }
 
         protected override void OnClosing(CancelEventArgs e)

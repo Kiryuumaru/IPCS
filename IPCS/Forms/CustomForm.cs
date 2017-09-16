@@ -11,7 +11,7 @@ using MetroFramework.Controls;
 
 namespace IPCS.Forms
 {
-    public partial class CustomForm : MetroFramework.Forms.MetroForm
+    public partial class CustomForm : MetroForm
     {
         #region Constructor
 
@@ -24,13 +24,11 @@ namespace IPCS.Forms
         #endregion
 
         #region Paint Method
-
-        SolidBrush brush;
-        Pen pen;
+        
         protected override void OnPaint(PaintEventArgs e)
         {
-            brush = new SolidBrush(StyleMethods.ToSystemColor(Style));
-            pen = new Pen(brush, 3);
+            SolidBrush brush = new SolidBrush(StyleMethods.ToSystemColor(Style));
+            Pen pen = new Pen(brush, 3);
             if (NotificationBox)
             {
                 e.Graphics.FillRectangle(brush, 0, Height - 25, Width, 25);
@@ -71,7 +69,7 @@ namespace IPCS.Forms
 
         #endregion
 
-        #region Fields
+        #region Properties
 
         private bool _ControlBox = true;
         [Category("Window Style"), Browsable(true)]
