@@ -16,15 +16,21 @@ namespace IPCS.Panels
 {
     public partial class PnlMain : UserControl
     {
+
+        #region Constructor
+
         public PnlMain()
         {
             InitializeComponent();
             UpdateComponents();
         }
 
+        #endregion
+
         public void UpdateComponents()
         {
             lblUsername.Text = Program.User.Username;
+            profilePicture.Image = Program.User.ProfilePic;
             PnlHome pnlHome = new PnlHome();
             PnlStartCashiering pnlStartCashiering = new PnlStartCashiering();
             PnlManageInventory pnlManageInventory = new PnlManageInventory();
@@ -40,16 +46,16 @@ namespace IPCS.Panels
 
         private void Tab_Click(object sender, EventArgs e)
         {
-            MetroLink tab = (MetroLink)sender;
+            UserControl tab = (UserControl)sender;
             foreach (Control p in pnlCenter.Controls)
             {
                 if (p is UserControl)
                 {
-                    if (p.Name.Equals("PnlHome") && tab.Name.Equals("lnkHome")) p.Show();
-                    else if (p.Name.Equals("PnlStartCashiering") && tab.Name.Equals("lnkStartCashiering")) p.Show();
-                    else if (p.Name.Equals("PnlManageInventory") && tab.Name.Equals("lnkManageInventory")) p.Show();
-                    else if (p.Name.Equals("PnlSettings") && tab.Name.Equals("lnkSettings")) p.Show();
-                    else if (p.Name.Equals("PnlHelp") && tab.Name.Equals("lnkHelp")) p.Show();
+                    if (p.Name.Equals("PnlHome") && tab.Tag.Equals("Home")) p.Show();
+                    else if (p.Name.Equals("PnlStartCashiering") && tab.Tag.Equals("StartCashiering")) p.Show();
+                    else if (p.Name.Equals("PnlManageInventory") && tab.Tag.Equals("ManageInventory")) p.Show();
+                    else if (p.Name.Equals("PnlSettings") && tab.Tag.Equals("Settings")) p.Show();
+                    else if (p.Name.Equals("PnlHelp") && tab.Tag.Equals("Help")) p.Show();
                     else p.Hide();
                 }
             }

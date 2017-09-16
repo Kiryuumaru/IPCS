@@ -3,28 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 using IPCS.Data;
 
-namespace IPCS.DatabaseManager 
+namespace IPCS.DatabaseManager
 {
     [Serializable]
     public class User
     {
+
         #region Constructor
 
-        public User(string username, string password)
+        public User(string username, string password, string recoveryKey, Image profilePic, Inventory data)
         {
             _Username = username;
             _Password = password;
-            _Data = new Inventory();
-            StyleManager = new MetroFramework.Components.MetroStyleManager();
-        }
-
-        public User(string username, string password, Inventory data)
-        {
-            _Username = username;
-            _Password = password;
+            _RecoveryKey = recoveryKey;
             _Data = data;
+            ProfilePic = profilePic;
             StyleManager = new MetroFramework.Components.MetroStyleManager();
         }
 
@@ -41,6 +37,12 @@ namespace IPCS.DatabaseManager
             }
         }
 
+        private string _Username;
+        public string Username
+        {
+            get { return _Username; }
+        }
+
         private string _Password;
         public bool CheckPassword(string password)
         {
@@ -48,10 +50,17 @@ namespace IPCS.DatabaseManager
             return false;
         }
 
-        private string _Username;
-        public string Username
+        public string GetPassword(string recoveryKey)
         {
-            get { return _Username; }
+            if (recoveryKey.Equals(_RecoveryKey)) return _Password;
+            return null;
+        }
+
+        private string _RecoveryKey;
+        public string RecoveryKey(string password)
+        {
+            if (password.Equals(_Password)) return _RecoveryKey;
+            return null;
         }
 
         public string _StyleManager;
@@ -67,8 +76,11 @@ namespace IPCS.DatabaseManager
             }
         }
 
+        public Image ProfilePic { get; set; }
+
         public bool Online { get; set; }
 
         #endregion
+
     }
 }

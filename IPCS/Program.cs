@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing;
 using IPCS.Forms;
 using IPCS.DatabaseManager;
 using MetroFramework;
@@ -60,12 +61,12 @@ namespace IPCS
             Database.UpdateUser(User);
         }
 
-        public static bool Signup(string username, string password)
+        public static bool Signup(string username, string password, string recoveryKey, Image profilePic)
         {
             Data.Product prod = new Data.Product(0, "testName", 100, 99, 10);
             Data.Inventory inv = new Data.Inventory();
             inv.NewProduct(prod);
-            User user = new User(username, password, inv);
+            User user = new User(username, password, recoveryKey, profilePic, inv);
             Database.CreateUser(user);
             return true;
         }

@@ -22,8 +22,6 @@ namespace IPCS.DatabaseManager
 
         #region Properties
 
-        private const string FILEDIR = "Data\\";
-        private const string FILENAME = "IPCSData.bin";
         private const string FILEPATH = FILEDIR + FILENAME;
 
         #endregion
@@ -33,7 +31,7 @@ namespace IPCS.DatabaseManager
         public bool CreateUser(User user)
         {
             if (GetData(user.Username) != null) return false;
-            string serializedString = StringCipher.ObjectToString(user);
+            string serializedString = Extension.ObjectToString(user);
             try
             {
                 string[] data = new string[2];
@@ -50,7 +48,7 @@ namespace IPCS.DatabaseManager
 
         public bool UpdateUser(User user)
         {
-            string serializedString = StringCipher.ObjectToString(user);
+            string serializedString = Extension.ObjectToString(user);
             try
             {
                 string[] data = new string[2];
@@ -71,13 +69,12 @@ namespace IPCS.DatabaseManager
             try
             {
                 string data = GetData(username);
-                user = (User)StringCipher.StringToObject(data);
+                user = (User)Extension.StringToObject(data);
                 if (user.CheckPassword(password)) user.Online = true;
                 else user.Online = false;
             }
-            catch (Exception)
-            {
-                user = new User(username, password);
+            catch (Exception) {
+                return null;
             }
             return user;
         }
@@ -86,6 +83,8 @@ namespace IPCS.DatabaseManager
 
         #region FileManager
 
+        private const string FILEDIR = "Data\\";
+        private const string FILENAME = "IPCSData.bin";
         private const string STARTLINE = ">>START";
         private const string ENDLINE = ">>END";
         private const string USERSTARTLINE = ">>STARTUSER";
