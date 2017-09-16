@@ -74,14 +74,21 @@ namespace IPCS
         public static bool Login(string username, string password)
         {
             User = Database.GetUser(username, password);
+            if (!UserReady()) return false;
             MainStyleManager = User.StyleManager;
-            return User.Online;
+            return true;
         }
 
         public static bool Logout()
         {
             UpdateUser();
             User = null;
+            return true;
+        }
+
+        public static bool UserReady()
+        {
+            if (User == null) return false;
             return true;
         }
 
