@@ -30,7 +30,10 @@
         {
             this.pnlMetro = new MetroFramework.Controls.MetroPanel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.lblTitle = new MetroFramework.Controls.MetroLabel();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
+            this.lblPassword = new MetroFramework.Controls.MetroLabel();
+            this.lblUsername = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.btnLogout = new MetroFramework.Controls.MetroButton();
@@ -49,9 +52,6 @@
             this.tileMagenta = new MetroFramework.Controls.MetroTile();
             this.tileBrown = new MetroFramework.Controls.MetroTile();
             this.tilePink = new MetroFramework.Controls.MetroTile();
-            this.lblUsername = new MetroFramework.Controls.MetroLabel();
-            this.lblPassword = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.pnlMetro.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.metroPanel3.SuspendLayout();
@@ -76,7 +76,7 @@
             // 
             // metroPanel2
             // 
-            this.metroPanel2.Controls.Add(this.metroLabel4);
+            this.metroPanel2.Controls.Add(this.lblTitle);
             this.metroPanel2.Controls.Add(this.metroPanel3);
             this.metroPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroPanel2.HorizontalScrollbarBarColor = true;
@@ -89,6 +89,17 @@
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblTitle.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(81, 25);
+            this.lblTitle.TabIndex = 31;
+            this.lblTitle.Text = "Settings";
             // 
             // metroPanel3
             // 
@@ -107,6 +118,24 @@
             this.metroPanel3.VerticalScrollbarBarColor = true;
             this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel3.VerticalScrollbarSize = 10;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Location = new System.Drawing.Point(143, 56);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(83, 19);
+            this.lblPassword.TabIndex = 31;
+            this.lblPassword.Text = "metroLabel5";
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Location = new System.Drawing.Point(143, 28);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(83, 19);
+            this.lblUsername.TabIndex = 30;
+            this.lblUsername.Text = "metroLabel4";
             // 
             // metroLabel3
             // 
@@ -330,35 +359,6 @@
             this.tilePink.UseSelectable = true;
             this.tilePink.Click += new System.EventHandler(this.Tile_MouseClick);
             // 
-            // lblUsername
-            // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(143, 28);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(83, 19);
-            this.lblUsername.TabIndex = 30;
-            this.lblUsername.Text = "metroLabel4";
-            // 
-            // lblPassword
-            // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(143, 56);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(83, 19);
-            this.lblPassword.TabIndex = 31;
-            this.lblPassword.Text = "metroLabel5";
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel4.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(81, 25);
-            this.metroLabel4.TabIndex = 31;
-            this.metroLabel4.Text = "Settings";
-            // 
             // PnlSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,6 +402,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel lblPassword;
         private MetroFramework.Controls.MetroLabel lblUsername;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel lblTitle;
     }
 }

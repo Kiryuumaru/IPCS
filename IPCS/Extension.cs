@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Drawing;
 
 namespace IPCS
 {
@@ -39,31 +38,6 @@ namespace IPCS
                 ms.Position = 0;
                 return new BinaryFormatter().Deserialize(ms);
             }
-        }
-
-        public static string ImageToString(Image image)
-        {
-            if (image == null) throw new ArgumentNullException("path");
-            using (image)
-            {
-                using (MemoryStream m = new MemoryStream())
-                {
-                    image.Save(m, image.RawFormat);
-                    byte[] imageBytes = m.ToArray();
-                    string base64String = Convert.ToBase64String(imageBytes);
-                    Program.PrintDebug(base64String);
-                    return base64String;
-                }
-            }
-        }
-
-        public static Image StringToImage(string base64String)
-        {
-            byte[] imageBytes = Convert.FromBase64String(base64String);
-            MemoryStream ms = new MemoryStream(imageBytes, 0, imageBytes.Length);
-            ms.Write(imageBytes, 0, imageBytes.Length);
-            Image image = Image.FromStream(ms, true);
-            return image;
         }
     }
 }

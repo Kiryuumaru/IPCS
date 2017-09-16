@@ -107,6 +107,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animations\Transitions.cs" />
     <Compile Include="Extension.cs" />
     <Compile Include="Forms\CashierForm.cs">
       <SubType>Form</SubType>

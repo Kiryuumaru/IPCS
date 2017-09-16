@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 using MetroFramework;
 using MetroFramework.Forms;
 using MetroFramework.Components;
@@ -21,6 +22,7 @@ namespace IPCS.Panels
         {
             InitializeComponent();
             UpdateComponents();
+            ConponentTransitions();
         }
 
         public void UpdateComponents()
@@ -51,6 +53,11 @@ namespace IPCS.Panels
             tileLime.Tag = MetroColorStyle.Lime;
             tileLime.BackColor = MetroColors.Lime;
             if (Program.MainStyleManager.Theme == MetroThemeStyle.Dark) metroToggle.CheckState = CheckState.Checked;
+        }
+
+        public void ConponentTransitions()
+        {
+            Thread thread = new Thread(new ThreadStart(ConponentTransitions));
         }
 
         private void Tile_MouseClick(object sender, EventArgs e)

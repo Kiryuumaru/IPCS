@@ -11,7 +11,6 @@ namespace IPCS.DatabaseManager
     [Serializable]
     public class User
     {
-
         #region Constructor
 
         public User(string username, string password, string recoveryKey, Image profilePic, Inventory data)
@@ -79,6 +78,5 @@ namespace IPCS.DatabaseManager
         public Image ProfilePic { get; set; }
 
         #endregion
-
     }
 }

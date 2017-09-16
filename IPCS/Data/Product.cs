@@ -54,6 +54,5 @@ namespace IPCS.Data
         public double TotalCost { get { return Cost * Quantity; } }
 
         #endregion
-
     }
 }
