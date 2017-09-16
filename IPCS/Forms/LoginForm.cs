@@ -24,6 +24,11 @@ namespace IPCS.Forms
 
         private void Login_Click(object sender, EventArgs e)
         {
+            if (txtUsername.Text.Length <= 0 || txtPassword.Text.Length <= 0)
+            {
+                NotifText = "Please fill up all field";
+                return;
+            }
             btnLogin.Enabled = false;
             btnSignup.Enabled = false;
             NotifText = "Signing in...";

@@ -21,6 +21,11 @@ namespace IPCS.Forms
 
         private void Signup_Click(object sender, EventArgs e)
         {
+            if (txtUsername.Text.Length <= 0 || txtPassword.Text.Length <= 0 || txtConfirmPassword.Text.Length <= 0|| txtRecoveryKey.Text.Length <=0)
+            {
+                NotifText = "Please fill up all field";
+                return;
+            }
             if (txtPassword.Text.Equals(txtConfirmPassword.Text))
             {
                 NotifText = "Creating Account...";
