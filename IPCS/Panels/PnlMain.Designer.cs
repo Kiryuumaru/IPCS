@@ -66,7 +66,7 @@
             this.pnlMetro.HorizontalScrollbarSize = 10;
             this.pnlMetro.Location = new System.Drawing.Point(0, 0);
             this.pnlMetro.Name = "pnlMetro";
-            this.pnlMetro.Size = new System.Drawing.Size(896, 442);
+            this.pnlMetro.Size = new System.Drawing.Size(896, 450);
             this.pnlMetro.TabIndex = 0;
             this.pnlMetro.VerticalScrollbarBarColor = true;
             this.pnlMetro.VerticalScrollbarHighlightOnWheel = false;
@@ -81,7 +81,7 @@
             this.pnlMainHolder.HorizontalScrollbarSize = 10;
             this.pnlMainHolder.Location = new System.Drawing.Point(212, 0);
             this.pnlMainHolder.Name = "pnlMainHolder";
-            this.pnlMainHolder.Size = new System.Drawing.Size(684, 442);
+            this.pnlMainHolder.Size = new System.Drawing.Size(684, 450);
             this.pnlMainHolder.TabIndex = 6;
             this.pnlMainHolder.VerticalScrollbarBarColor = true;
             this.pnlMainHolder.VerticalScrollbarHighlightOnWheel = false;
@@ -97,7 +97,7 @@
             this.pnlCenter.Margin = new System.Windows.Forms.Padding(0);
             this.pnlCenter.Name = "pnlCenter";
             this.pnlCenter.Padding = new System.Windows.Forms.Padding(5);
-            this.pnlCenter.Size = new System.Drawing.Size(684, 442);
+            this.pnlCenter.Size = new System.Drawing.Size(684, 450);
             this.pnlCenter.TabIndex = 4;
             this.pnlCenter.VerticalScrollbarBarColor = true;
             this.pnlCenter.VerticalScrollbarHighlightOnWheel = false;
@@ -115,7 +115,7 @@
             this.pnlControl.HorizontalScrollbarSize = 10;
             this.pnlControl.Location = new System.Drawing.Point(0, 0);
             this.pnlControl.Name = "pnlControl";
-            this.pnlControl.Size = new System.Drawing.Size(212, 442);
+            this.pnlControl.Size = new System.Drawing.Size(212, 450);
             this.pnlControl.TabIndex = 3;
             this.pnlControl.VerticalScrollbarBarColor = true;
             this.pnlControl.VerticalScrollbarHighlightOnWheel = false;
@@ -125,11 +125,11 @@
             // 
             this.separator.BackColor = System.Drawing.Color.Transparent;
             this.separator.Dock = System.Windows.Forms.DockStyle.Right;
-            this.separator.Image = global::IPCS.Properties.Resources.separator;
+            this.separator.Image = ((System.Drawing.Image)(resources.GetObject("separator.Image")));
             this.separator.Location = new System.Drawing.Point(210, 0);
             this.separator.Margin = new System.Windows.Forms.Padding(0);
             this.separator.Name = "separator";
-            this.separator.Size = new System.Drawing.Size(2, 442);
+            this.separator.Size = new System.Drawing.Size(2, 450);
             this.separator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.separator.TabIndex = 2;
             this.separator.TabStop = false;
@@ -144,7 +144,7 @@
             this.pnlTab.HorizontalScrollbarSize = 10;
             this.pnlTab.Location = new System.Drawing.Point(0, 0);
             this.pnlTab.Name = "pnlTab";
-            this.pnlTab.Size = new System.Drawing.Size(210, 442);
+            this.pnlTab.Size = new System.Drawing.Size(210, 450);
             this.pnlTab.TabIndex = 2;
             this.pnlTab.VerticalScrollbarBarColor = true;
             this.pnlTab.VerticalScrollbarHighlightOnWheel = false;
@@ -161,7 +161,7 @@
             this.pnlTabHolder.HorizontalScrollbarBarColor = true;
             this.pnlTabHolder.HorizontalScrollbarHighlightOnWheel = false;
             this.pnlTabHolder.HorizontalScrollbarSize = 10;
-            this.pnlTabHolder.Location = new System.Drawing.Point(7, 133);
+            this.pnlTabHolder.Location = new System.Drawing.Point(8, 122);
             this.pnlTabHolder.Name = "pnlTabHolder";
             this.pnlTabHolder.Size = new System.Drawing.Size(178, 218);
             this.pnlTabHolder.TabIndex = 2;
@@ -252,7 +252,7 @@
             this.pnlProfile.HorizontalScrollbarSize = 10;
             this.pnlProfile.Location = new System.Drawing.Point(0, 0);
             this.pnlProfile.Name = "pnlProfile";
-            this.pnlProfile.Size = new System.Drawing.Size(210, 130);
+            this.pnlProfile.Size = new System.Drawing.Size(210, 116);
             this.pnlProfile.TabIndex = 4;
             this.pnlProfile.VerticalScrollbarBarColor = true;
             this.pnlProfile.VerticalScrollbarHighlightOnWheel = false;
@@ -288,7 +288,7 @@
             // 
             this.lblUsername.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.lblUsername.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblUsername.Location = new System.Drawing.Point(0, 111);
+            this.lblUsername.Location = new System.Drawing.Point(0, 97);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(210, 19);
             this.lblUsername.TabIndex = 4;
@@ -300,9 +300,9 @@
             this.profilePicture.BackColor = System.Drawing.Color.Transparent;
             this.profilePicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.profilePicture.Image = global::IPCS.Properties.Resources.logo;
-            this.profilePicture.Location = new System.Drawing.Point(66, 36);
+            this.profilePicture.Location = new System.Drawing.Point(76, 34);
             this.profilePicture.Name = "profilePicture";
-            this.profilePicture.Size = new System.Drawing.Size(75, 75);
+            this.profilePicture.Size = new System.Drawing.Size(60, 60);
             this.profilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.profilePicture.TabIndex = 5;
             this.profilePicture.TabStop = false;
@@ -313,7 +313,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlMetro);
             this.Name = "PnlMain";
-            this.Size = new System.Drawing.Size(896, 442);
+            this.Size = new System.Drawing.Size(896, 450);
             this.pnlMetro.ResumeLayout(false);
             this.pnlMetro.PerformLayout();
             this.pnlMainHolder.ResumeLayout(false);

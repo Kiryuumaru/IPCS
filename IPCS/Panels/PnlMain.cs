@@ -16,7 +16,6 @@ namespace IPCS.Panels
 {
     public partial class PnlMain : UserControl
     {
-
         #region Constructor
 
         public PnlMain()
@@ -26,6 +25,8 @@ namespace IPCS.Panels
         }
 
         #endregion
+
+        #region Threads
 
         UserControl pnlHome = new PnlHome();
         UserControl pnlStartCashiering = new PnlStartCashiering();
@@ -52,6 +53,24 @@ namespace IPCS.Panels
             pnlSettings.Hide();
             Tab_Click(tabHome, new EventArgs());
         }
+
+        private void MinimizeTab()
+        {
+            tabShow.Show();
+            lblUsername.Hide();
+            pnlTab.Size = new Size(50, pnlControl.Height);
+        }
+
+        private void MaximizeTab()
+        {
+            tabShow.Hide();
+            lblUsername.Show();
+            pnlTab.Size = new Size(210, pnlControl.Height);
+        }
+
+        #endregion
+
+        #region Events
 
         private void Tab_Click(object sender, EventArgs e)
         {
@@ -80,23 +99,12 @@ namespace IPCS.Panels
                         else if (p.Name.Equals("PnlManageInventory") && tab.Name.Equals("tabManageInventory")) p.Show();
                         else if (p.Name.Equals("PnlHelp") && tab.Name.Equals("tabHelp")) p.Show();
                         else p.Hide();
+                        if (pnlSettings.Visible) pnlSettings.Hide();
                     }
                 }
             }
         }
-        
-        private void MinimizeTab()
-        {
-            tabShow.Show();
-            lblUsername.Hide();
-            pnlTab.Size = new Size(50, pnlControl.Height);
-        }
 
-        private void MaximizeTab()
-        {
-            tabShow.Hide();
-            lblUsername.Show();
-            pnlTab.Size = new Size(210, pnlControl.Height);
-        }
+        #endregion
     }
 }
