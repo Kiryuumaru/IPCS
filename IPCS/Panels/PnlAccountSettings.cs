@@ -1,27 +1,33 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using MetroFramework;
+using MetroFramework.Forms;
+using MetroFramework.Components;
 using MetroFramework.Controls;
 
 namespace IPCS.Panels
 {
-    public partial class PnlSettings : UserControl
+    public partial class PnlAccountSettings : UserControl
     {
-        public PnlSettings()
+
+        public PnlAccountSettings()
         {
             InitializeComponent();
             UpdateComponents();
             ConponentTransitions();
         }
 
-        private void Close_Click(object sender, EventArgs e)
-        {
-            SendToBack();
-        }
-
         public void UpdateComponents()
         {
+            lblUsername.Text = Program.User.Username;
             tileYellow.Tag = MetroColorStyle.Yellow;
             tileYellow.BackColor = MetroColors.Yellow;
             tileRed.Tag = MetroColorStyle.Red;
@@ -51,7 +57,7 @@ namespace IPCS.Panels
 
         public void ConponentTransitions()
         {
-            //Thread thread = new Thread(new ThreadStart(ConponentTransitions));
+            Thread thread = new Thread(new ThreadStart(ConponentTransitions));
         }
 
         private void Tile_MouseClick(object sender, EventArgs e)

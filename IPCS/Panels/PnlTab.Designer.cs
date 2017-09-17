@@ -71,9 +71,9 @@
             this.lblTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTab.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblTab.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblTab.Location = new System.Drawing.Point(35, 0);
+            this.lblTab.Location = new System.Drawing.Point(40, 0);
             this.lblTab.Name = "lblTab";
-            this.lblTab.Size = new System.Drawing.Size(130, 35);
+            this.lblTab.Size = new System.Drawing.Size(125, 35);
             this.lblTab.TabIndex = 10;
             this.lblTab.Text = "Tab name";
             this.lblTab.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -90,7 +90,7 @@
             this.pnlPictureBoxHolder.HorizontalScrollbarSize = 10;
             this.pnlPictureBoxHolder.Location = new System.Drawing.Point(0, 0);
             this.pnlPictureBoxHolder.Name = "pnlPictureBoxHolder";
-            this.pnlPictureBoxHolder.Size = new System.Drawing.Size(35, 35);
+            this.pnlPictureBoxHolder.Size = new System.Drawing.Size(40, 35);
             this.pnlPictureBoxHolder.TabIndex = 11;
             this.pnlPictureBoxHolder.VerticalScrollbarBarColor = true;
             this.pnlPictureBoxHolder.VerticalScrollbarHighlightOnWheel = false;

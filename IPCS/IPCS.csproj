@@ -115,12 +115,19 @@
     <Compile Include="Forms\CashierForm.Designer.cs">
       <DependentUpon>CashierForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\InventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InventoryForm.Designer.cs">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Native\WinApi.cs" />
     <Compile Include="Panels\PnlHelp.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -144,6 +151,12 @@
     </Compile>
     <Compile Include="Panels\PnlManageInventory.Designer.cs">
       <DependentUpon>PnlManageInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\PnlAccountSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\PnlAccountSettings.Designer.cs">
+      <DependentUpon>PnlAccountSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="Panels\PnlSettings.cs">
       <SubType>UserControl</SubType>
@@ -196,6 +209,9 @@
     <EmbeddedResource Include="Forms\CustomForm.resx">
       <DependentUpon>CustomForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InventoryForm.resx">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Panels\PnlManageInventory.resx">
       <DependentUpon>PnlManageInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\PnlAccountSettings.resx">
+      <DependentUpon>PnlAccountSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panels\PnlSettings.resx">
       <DependentUpon>PnlSettings.cs</DependentUpon>
@@ -259,51 +278,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\drect-black.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\drect-gray.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\drect-white.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\line-black.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\line-gray.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\line-white.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\o-black.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\o-gray.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\o-white.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rect-black.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rect-gray.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rect-white.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\x-black.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\x-gray.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\x-white.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ic_home_white_48dp_2x.png" />
@@ -352,6 +326,72 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_menu_black_48pt_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_menu_gray_48pt_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_menu_white_48pt_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drect-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drect-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drect-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_chevron_left_black_48pt_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_chevron_left_gray_48pt_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_chevron_left_white_48pt_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_chevron_right_black_48pt_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_chevron_right_gray_48pt_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_chevron_right_white_48pt_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\separator.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Costura.Fody.1.6.2\build\dotnet\Costura.Fody.targets" Condition="Exists('packages\Costura.Fody.1.6.2\build\dotnet\Costura.Fody.targets')" />

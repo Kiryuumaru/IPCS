@@ -28,27 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PnlMain));
             this.pnlMetro = new MetroFramework.Controls.MetroPanel();
+            this.pnlMainHolder = new MetroFramework.Controls.MetroPanel();
             this.pnlCenter = new MetroFramework.Controls.MetroPanel();
+            this.pnlControl = new MetroFramework.Controls.MetroPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlTab = new MetroFramework.Controls.MetroPanel();
             this.tabHelp = new IPCS.Panels.PnlTab();
-            this.tabSettings = new IPCS.Panels.PnlTab();
-            this.tabManageInventory = new IPCS.Panels.PnlTab();
-            this.tabStartCashiering = new IPCS.Panels.PnlTab();
-            this.tabHome = new IPCS.Panels.PnlTab();
             this.pnlProfile = new MetroFramework.Controls.MetroPanel();
+            this.tabShow = new IPCS.Panels.PnlTab();
+            this.tabHide = new IPCS.Panels.PnlTab();
             this.lblUsername = new MetroFramework.Controls.MetroLabel();
             this.profilePicture = new System.Windows.Forms.PictureBox();
+            this.tabSettings = new IPCS.Panels.PnlTab();
+            this.tabHome = new IPCS.Panels.PnlTab();
+            this.tabManageInventory = new IPCS.Panels.PnlTab();
+            this.tabStartCashiering = new IPCS.Panels.PnlTab();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.pnlMetro.SuspendLayout();
+            this.pnlMainHolder.SuspendLayout();
+            this.pnlControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlTab.SuspendLayout();
             this.pnlProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).BeginInit();
+            this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMetro
             // 
-            this.pnlMetro.Controls.Add(this.pnlCenter);
-            this.pnlMetro.Controls.Add(this.pnlTab);
+            this.pnlMetro.Controls.Add(this.pnlMainHolder);
+            this.pnlMetro.Controls.Add(this.pnlControl);
             this.pnlMetro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMetro.HorizontalScrollbarBarColor = true;
             this.pnlMetro.HorizontalScrollbarHighlightOnWheel = false;
@@ -61,37 +72,78 @@
             this.pnlMetro.VerticalScrollbarHighlightOnWheel = false;
             this.pnlMetro.VerticalScrollbarSize = 10;
             // 
+            // pnlMainHolder
+            // 
+            this.pnlMainHolder.Controls.Add(this.pnlCenter);
+            this.pnlMainHolder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMainHolder.HorizontalScrollbarBarColor = true;
+            this.pnlMainHolder.HorizontalScrollbarHighlightOnWheel = false;
+            this.pnlMainHolder.HorizontalScrollbarSize = 10;
+            this.pnlMainHolder.Location = new System.Drawing.Point(210, 0);
+            this.pnlMainHolder.Name = "pnlMainHolder";
+            this.pnlMainHolder.Size = new System.Drawing.Size(686, 442);
+            this.pnlMainHolder.TabIndex = 6;
+            this.pnlMainHolder.VerticalScrollbarBarColor = true;
+            this.pnlMainHolder.VerticalScrollbarHighlightOnWheel = false;
+            this.pnlMainHolder.VerticalScrollbarSize = 10;
+            // 
             // pnlCenter
             // 
             this.pnlCenter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCenter.HorizontalScrollbarBarColor = true;
             this.pnlCenter.HorizontalScrollbarHighlightOnWheel = false;
             this.pnlCenter.HorizontalScrollbarSize = 10;
-            this.pnlCenter.Location = new System.Drawing.Point(200, 0);
+            this.pnlCenter.Location = new System.Drawing.Point(0, 0);
             this.pnlCenter.Margin = new System.Windows.Forms.Padding(0);
             this.pnlCenter.Name = "pnlCenter";
-            this.pnlCenter.Size = new System.Drawing.Size(696, 442);
+            this.pnlCenter.Padding = new System.Windows.Forms.Padding(5);
+            this.pnlCenter.Size = new System.Drawing.Size(686, 442);
             this.pnlCenter.TabIndex = 4;
             this.pnlCenter.VerticalScrollbarBarColor = true;
             this.pnlCenter.VerticalScrollbarHighlightOnWheel = false;
             this.pnlCenter.VerticalScrollbarSize = 10;
             // 
+            // pnlControl
+            // 
+            this.pnlControl.Controls.Add(this.pictureBox1);
+            this.pnlControl.Controls.Add(this.pnlTab);
+            this.pnlControl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlControl.HorizontalScrollbarBarColor = true;
+            this.pnlControl.HorizontalScrollbarHighlightOnWheel = false;
+            this.pnlControl.HorizontalScrollbarSize = 10;
+            this.pnlControl.Location = new System.Drawing.Point(0, 0);
+            this.pnlControl.Name = "pnlControl";
+            this.pnlControl.Size = new System.Drawing.Size(210, 442);
+            this.pnlControl.TabIndex = 3;
+            this.pnlControl.VerticalScrollbarBarColor = true;
+            this.pnlControl.VerticalScrollbarHighlightOnWheel = false;
+            this.pnlControl.VerticalScrollbarSize = 10;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Image = global::IPCS.Properties.Resources.separator1;
+            this.pictureBox1.Location = new System.Drawing.Point(207, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(3, 442);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // pnlTab
             // 
-            this.pnlTab.Controls.Add(this.tabHelp);
-            this.pnlTab.Controls.Add(this.tabSettings);
-            this.pnlTab.Controls.Add(this.tabManageInventory);
-            this.pnlTab.Controls.Add(this.tabStartCashiering);
-            this.pnlTab.Controls.Add(this.tabHome);
+            this.pnlTab.Controls.Add(this.metroPanel1);
             this.pnlTab.Controls.Add(this.pnlProfile);
-            this.pnlTab.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTab.HorizontalScrollbarBarColor = true;
             this.pnlTab.HorizontalScrollbarHighlightOnWheel = false;
             this.pnlTab.HorizontalScrollbarSize = 10;
             this.pnlTab.Location = new System.Drawing.Point(0, 0);
             this.pnlTab.Name = "pnlTab";
-            this.pnlTab.Size = new System.Drawing.Size(200, 442);
-            this.pnlTab.TabIndex = 3;
+            this.pnlTab.Size = new System.Drawing.Size(210, 442);
+            this.pnlTab.TabIndex = 2;
             this.pnlTab.VerticalScrollbarBarColor = true;
             this.pnlTab.VerticalScrollbarHighlightOnWheel = false;
             this.pnlTab.VerticalScrollbarSize = 10;
@@ -101,7 +153,7 @@
             this.tabHelp.DarkThemeImage = global::IPCS.Properties.Resources.ic_help_white_48dp_2x;
             this.tabHelp.Image = global::IPCS.Properties.Resources.ic_help_gray_48dp_2x;
             this.tabHelp.LightThemeImage = global::IPCS.Properties.Resources.ic_help_black_48dp_2x;
-            this.tabHelp.Location = new System.Drawing.Point(20, 260);
+            this.tabHelp.Location = new System.Drawing.Point(1, 167);
             this.tabHelp.Name = "tabHelp";
             this.tabHelp.Size = new System.Drawing.Size(174, 35);
             this.tabHelp.TabIndex = 17;
@@ -109,12 +161,78 @@
             this.tabHelp.Tag = "Help";
             this.tabHelp.Click += new System.EventHandler(this.Tab_Click);
             // 
+            // pnlProfile
+            // 
+            this.pnlProfile.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.pnlProfile.Controls.Add(this.tabShow);
+            this.pnlProfile.Controls.Add(this.tabHide);
+            this.pnlProfile.Controls.Add(this.lblUsername);
+            this.pnlProfile.Controls.Add(this.profilePicture);
+            this.pnlProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlProfile.HorizontalScrollbarBarColor = true;
+            this.pnlProfile.HorizontalScrollbarHighlightOnWheel = false;
+            this.pnlProfile.HorizontalScrollbarSize = 10;
+            this.pnlProfile.Location = new System.Drawing.Point(0, 0);
+            this.pnlProfile.Name = "pnlProfile";
+            this.pnlProfile.Size = new System.Drawing.Size(210, 130);
+            this.pnlProfile.TabIndex = 4;
+            this.pnlProfile.VerticalScrollbarBarColor = true;
+            this.pnlProfile.VerticalScrollbarHighlightOnWheel = false;
+            this.pnlProfile.VerticalScrollbarSize = 10;
+            // 
+            // tabShow
+            // 
+            this.tabShow.DarkThemeImage = global::IPCS.Properties.Resources.ic_chevron_right_white_48pt_2x;
+            this.tabShow.Image = global::IPCS.Properties.Resources.ic_chevron_right_gray_48pt_2x;
+            this.tabShow.LightThemeImage = global::IPCS.Properties.Resources.ic_chevron_right_black_48pt_2x;
+            this.tabShow.Location = new System.Drawing.Point(8, 0);
+            this.tabShow.Name = "tabShow";
+            this.tabShow.Size = new System.Drawing.Size(35, 35);
+            this.tabShow.TabIndex = 6;
+            this.tabShow.TabText = null;
+            this.tabShow.Click += new System.EventHandler(this.Tab_Click);
+            // 
+            // tabHide
+            // 
+            this.tabHide.DarkThemeImage = ((System.Drawing.Image)(resources.GetObject("tabHide.DarkThemeImage")));
+            this.tabHide.Image = ((System.Drawing.Image)(resources.GetObject("tabHide.Image")));
+            this.tabHide.LightThemeImage = ((System.Drawing.Image)(resources.GetObject("tabHide.LightThemeImage")));
+            this.tabHide.Location = new System.Drawing.Point(168, 0);
+            this.tabHide.Name = "tabHide";
+            this.tabHide.Size = new System.Drawing.Size(35, 35);
+            this.tabHide.TabIndex = 2;
+            this.tabHide.TabText = null;
+            this.tabHide.Click += new System.EventHandler(this.Tab_Click);
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblUsername.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblUsername.Location = new System.Drawing.Point(0, 111);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(210, 19);
+            this.lblUsername.TabIndex = 4;
+            this.lblUsername.Text = "Anatawa dare?";
+            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // profilePicture
+            // 
+            this.profilePicture.BackColor = System.Drawing.Color.Transparent;
+            this.profilePicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.profilePicture.Image = global::IPCS.Properties.Resources.ic_help_black_48dp_2x;
+            this.profilePicture.Location = new System.Drawing.Point(66, 36);
+            this.profilePicture.Name = "profilePicture";
+            this.profilePicture.Size = new System.Drawing.Size(75, 75);
+            this.profilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.profilePicture.TabIndex = 5;
+            this.profilePicture.TabStop = false;
+            // 
             // tabSettings
             // 
             this.tabSettings.DarkThemeImage = global::IPCS.Properties.Resources.ic_build_white_48dp_2x;
             this.tabSettings.Image = global::IPCS.Properties.Resources.ic_build_gray_48dp_2x;
             this.tabSettings.LightThemeImage = global::IPCS.Properties.Resources.ic_build_black_48dp_2x;
-            this.tabSettings.Location = new System.Drawing.Point(20, 219);
+            this.tabSettings.Location = new System.Drawing.Point(1, 126);
             this.tabSettings.Name = "tabSettings";
             this.tabSettings.Size = new System.Drawing.Size(174, 35);
             this.tabSettings.TabIndex = 16;
@@ -122,12 +240,25 @@
             this.tabSettings.Tag = "Settings";
             this.tabSettings.Click += new System.EventHandler(this.Tab_Click);
             // 
+            // tabHome
+            // 
+            this.tabHome.DarkThemeImage = global::IPCS.Properties.Resources.ic_home_white_48dp_2x;
+            this.tabHome.Image = global::IPCS.Properties.Resources.ic_home_gray_48dp_2x;
+            this.tabHome.LightThemeImage = global::IPCS.Properties.Resources.ic_home_black_48dp_2x;
+            this.tabHome.Location = new System.Drawing.Point(0, 3);
+            this.tabHome.Name = "tabHome";
+            this.tabHome.Size = new System.Drawing.Size(175, 35);
+            this.tabHome.TabIndex = 2;
+            this.tabHome.TabText = "Home";
+            this.tabHome.Tag = "Home";
+            this.tabHome.Click += new System.EventHandler(this.Tab_Click);
+            // 
             // tabManageInventory
             // 
             this.tabManageInventory.DarkThemeImage = global::IPCS.Properties.Resources.ic_assessment_white_48dp_2x;
             this.tabManageInventory.Image = global::IPCS.Properties.Resources.ic_assessment_gray_48dp_2x;
             this.tabManageInventory.LightThemeImage = global::IPCS.Properties.Resources.ic_assessment_black_48dp_2x;
-            this.tabManageInventory.Location = new System.Drawing.Point(20, 178);
+            this.tabManageInventory.Location = new System.Drawing.Point(0, 85);
             this.tabManageInventory.Name = "tabManageInventory";
             this.tabManageInventory.Size = new System.Drawing.Size(175, 35);
             this.tabManageInventory.TabIndex = 15;
@@ -140,69 +271,32 @@
             this.tabStartCashiering.DarkThemeImage = global::IPCS.Properties.Resources.ic_monetization_on_white_48dp_2x;
             this.tabStartCashiering.Image = global::IPCS.Properties.Resources.ic_monetization_on_gray_48dp_2x;
             this.tabStartCashiering.LightThemeImage = global::IPCS.Properties.Resources.ic_monetization_on_black_48dp_2x;
-            this.tabStartCashiering.Location = new System.Drawing.Point(20, 137);
+            this.tabStartCashiering.Location = new System.Drawing.Point(0, 44);
             this.tabStartCashiering.Name = "tabStartCashiering";
-            this.tabStartCashiering.Size = new System.Drawing.Size(174, 35);
+            this.tabStartCashiering.Size = new System.Drawing.Size(175, 35);
             this.tabStartCashiering.TabIndex = 14;
             this.tabStartCashiering.TabText = "Start Cashiering";
             this.tabStartCashiering.Tag = "StartCashiering";
             this.tabStartCashiering.Click += new System.EventHandler(this.Tab_Click);
             // 
-            // tabHome
+            // metroPanel1
             // 
-            this.tabHome.DarkThemeImage = global::IPCS.Properties.Resources.ic_home_white_48dp_2x;
-            this.tabHome.Image = global::IPCS.Properties.Resources.ic_home_gray_48dp_2x;
-            this.tabHome.LightThemeImage = global::IPCS.Properties.Resources.ic_home_black_48dp_2x;
-            this.tabHome.Location = new System.Drawing.Point(20, 96);
-            this.tabHome.Name = "tabHome";
-            this.tabHome.Size = new System.Drawing.Size(174, 35);
-            this.tabHome.TabIndex = 2;
-            this.tabHome.TabText = "Home";
-            this.tabHome.Tag = "Home";
-            this.tabHome.Click += new System.EventHandler(this.Tab_Click);
-            // 
-            // pnlProfile
-            // 
-            this.pnlProfile.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.pnlProfile.Controls.Add(this.lblUsername);
-            this.pnlProfile.Controls.Add(this.profilePicture);
-            this.pnlProfile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlProfile.HorizontalScrollbarBarColor = true;
-            this.pnlProfile.HorizontalScrollbarHighlightOnWheel = false;
-            this.pnlProfile.HorizontalScrollbarSize = 10;
-            this.pnlProfile.Location = new System.Drawing.Point(0, 0);
-            this.pnlProfile.Name = "pnlProfile";
-            this.pnlProfile.Size = new System.Drawing.Size(200, 73);
-            this.pnlProfile.TabIndex = 4;
-            this.pnlProfile.VerticalScrollbarBarColor = true;
-            this.pnlProfile.VerticalScrollbarHighlightOnWheel = false;
-            this.pnlProfile.VerticalScrollbarSize = 10;
-            // 
-            // lblUsername
-            // 
-            this.lblUsername.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblUsername.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblUsername.Location = new System.Drawing.Point(0, 54);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(200, 19);
-            this.lblUsername.TabIndex = 4;
-            this.lblUsername.Text = "Anatawa dare?";
-            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // profilePicture
-            // 
-            this.profilePicture.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.profilePicture.BackColor = System.Drawing.Color.Transparent;
-            this.profilePicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.profilePicture.Image = global::IPCS.Properties.Resources.ic_help_black_48dp_2x;
-            this.profilePicture.Location = new System.Drawing.Point(80, 16);
-            this.profilePicture.Name = "profilePicture";
-            this.profilePicture.Size = new System.Drawing.Size(35, 35);
-            this.profilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.profilePicture.TabIndex = 5;
-            this.profilePicture.TabStop = false;
+            this.metroPanel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.metroPanel1.Controls.Add(this.tabHome);
+            this.metroPanel1.Controls.Add(this.tabHelp);
+            this.metroPanel1.Controls.Add(this.tabStartCashiering);
+            this.metroPanel1.Controls.Add(this.tabManageInventory);
+            this.metroPanel1.Controls.Add(this.tabSettings);
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(7, 133);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(203, 218);
+            this.metroPanel1.TabIndex = 2;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
             // 
             // PnlMain
             // 
@@ -212,9 +306,13 @@
             this.Name = "PnlMain";
             this.Size = new System.Drawing.Size(896, 442);
             this.pnlMetro.ResumeLayout(false);
+            this.pnlMainHolder.ResumeLayout(false);
+            this.pnlControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlTab.ResumeLayout(false);
             this.pnlProfile.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).EndInit();
+            this.metroPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -222,15 +320,21 @@
         #endregion
 
         private MetroFramework.Controls.MetroPanel pnlMetro;
-        private MetroFramework.Controls.MetroPanel pnlTab;
-        private MetroFramework.Controls.MetroPanel pnlProfile;
-        private MetroFramework.Controls.MetroLabel lblUsername;
-        private System.Windows.Forms.PictureBox profilePicture;
         private MetroFramework.Controls.MetroPanel pnlCenter;
-        private PnlTab tabHome;
-        private PnlTab tabStartCashiering;
+        private MetroFramework.Controls.MetroPanel pnlControl;
         private PnlTab tabHelp;
         private PnlTab tabSettings;
         private PnlTab tabManageInventory;
+        private PnlTab tabStartCashiering;
+        private PnlTab tabHome;
+        private MetroFramework.Controls.MetroPanel pnlProfile;
+        private MetroFramework.Controls.MetroLabel lblUsername;
+        private System.Windows.Forms.PictureBox profilePicture;
+        private MetroFramework.Controls.MetroPanel pnlMainHolder;
+        private PnlTab tabHide;
+        private PnlTab tabShow;
+        private MetroFramework.Controls.MetroPanel pnlTab;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
     }
 }

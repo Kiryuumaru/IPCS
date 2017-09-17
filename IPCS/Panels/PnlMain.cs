@@ -31,12 +31,26 @@ namespace IPCS.Panels
         {
             lblUsername.Text = Program.User.Username;
             profilePicture.Image = Program.User.ProfilePic;
+            tabShow.Hide();
+            UserControl pnlHome = new PnlHome();
+            UserControl pnlStartCashiering = new PnlStartCashiering();
+            UserControl pnlManageInventory = new PnlManageInventory();
+            UserControl pnlSettings = new PnlSettings();
+            UserControl pnlHelp = new PnlHelp();
 
-            pnlCenter.Controls.Add(new PnlHome());
-            pnlCenter.Controls.Add(new PnlStartCashiering());
-            pnlCenter.Controls.Add(new PnlManageInventory());
-            pnlCenter.Controls.Add(new PnlSettings());
-            pnlCenter.Controls.Add(new PnlHelp());
+            pnlHome.Dock = DockStyle.Fill;
+            pnlStartCashiering.Dock = DockStyle.Fill;
+            pnlManageInventory.Dock = DockStyle.Fill;
+            pnlSettings.Dock = DockStyle.Fill;
+            pnlHelp.Dock = DockStyle.Fill;
+
+            pnlCenter.Controls.Add(pnlHome);
+            pnlCenter.Controls.Add(pnlStartCashiering);
+            pnlCenter.Controls.Add(pnlManageInventory);
+            pnlControl.Controls.Add(pnlSettings);
+            pnlCenter.Controls.Add(pnlHelp);
+
+            Tab_Click(tabHome, new EventArgs());
         }
 
         private void Tab_Click(object sender, EventArgs e)
@@ -46,14 +60,36 @@ namespace IPCS.Panels
             {
                 if (p is UserControl)
                 {
-                    if (p.Name.Equals("PnlHome") && tab.Tag.Equals("Home")) p.Show();
-                    else if (p.Name.Equals("PnlStartCashiering") && tab.Tag.Equals("StartCashiering")) p.Show();
-                    else if (p.Name.Equals("PnlManageInventory") && tab.Tag.Equals("ManageInventory")) p.Show();
-                    else if (p.Name.Equals("PnlSettings") && tab.Tag.Equals("Settings")) p.Show();
-                    else if (p.Name.Equals("PnlHelp") && tab.Tag.Equals("Help")) p.Show();
+                    if (p.Name.Equals("PnlHome") && tab.Name.Equals("tabHome")) p.Show();
+                    else if (p.Name.Equals("PnlStartCashiering") && tab.Name.Equals("tabStartCashiering")) p.Show();
+                    else if (p.Name.Equals("PnlManageInventory") && tab.Name.Equals("tabManageInventory")) p.Show();
+                    else if (p.Name.Equals("PnlHelp") && tab.Name.Equals("tabHelp")) p.Show();
+                    else if (tab.Name.Equals("tabShow")) MaximizeTab();
+                    else if (tab.Name.Equals("tabHide")) MinimizeTab();
+                    else if (tab.Name.Equals("tabSettings"))
+                    {
+                        MaximizeTab();
+                        p.BringToFront();
+                        pnlTab.SendToBack();
+                    }
                     else p.Hide();
+
                 }
             }
+        }
+
+        private void MinimizeTab()
+        {
+            tabShow.Show();
+            lblUsername.Hide();
+            pnlControl.Size = new Size(50, pnlControl.Height);
+        }
+
+        private void MaximizeTab()
+        {
+            tabShow.Hide();
+            lblUsername.Show();
+            pnlControl.Size = new Size(210, pnlControl.Height);
         }
     }
 }

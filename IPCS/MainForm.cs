@@ -23,7 +23,9 @@ namespace IPCS
         {
             Program.MainStyleManager.Owner = this;
             StyleManager = Program.MainStyleManager;
-            pnlMain.Controls.Add(new Panels.PnlMain());
+            UserControl panel = new Panels.PnlMain();
+            panel.Dock = DockStyle.Fill;
+            pnlMain.Controls.Add(panel);
             StyleManager.Update();
         }
 

@@ -61,32 +61,32 @@ namespace IPCS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Icon drect_black {
+        public static System.Drawing.Bitmap drect_black {
             get {
                 object obj = ResourceManager.GetObject("drect_black", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Icon drect_gray {
+        public static System.Drawing.Bitmap drect_gray {
             get {
                 object obj = ResourceManager.GetObject("drect_gray", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Icon drect_white {
+        public static System.Drawing.Bitmap drect_white {
             get {
                 object obj = ResourceManager.GetObject("drect_white", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -146,6 +146,66 @@ namespace IPCS.Properties {
         public static System.Drawing.Bitmap ic_build_white_48dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_build_white_48dp_2x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ic_chevron_left_black_48pt_2x {
+            get {
+                object obj = ResourceManager.GetObject("ic_chevron_left_black_48pt_2x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ic_chevron_left_gray_48pt_2x {
+            get {
+                object obj = ResourceManager.GetObject("ic_chevron_left_gray_48pt_2x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ic_chevron_left_white_48pt_2x {
+            get {
+                object obj = ResourceManager.GetObject("ic_chevron_left_white_48pt_2x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ic_chevron_right_black_48pt_2x {
+            get {
+                object obj = ResourceManager.GetObject("ic_chevron_right_black_48pt_2x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ic_chevron_right_gray_48pt_2x {
+            get {
+                object obj = ResourceManager.GetObject("ic_chevron_right_gray_48pt_2x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ic_chevron_right_white_48pt_2x {
+            get {
+                object obj = ResourceManager.GetObject("ic_chevron_right_white_48pt_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,6 +273,36 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap ic_menu_black_48pt_2x {
+            get {
+                object obj = ResourceManager.GetObject("ic_menu_black_48pt_2x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ic_menu_gray_48pt_2x {
+            get {
+                object obj = ResourceManager.GetObject("ic_menu_gray_48pt_2x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ic_menu_white_48pt_2x {
+            get {
+                object obj = ResourceManager.GetObject("ic_menu_white_48pt_2x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap ic_monetization_on_black_48dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_monetization_on_black_48dp_2x", resourceCulture);
@@ -241,32 +331,32 @@ namespace IPCS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Icon line_black {
+        public static System.Drawing.Bitmap line_black {
             get {
                 object obj = ResourceManager.GetObject("line_black", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Icon line_gray {
+        public static System.Drawing.Bitmap line_gray {
             get {
                 object obj = ResourceManager.GetObject("line_gray", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Icon line_white {
+        public static System.Drawing.Bitmap line_white {
             get {
                 object obj = ResourceManager.GetObject("line_white", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -281,92 +371,82 @@ namespace IPCS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Icon o_black {
-            get {
-                object obj = ResourceManager.GetObject("o_black", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        public static System.Drawing.Icon o_gray {
-            get {
-                object obj = ResourceManager.GetObject("o_gray", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        public static System.Drawing.Icon o_white {
-            get {
-                object obj = ResourceManager.GetObject("o_white", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        public static System.Drawing.Icon rect_black {
+        public static System.Drawing.Bitmap rect_black {
             get {
                 object obj = ResourceManager.GetObject("rect_black", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Icon rect_gray {
+        public static System.Drawing.Bitmap rect_gray {
             get {
                 object obj = ResourceManager.GetObject("rect_gray", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Icon rect_white {
+        public static System.Drawing.Bitmap rect_white {
             get {
                 object obj = ResourceManager.GetObject("rect_white", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Icon x_black {
+        public static System.Drawing.Bitmap separator {
+            get {
+                object obj = ResourceManager.GetObject("separator", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap separator1 {
+            get {
+                object obj = ResourceManager.GetObject("separator1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap x_black {
             get {
                 object obj = ResourceManager.GetObject("x_black", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Icon x_gray {
+        public static System.Drawing.Bitmap x_gray {
             get {
                 object obj = ResourceManager.GetObject("x_gray", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Icon x_white {
+        public static System.Drawing.Bitmap x_white {
             get {
                 object obj = ResourceManager.GetObject("x_white", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

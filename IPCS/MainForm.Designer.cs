@@ -40,7 +40,7 @@
             this.pnlMain.Location = new System.Drawing.Point(2, 35);
             this.pnlMain.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(896, 442);
+            this.pnlMain.Size = new System.Drawing.Size(896, 463);
             this.pnlMain.TabIndex = 3;
             this.pnlMain.VerticalScrollbarBarColor = true;
             this.pnlMain.VerticalScrollbarHighlightOnWheel = false;
@@ -53,9 +53,9 @@
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(900, 500);
             this.Controls.Add(this.pnlMain);
-            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(900, 500);
             this.Name = "MainForm";
+            this.NotificationBox = false;
             this.Resizable = false;
             this.Text = "IPCS";
             this.Controls.SetChildIndex(this.pnlMain, 0);

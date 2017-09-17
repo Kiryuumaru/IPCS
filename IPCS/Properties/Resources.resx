@@ -118,97 +118,121 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="drect_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\drect-black.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="drect_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\drect-gray.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="drect_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\drect-white.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ic_assessment_black_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_assessment_black_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ic_assessment_gray_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_assessment_gray_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ic_assessment_white_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_assessment_white_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ic_build_black_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_build_black_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ic_build_gray_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_build_gray_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_build_white_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_build_white_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_chevron_right_black_48pt_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_chevron_right_black_48pt_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_help_black_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_help_black_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="x_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\x-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_help_gray_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_help_gray_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rect_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rect-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rect_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rect-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="line_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\line-gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ic_help_white_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_help_white_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_home_black_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_home_black_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="drect_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\drect-gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_home_gray_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_home_gray_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_assessment_gray_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_assessment_gray_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_home_white_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_home_white_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_assessment_black_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_assessment_black_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_monetization_on_black_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_monetization_on_black_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_assessment_white_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_assessment_white_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="separator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\separator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="line_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\line-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="x_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\x-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ic_monetization_on_gray_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_monetization_on_gray_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="rect_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rect-gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_menu_black_48pt_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_menu_black_48pt_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_menu_white_48pt_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_menu_white_48pt_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="drect_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\drect-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_chevron_right_white_48pt_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_chevron_right_white_48pt_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_home_black_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_home_black_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_help_gray_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_help_gray_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_home_white_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_home_white_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_build_black_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_build_black_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_monetization_on_black_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_monetization_on_black_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="x_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\x-gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_menu_gray_48pt_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_menu_gray_48pt_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_help_black_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_help_black_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_chevron_left_gray_48pt_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_chevron_left_gray_48pt_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_chevron_left_white_48pt_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_chevron_left_white_48pt_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_build_white_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_build_white_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ic_monetization_on_white_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_monetization_on_white_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="line_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\line-black.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="line_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\line-gray.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="line_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\line-white.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_chevron_left_black_48pt_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_chevron_left_black_48pt_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="o_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\o-black.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="drect_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\drect-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="o_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\o-gray.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="line_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\line-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="o_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\o-white.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_chevron_right_gray_48pt_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_chevron_right_gray_48pt_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rect_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rect-black.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_home_gray_48dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_home_gray_48dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rect_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rect-gray.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rect_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rect-white.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="x_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\x-black.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="x_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\x-gray.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="x_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\x-white.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="separator1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\separator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -28,7 +28,7 @@ namespace IPCS.Forms
         protected override void OnPaint(PaintEventArgs e)
         {
             SolidBrush brush = new SolidBrush(StyleMethods.ToSystemColor(Style));
-            Pen pen = new Pen(brush, 3);
+            Pen pen = new Pen(brush, 2);
             if (NotificationBox)
             {
                 e.Graphics.FillRectangle(brush, 0, Height - 25, Width, 25);
@@ -38,7 +38,7 @@ namespace IPCS.Forms
                 case MetroFormBorderStyle.None:
                     break;
                 case MetroFormBorderStyle.FixedSingle:
-                    if (WindowState == FormWindowState.Normal) e.Graphics.DrawRectangle(pen, 0, 0, Width - 1, Height - 1);
+                    if (WindowState == FormWindowState.Normal) e.Graphics.DrawRectangle(pen, 1, 1, Width - 2, Height - 2);
                     break;
             }
             RefreshComponents();
@@ -64,7 +64,7 @@ namespace IPCS.Forms
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            this.FocusMe();
+            FocusMe();
         }
 
         #endregion
@@ -156,8 +156,8 @@ namespace IPCS.Forms
             windowClose.Theme = Theme;
             windowClose.UseCustomBackColor = true;
             windowClose.UseSelectable = true;
-            windowClose.Image = Properties.Resources.x_white.ToBitmap();
-            windowClose.NoFocusImage = Properties.Resources.x_white.ToBitmap();
+            windowClose.Image = Properties.Resources.x_white;
+            windowClose.NoFocusImage = Properties.Resources.x_white;
             windowClose.MouseEnter += WindowButton_MouseEnter;
             windowClose.MouseClick += WindowButton_MouseClick;
             windowClose.MouseLeave += WindowButton_MouseLeave;
@@ -204,7 +204,7 @@ namespace IPCS.Forms
             // titleLabel
             // 
             titleLabel.AutoSize = true;
-            titleLabel.Anchor = AnchorStyles.Left;
+            titleLabel.Anchor = AnchorStyles.Left | AnchorStyles.Top;
             titleLabel.UseSelectable = true;
             titleLabel.UseCustomForeColor = true;
             titleLabel.FontWeight = MetroLabelWeight.Regular;
@@ -240,7 +240,7 @@ namespace IPCS.Forms
             switch (buttonType)
             {
                 case WindowsButton.close:
-                    this.Close();
+                    Close();
                     break;
                 case WindowsButton.maximized:
                     WindowState = FormWindowState.Normal;
@@ -274,13 +274,13 @@ namespace IPCS.Forms
             {
                 if (Theme == MetroThemeStyle.Light)
                 {
-                    windowMaximize.Image = Properties.Resources.drect_black.ToBitmap();
-                    windowMaximize.NoFocusImage = Properties.Resources.drect_black.ToBitmap();
+                    windowMaximize.Image = Properties.Resources.drect_black;
+                    windowMaximize.NoFocusImage = Properties.Resources.drect_black;
                 }
                 else
                 {
-                    windowMaximize.Image = Properties.Resources.drect_white.ToBitmap();
-                    windowMaximize.NoFocusImage = Properties.Resources.drect_white.ToBitmap();
+                    windowMaximize.Image = Properties.Resources.drect_white;
+                    windowMaximize.NoFocusImage = Properties.Resources.drect_white;
                 }
                 windowMaximize.Tag = WindowsButton.maximized;
                 CustomPanelWinControl.Location = new Point(ClientSize.Width - controlBoxSpace, 0);
@@ -289,30 +289,30 @@ namespace IPCS.Forms
             {
                 if (Theme == MetroThemeStyle.Light)
                 {
-                    windowMaximize.Image = Properties.Resources.rect_black.ToBitmap();
-                    windowMaximize.NoFocusImage = Properties.Resources.rect_black.ToBitmap();
+                    windowMaximize.Image = Properties.Resources.rect_black;
+                    windowMaximize.NoFocusImage = Properties.Resources.rect_black;
                 }
                 else
                 {
-                    windowMaximize.Image = Properties.Resources.rect_white.ToBitmap();
-                    windowMaximize.NoFocusImage = Properties.Resources.rect_white.ToBitmap();
+                    windowMaximize.Image = Properties.Resources.rect_white;
+                    windowMaximize.NoFocusImage = Properties.Resources.rect_white;
                 }
                 windowMaximize.Tag = WindowsButton.minimized;
                 CustomPanelWinControl.Location = new Point(ClientSize.Width - controlBoxSpace - 2, 2);
             }
             if (Theme == MetroThemeStyle.Light)
             {
-                windowClose.Image = Properties.Resources.x_black.ToBitmap();
-                windowClose.NoFocusImage = Properties.Resources.x_black.ToBitmap();
-                windowTray.Image = Properties.Resources.line_black.ToBitmap();
-                windowTray.NoFocusImage = Properties.Resources.line_black.ToBitmap();
+                windowClose.Image = Properties.Resources.x_black;
+                windowClose.NoFocusImage = Properties.Resources.x_black;
+                windowTray.Image = Properties.Resources.line_black;
+                windowTray.NoFocusImage = Properties.Resources.line_black;
             }
             else
             {
-                windowClose.Image = Properties.Resources.x_white.ToBitmap();
-                windowClose.NoFocusImage = Properties.Resources.x_white.ToBitmap();
-                windowTray.Image = Properties.Resources.line_white.ToBitmap();
-                windowTray.NoFocusImage = Properties.Resources.line_white.ToBitmap();
+                windowClose.Image = Properties.Resources.x_white;
+                windowClose.NoFocusImage = Properties.Resources.x_white;
+                windowTray.Image = Properties.Resources.line_white;
+                windowTray.NoFocusImage = Properties.Resources.line_white;
             }
             windowClose.BackColor = Color.Transparent;
             windowTray.BackColor = Color.Transparent;
