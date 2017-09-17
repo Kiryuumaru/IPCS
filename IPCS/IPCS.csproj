@@ -152,11 +152,11 @@
     <Compile Include="Panels\PnlManageInventory.Designer.cs">
       <DependentUpon>PnlManageInventory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panels\PnlAccountSettings.cs">
+    <Compile Include="Panels\PnlProfileSettings.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panels\PnlAccountSettings.Designer.cs">
-      <DependentUpon>PnlAccountSettings.cs</DependentUpon>
+    <Compile Include="Panels\PnlProfileSettings.Designer.cs">
+      <DependentUpon>PnlProfileSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="Panels\PnlSettings.cs">
       <SubType>UserControl</SubType>
@@ -233,8 +233,8 @@
     <EmbeddedResource Include="Panels\PnlManageInventory.resx">
       <DependentUpon>PnlManageInventory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panels\PnlAccountSettings.resx">
-      <DependentUpon>PnlAccountSettings.cs</DependentUpon>
+    <EmbeddedResource Include="Panels\PnlProfileSettings.resx">
+      <DependentUpon>PnlProfileSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panels\PnlSettings.resx">
       <DependentUpon>PnlSettings.cs</DependentUpon>
@@ -280,63 +280,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ic_home_white_48dp_2x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ic_home_black_48dp_2x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ic_build_black_48dp_2x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ic_build_white_48dp_2x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ic_assessment_white_48dp_2x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ic_help_white_48dp_2x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ic_help_black_48dp_2x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ic_monetization_on_white_48dp_2x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ic_monetization_on_black_48dp_2x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ic_assessment_black_48dp_2x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ic_assessment_gray_48dp_2x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ic_build_gray_48dp_2x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ic_help_gray_48dp_2x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ic_home_gray_48dp_2x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ic_monetization_on_gray_48dp_2x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ic_menu_black_48pt_2x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ic_menu_gray_48pt_2x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ic_menu_white_48pt_2x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\drect-black.png" />
   </ItemGroup>
   <ItemGroup>
@@ -346,31 +289,22 @@
     <None Include="Resources\drect-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\line-black.png" />
+    <None Include="Resources\ic_assessment_black_48dp_2x.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\line-gray.png" />
+    <None Include="Resources\ic_assessment_gray_48dp_2x.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\line-white.png" />
+    <None Include="Resources\ic_assessment_white_48dp_2x.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\rect-black.png" />
+    <None Include="Resources\ic_build_black_48dp_2x.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\rect-gray.png" />
+    <None Include="Resources\ic_build_gray_48dp_2x.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\rect-white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\x-black.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\x-gray.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\x-white.png" />
+    <None Include="Resources\ic_build_white_48dp_2x.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ic_chevron_left_black_48pt_2x.png" />
@@ -389,6 +323,84 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ic_chevron_right_white_48pt_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_help_black_48dp_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_help_gray_48dp_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_help_white_48dp_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_home_black_48dp_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_home_gray_48dp_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_home_white_48dp_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_menu_48pt_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_menu_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_menu_black_48pt_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_menu_gray_48pt_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_menu_white_48pt_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_menu_white_48pt_3x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_monetization_on_black_48dp_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_monetization_on_gray_48dp_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_monetization_on_white_48dp_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_selected_gray_48dp_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-white.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\separator.png" />

@@ -17,7 +17,7 @@ namespace IPCS.Panels
 
         private void Close_Click(object sender, EventArgs e)
         {
-            SendToBack();
+            Hide();
         }
 
         public void UpdateComponents()

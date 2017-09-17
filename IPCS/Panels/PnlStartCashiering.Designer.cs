@@ -276,7 +276,6 @@
             this.metroTextBoxSearchI.MaxLength = 32767;
             this.metroTextBoxSearchI.Name = "metroTextBoxSearchI";
             this.metroTextBoxSearchI.PasswordChar = '\0';
-            this.metroTextBoxSearchI.PromptText = "Label name";
             this.metroTextBoxSearchI.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.metroTextBoxSearchI.SelectedText = "";
             this.metroTextBoxSearchI.SelectionLength = 0;

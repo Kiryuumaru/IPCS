@@ -44,8 +44,10 @@
             this.tileBrown = new MetroFramework.Controls.MetroTile();
             this.tilePink = new MetroFramework.Controls.MetroTile();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.separator = new System.Windows.Forms.PictureBox();
             this.tabClose = new IPCS.Panels.PnlTab();
             this.metroPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.separator)).BeginInit();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -215,6 +217,7 @@
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.separator);
             this.metroPanel1.Controls.Add(this.tabClose);
             this.metroPanel1.Controls.Add(this.metroLabel1);
             this.metroPanel1.Controls.Add(this.tileSilver);
@@ -236,22 +239,34 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(0, 0);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(207, 442);
+            this.metroPanel1.Size = new System.Drawing.Size(210, 442);
             this.metroPanel1.TabIndex = 31;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // separator
+            // 
+            this.separator.Dock = System.Windows.Forms.DockStyle.Right;
+            this.separator.Image = ((System.Drawing.Image)(resources.GetObject("separator.Image")));
+            this.separator.Location = new System.Drawing.Point(208, 0);
+            this.separator.Name = "separator";
+            this.separator.Size = new System.Drawing.Size(2, 442);
+            this.separator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.separator.TabIndex = 36;
+            this.separator.TabStop = false;
             // 
             // tabClose
             // 
             this.tabClose.DarkThemeImage = ((System.Drawing.Image)(resources.GetObject("tabClose.DarkThemeImage")));
             this.tabClose.Image = ((System.Drawing.Image)(resources.GetObject("tabClose.Image")));
             this.tabClose.LightThemeImage = ((System.Drawing.Image)(resources.GetObject("tabClose.LightThemeImage")));
-            this.tabClose.Location = new System.Drawing.Point(49, 0);
+            this.tabClose.Location = new System.Drawing.Point(171, 0);
             this.tabClose.Name = "tabClose";
-            this.tabClose.Size = new System.Drawing.Size(141, 35);
+            this.tabClose.Size = new System.Drawing.Size(33, 35);
             this.tabClose.TabIndex = 35;
-            this.tabClose.TabText = "Back to menu";
+            this.tabClose.TabText = "";
+            this.tabClose.Toggled = false;
             this.tabClose.Click += new System.EventHandler(this.Close_Click);
             // 
             // PnlSettings
@@ -260,9 +275,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.metroPanel1);
             this.Name = "PnlSettings";
-            this.Size = new System.Drawing.Size(207, 442);
+            this.Size = new System.Drawing.Size(210, 442);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.separator)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -285,5 +301,6 @@
         private MetroFramework.Controls.MetroTile tilePink;
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private PnlTab tabClose;
+        private System.Windows.Forms.PictureBox separator;
     }
 }

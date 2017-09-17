@@ -1,6 +1,6 @@
 ﻿namespace IPCS.Panels
 {
-    partial class PnlAccountSettings
+    partial class PnlProfileSettings
     {
         /// <summary> 
         /// Required designer variable.
@@ -360,12 +360,12 @@
             this.tilePink.UseSelectable = true;
             this.tilePink.Click += new System.EventHandler(this.Tile_MouseClick);
             // 
-            // PnlAccountSettings
+            // PnlProfileSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlMetro);
-            this.Name = "PnlAccountSettings";
+            this.Name = "PnlProfileSettings";
             this.Size = new System.Drawing.Size(707, 435);
             this.pnlMetro.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);

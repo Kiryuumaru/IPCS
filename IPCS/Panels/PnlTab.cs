@@ -25,6 +25,12 @@ namespace IPCS.Panels
 
         #region Threads
 
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            RefreshTab();
+        }
+
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
@@ -35,6 +41,22 @@ namespace IPCS.Panels
             Application.DoEvents();
         }
 
+        public void RefreshTab()
+        {
+            if (_Toggled)
+            {
+                if (pnlMetroTab.Theme == MetroThemeStyle.Light) lblTab.ForeColor = Color.Black;
+                else lblTab.ForeColor = Color.White;
+                if (pnlMetroTab.Theme == MetroThemeStyle.Light) pictureBoxTab.Image = LightThemeImage;
+                else pictureBoxTab.Image = DarkThemeImage;
+            }
+            else
+            {
+                lblTab.ForeColor = SystemColors.ControlDarkDark;
+                pictureBoxTab.Image = Image;
+            }
+        }
+
         #endregion
 
         #region Properties
@@ -42,6 +64,23 @@ namespace IPCS.Panels
         [Category("Appearance"), Browsable(true)]
         [Description("Tab text")]
         public string TabText { get; set; }
+
+        public bool _Toggled = false;
+        [Category("Appearance"), Browsable(true)]
+        [Description("Tab text")]
+        public bool Toggled
+        {
+            get
+            {
+                RefreshTab();
+                return _Toggled;
+            }
+            set
+            {
+                _Toggled = value;
+                RefreshTab();
+            }
+        }
 
         [Category("Appearance"), Browsable(true)]
         [Description("Default image")]
@@ -63,7 +102,7 @@ namespace IPCS.Panels
         {
             foreach (Control ctl in cont.Controls)
             {
-                ctl.Click += ctl_Click;
+                ctl.Click += Event_Click;
                 if (ctl.HasChildren)
                 {
                     WireAllControls(ctl);
@@ -71,13 +110,14 @@ namespace IPCS.Panels
             }
         }
 
-        private void ctl_Click(object sender, EventArgs e)
+        private void Event_Click(object sender, EventArgs e)
         {
             InvokeOnClick(this, EventArgs.Empty);
         }
 
         private void Tab_Enter(object sender, EventArgs e)
         {
+            if (Toggled) return;
             if (pnlMetroTab.Theme == MetroThemeStyle.Light) lblTab.ForeColor = Color.Black;
             else lblTab.ForeColor = Color.White;
             if (pnlMetroTab.Theme == MetroThemeStyle.Light) pictureBoxTab.Image = LightThemeImage;
@@ -86,6 +126,7 @@ namespace IPCS.Panels
 
         private void Tab_Leave(object sender, EventArgs e)
         {
+            if (Toggled) return;
             lblTab.ForeColor = SystemColors.ControlDarkDark;
             pictureBoxTab.Image = Image;
         }

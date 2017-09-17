@@ -118,6 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="separator.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABkCAYAAABOx/oaAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAMFJREFUSEvt1b0NwjAQBeAMQUnBABSMwCApkG3ZFAzBBhknJcMwiHkvSgzSO/Ej
+        BSOkFNaLP9nSFc5dk3OW9VWMMa4EQwhHQe99J4iTvYUXQVy/CuIk4hUC1kRmwZTShsicCwE7onNuWxCF
+        74nMn2A7YlsQcCAy6yNKOY04vJIJz0Tmggv+NerzxqbOz2UiStImgE21FqQIGFols+D7nfZzxLo3fy7i
+        9P0cUbg5enRIAXWc4bo5+HREmsP0cc2PubkBOBWxQrqD5WkAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="tabClose.DarkThemeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAAAT1JREFUeF7t

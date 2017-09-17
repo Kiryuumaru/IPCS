@@ -123,7 +123,6 @@
             this.metroTextBoxInventorySearchI.MaxLength = 32767;
             this.metroTextBoxInventorySearchI.Name = "metroTextBoxInventorySearchI";
             this.metroTextBoxInventorySearchI.PasswordChar = '\0';
-            this.metroTextBoxInventorySearchI.PromptText = "Label name";
             this.metroTextBoxInventorySearchI.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.metroTextBoxInventorySearchI.SelectedText = "";
             this.metroTextBoxInventorySearchI.SelectionLength = 0;
@@ -266,7 +265,6 @@
             this.metroTextBoxPasswordI.MaxLength = 32767;
             this.metroTextBoxPasswordI.Name = "metroTextBoxPasswordI";
             this.metroTextBoxPasswordI.PasswordChar = '●';
-            this.metroTextBoxPasswordI.PromptText = "Admin password";
             this.metroTextBoxPasswordI.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.metroTextBoxPasswordI.SelectedText = "";
             this.metroTextBoxPasswordI.SelectionLength = 0;

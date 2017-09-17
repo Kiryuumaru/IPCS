@@ -15,10 +15,10 @@ using MetroFramework.Controls;
 
 namespace IPCS.Panels
 {
-    public partial class PnlAccountSettings : UserControl
+    public partial class PnlProfileSettings : UserControl
     {
 
-        public PnlAccountSettings()
+        public PnlProfileSettings()
         {
             InitializeComponent();
             UpdateComponents();
