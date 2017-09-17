@@ -258,9 +258,9 @@
             // 
             // tabClose
             // 
-            this.tabClose.DarkThemeImage = ((System.Drawing.Image)(resources.GetObject("tabClose.DarkThemeImage")));
-            this.tabClose.Image = ((System.Drawing.Image)(resources.GetObject("tabClose.Image")));
-            this.tabClose.LightThemeImage = ((System.Drawing.Image)(resources.GetObject("tabClose.LightThemeImage")));
+            this.tabClose.DarkThemeImage = global::IPCS.Properties.Resources.ic_chevron_left_gray_48pt_2x;
+            this.tabClose.Image = global::IPCS.Properties.Resources.ic_chevron_left_white_48pt_2x;
+            this.tabClose.LightThemeImage = global::IPCS.Properties.Resources.ic_chevron_left_black_48pt_2x;
             this.tabClose.Location = new System.Drawing.Point(171, 0);
             this.tabClose.Name = "tabClose";
             this.tabClose.Size = new System.Drawing.Size(33, 35);

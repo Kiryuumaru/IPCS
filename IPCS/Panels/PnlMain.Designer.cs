@@ -125,7 +125,7 @@
             // 
             this.separator.BackColor = System.Drawing.Color.Transparent;
             this.separator.Dock = System.Windows.Forms.DockStyle.Right;
-            this.separator.Image = ((System.Drawing.Image)(resources.GetObject("separator.Image")));
+            this.separator.Image = global::IPCS.Properties.Resources.separator;
             this.separator.Location = new System.Drawing.Point(210, 0);
             this.separator.Margin = new System.Windows.Forms.Padding(0);
             this.separator.Name = "separator";
@@ -171,9 +171,9 @@
             // 
             // tabHome
             // 
-            this.tabHome.DarkThemeImage = ((System.Drawing.Image)(resources.GetObject("tabHome.DarkThemeImage")));
-            this.tabHome.Image = ((System.Drawing.Image)(resources.GetObject("tabHome.Image")));
-            this.tabHome.LightThemeImage = ((System.Drawing.Image)(resources.GetObject("tabHome.LightThemeImage")));
+            this.tabHome.DarkThemeImage = global::IPCS.Properties.Resources.ic_home_white_48dp_2x;
+            this.tabHome.Image = global::IPCS.Properties.Resources.ic_home_gray_48dp_2x;
+            this.tabHome.LightThemeImage = global::IPCS.Properties.Resources.ic_home_black_48dp_2x;
             this.tabHome.Location = new System.Drawing.Point(0, 3);
             this.tabHome.Name = "tabHome";
             this.tabHome.Size = new System.Drawing.Size(175, 35);
@@ -185,9 +185,9 @@
             // 
             // tabHelp
             // 
-            this.tabHelp.DarkThemeImage = ((System.Drawing.Image)(resources.GetObject("tabHelp.DarkThemeImage")));
-            this.tabHelp.Image = ((System.Drawing.Image)(resources.GetObject("tabHelp.Image")));
-            this.tabHelp.LightThemeImage = ((System.Drawing.Image)(resources.GetObject("tabHelp.LightThemeImage")));
+            this.tabHelp.DarkThemeImage = global::IPCS.Properties.Resources.ic_help_white_48dp_2x;
+            this.tabHelp.Image = global::IPCS.Properties.Resources.ic_help_gray_48dp_2x;
+            this.tabHelp.LightThemeImage = global::IPCS.Properties.Resources.ic_help_black_48dp_2x;
             this.tabHelp.Location = new System.Drawing.Point(1, 167);
             this.tabHelp.Name = "tabHelp";
             this.tabHelp.Size = new System.Drawing.Size(174, 35);
@@ -199,9 +199,9 @@
             // 
             // tabStartCashiering
             // 
-            this.tabStartCashiering.DarkThemeImage = ((System.Drawing.Image)(resources.GetObject("tabStartCashiering.DarkThemeImage")));
-            this.tabStartCashiering.Image = ((System.Drawing.Image)(resources.GetObject("tabStartCashiering.Image")));
-            this.tabStartCashiering.LightThemeImage = ((System.Drawing.Image)(resources.GetObject("tabStartCashiering.LightThemeImage")));
+            this.tabStartCashiering.DarkThemeImage = global::IPCS.Properties.Resources.ic_monetization_on_white_48dp_2x;
+            this.tabStartCashiering.Image = global::IPCS.Properties.Resources.ic_monetization_on_gray_48dp_2x;
+            this.tabStartCashiering.LightThemeImage = global::IPCS.Properties.Resources.ic_monetization_on_black_48dp_2x;
             this.tabStartCashiering.Location = new System.Drawing.Point(0, 44);
             this.tabStartCashiering.Name = "tabStartCashiering";
             this.tabStartCashiering.Size = new System.Drawing.Size(175, 35);
@@ -213,9 +213,9 @@
             // 
             // tabManageInventory
             // 
-            this.tabManageInventory.DarkThemeImage = ((System.Drawing.Image)(resources.GetObject("tabManageInventory.DarkThemeImage")));
-            this.tabManageInventory.Image = ((System.Drawing.Image)(resources.GetObject("tabManageInventory.Image")));
-            this.tabManageInventory.LightThemeImage = ((System.Drawing.Image)(resources.GetObject("tabManageInventory.LightThemeImage")));
+            this.tabManageInventory.DarkThemeImage = global::IPCS.Properties.Resources.ic_assessment_white_48dp_2x;
+            this.tabManageInventory.Image = global::IPCS.Properties.Resources.ic_assessment_gray_48dp_2x;
+            this.tabManageInventory.LightThemeImage = global::IPCS.Properties.Resources.ic_assessment_black_48dp_2x;
             this.tabManageInventory.Location = new System.Drawing.Point(0, 85);
             this.tabManageInventory.Name = "tabManageInventory";
             this.tabManageInventory.Size = new System.Drawing.Size(175, 35);
@@ -227,9 +227,9 @@
             // 
             // tabSettings
             // 
-            this.tabSettings.DarkThemeImage = ((System.Drawing.Image)(resources.GetObject("tabSettings.DarkThemeImage")));
-            this.tabSettings.Image = ((System.Drawing.Image)(resources.GetObject("tabSettings.Image")));
-            this.tabSettings.LightThemeImage = ((System.Drawing.Image)(resources.GetObject("tabSettings.LightThemeImage")));
+            this.tabSettings.DarkThemeImage = global::IPCS.Properties.Resources.ic_build_white_48dp_2x;
+            this.tabSettings.Image = global::IPCS.Properties.Resources.ic_build_gray_48dp_2x;
+            this.tabSettings.LightThemeImage = global::IPCS.Properties.Resources.ic_build_black_48dp_2x;
             this.tabSettings.Location = new System.Drawing.Point(1, 126);
             this.tabSettings.Name = "tabSettings";
             this.tabSettings.Size = new System.Drawing.Size(174, 35);
@@ -260,9 +260,9 @@
             // 
             // tabShow
             // 
-            this.tabShow.DarkThemeImage = ((System.Drawing.Image)(resources.GetObject("tabShow.DarkThemeImage")));
-            this.tabShow.Image = ((System.Drawing.Image)(resources.GetObject("tabShow.Image")));
-            this.tabShow.LightThemeImage = ((System.Drawing.Image)(resources.GetObject("tabShow.LightThemeImage")));
+            this.tabShow.DarkThemeImage = global::IPCS.Properties.Resources.ic_chevron_right_white_48pt_2x;
+            this.tabShow.Image = global::IPCS.Properties.Resources.ic_chevron_right_gray_48pt_2x;
+            this.tabShow.LightThemeImage = global::IPCS.Properties.Resources.ic_chevron_right_black_48pt_2x;
             this.tabShow.Location = new System.Drawing.Point(8, 0);
             this.tabShow.Name = "tabShow";
             this.tabShow.Size = new System.Drawing.Size(35, 35);
@@ -273,9 +273,9 @@
             // 
             // tabHide
             // 
-            this.tabHide.DarkThemeImage = ((System.Drawing.Image)(resources.GetObject("tabHide.DarkThemeImage")));
-            this.tabHide.Image = ((System.Drawing.Image)(resources.GetObject("tabHide.Image")));
-            this.tabHide.LightThemeImage = ((System.Drawing.Image)(resources.GetObject("tabHide.LightThemeImage")));
+            this.tabHide.DarkThemeImage = global::IPCS.Properties.Resources.ic_chevron_left_white_48pt_2x;
+            this.tabHide.Image = global::IPCS.Properties.Resources.ic_chevron_left_gray_48pt_2x;
+            this.tabHide.LightThemeImage = global::IPCS.Properties.Resources.ic_chevron_left_black_48pt_2x;
             this.tabHide.Location = new System.Drawing.Point(169, 0);
             this.tabHide.Name = "tabHide";
             this.tabHide.Size = new System.Drawing.Size(35, 35);
@@ -299,7 +299,7 @@
             // 
             this.profilePicture.BackColor = System.Drawing.Color.Transparent;
             this.profilePicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.profilePicture.Image = ((System.Drawing.Image)(resources.GetObject("profilePicture.Image")));
+            this.profilePicture.Image = global::IPCS.Properties.Resources.logo;
             this.profilePicture.Location = new System.Drawing.Point(66, 36);
             this.profilePicture.Name = "profilePicture";
             this.profilePicture.Size = new System.Drawing.Size(75, 75);
