@@ -15,6 +15,12 @@ namespace IPCS.Panels
         public PnlManageInventory()
         {
             InitializeComponent();
+            UpdateComponents();
+        }
+
+        private void UpdateComponents()
+        {
+            //metroGridInventory.DataSource = new 
         }
     }
 }

@@ -105,9 +105,6 @@
             this.metroTextBoxInventorySearchI.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.metroTextBoxInventorySearchI.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            // 
-            // 
-            // 
             this.metroTextBoxInventorySearchI.CustomButton.Image = null;
             this.metroTextBoxInventorySearchI.CustomButton.Location = new System.Drawing.Point(305, 1);
             this.metroTextBoxInventorySearchI.CustomButton.Name = "";
@@ -247,9 +244,6 @@
             this.metroButtonEditProduct.UseSelectable = true;
             // 
             // metroTextBoxPasswordI
-            // 
-            // 
-            // 
             // 
             this.metroTextBoxPasswordI.CustomButton.Image = null;
             this.metroTextBoxPasswordI.CustomButton.Location = new System.Drawing.Point(143, 1);

@@ -10,6 +10,7 @@ using IPCS.Forms;
 using IPCS.DatabaseManager;
 using MetroFramework;
 using MetroFramework.Components;
+using IPCS.Data;
 
 namespace IPCS
 {
@@ -63,8 +64,8 @@ namespace IPCS
 
         public static bool Signup(string username, string password, string recoveryKey, Image profilePic)
         {
-            Data.Product prod = new Data.Product(0, "testName", 100, 99, 10);
-            Data.Inventory inv = new Data.Inventory();
+            Product prod = new Product(0, "testName", 100, 99, 10);
+            Inventory inv = new Inventory();
             inv.NewProduct(prod);
             User user = new User(username, password, recoveryKey, profilePic, inv);
             return Database.CreateUser(user);

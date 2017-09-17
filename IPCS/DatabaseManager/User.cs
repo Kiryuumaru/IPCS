@@ -13,12 +13,12 @@ namespace IPCS.DatabaseManager
     {
         #region Constructor
 
-        public User(string username, string password, string recoveryKey, Image profilePic, Inventory data)
+        public User(string username, string password, string recoveryKey, Image profilePic, Inventory inventory)
         {
             _Username = username;
             _Password = password;
             _RecoveryKey = recoveryKey;
-            _Data = data;
+            Inventory = inventory;
             ProfilePic = profilePic;
             StyleManager = new MetroFramework.Components.MetroStyleManager();
         }
@@ -26,15 +26,6 @@ namespace IPCS.DatabaseManager
         #endregion
 
         #region Properties
-
-        private Inventory _Data;
-        public Inventory Data
-        {
-            get
-            {
-                return _Data;
-            }
-        }
 
         private string _Username;
         public string Username
@@ -61,6 +52,8 @@ namespace IPCS.DatabaseManager
             if (password.Equals(_Password)) return _RecoveryKey;
             return null;
         }
+
+        public Inventory Inventory { get; set; }
 
         public string _StyleManager;
         public MetroFramework.Components.MetroStyleManager StyleManager
