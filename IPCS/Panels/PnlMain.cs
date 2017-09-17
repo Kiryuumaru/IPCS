@@ -75,23 +75,10 @@ namespace IPCS.Panels
                 {
                     if (p is UserControl)
                     {
-                        if (p.Name.Equals("PnlHome") && tab.Name.Equals("tabHome"))
-                        {
-                            p.Show();
-                        }
-                        else if (p.Name.Equals("PnlStartCashiering") && tab.Name.Equals("tabStartCashiering"))
-                        {
-                            p.Show();
-                        }
-                        else if (p.Name.Equals("PnlManageInventory") && tab.Name.Equals("tabManageInventory"))
-                        {
-                            p.Show();
-                        }
-                        else if (p.Name.Equals("PnlHelp") && tab.Name.Equals("tabHelp"))
-                        {
-                            p.Show();
-
-                        }
+                        if (p.Name.Equals("PnlHome") && tab.Name.Equals("tabHome")) p.Show();
+                        else if (p.Name.Equals("PnlStartCashiering") && tab.Name.Equals("tabStartCashiering")) p.Show();
+                        else if (p.Name.Equals("PnlManageInventory") && tab.Name.Equals("tabManageInventory")) p.Show();
+                        else if (p.Name.Equals("PnlHelp") && tab.Name.Equals("tabHelp")) p.Show();
                         else p.Hide();
                     }
                 }
