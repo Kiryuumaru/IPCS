@@ -44,6 +44,7 @@
             this.tileBrown = new MetroFramework.Controls.MetroTile();
             this.tilePink = new MetroFramework.Controls.MetroTile();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.lblTitle = new MetroFramework.Controls.MetroLabel();
             this.separator = new System.Windows.Forms.PictureBox();
             this.tabClose = new IPCS.Panels.PnlTab();
             this.metroPanel1.SuspendLayout();
@@ -217,6 +218,7 @@
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.lblTitle);
             this.metroPanel1.Controls.Add(this.separator);
             this.metroPanel1.Controls.Add(this.tabClose);
             this.metroPanel1.Controls.Add(this.metroLabel1);
@@ -245,6 +247,17 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblTitle.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblTitle.Location = new System.Drawing.Point(5, 6);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(81, 25);
+            this.lblTitle.TabIndex = 37;
+            this.lblTitle.Text = "Settings";
+            // 
             // separator
             // 
             this.separator.Dock = System.Windows.Forms.DockStyle.Right;
@@ -258,9 +271,9 @@
             // 
             // tabClose
             // 
-            this.tabClose.DarkThemeImage = global::IPCS.Properties.Resources.ic_chevron_left_gray_48pt_2x;
-            this.tabClose.Image = global::IPCS.Properties.Resources.ic_chevron_left_white_48pt_2x;
-            this.tabClose.LightThemeImage = global::IPCS.Properties.Resources.ic_chevron_left_black_48pt_2x;
+            this.tabClose.DarkThemeImage = global::IPCS.Properties.Resources.ic_close_white_48dp;
+            this.tabClose.Image = global::IPCS.Properties.Resources.ic_close_gray_48dp;
+            this.tabClose.LightThemeImage = global::IPCS.Properties.Resources.ic_close_black_48dp;
             this.tabClose.Location = new System.Drawing.Point(171, 0);
             this.tabClose.Name = "tabClose";
             this.tabClose.Size = new System.Drawing.Size(33, 35);
@@ -302,5 +315,6 @@
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private PnlTab tabClose;
         private System.Windows.Forms.PictureBox separator;
+        private MetroFramework.Controls.MetroLabel lblTitle;
     }
 }

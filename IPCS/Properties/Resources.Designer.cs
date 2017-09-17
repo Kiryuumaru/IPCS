@@ -213,6 +213,36 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap ic_close_black_48dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_close_black_48dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ic_close_gray_48dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_close_gray_48dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ic_close_white_48dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_close_white_48dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap ic_help_black_48dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_help_black_48dp_2x", resourceCulture);
