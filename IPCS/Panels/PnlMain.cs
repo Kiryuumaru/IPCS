@@ -66,7 +66,8 @@ namespace IPCS.Panels
             }
             else if (tab.Name.Equals("tabSettings"))
             {
-                pnlSettings.Show();
+                if(pnlSettings.Visible) pnlSettings.Hide();
+                else pnlSettings.Show();
             }
             else
             {
@@ -76,22 +77,18 @@ namespace IPCS.Panels
                     {
                         if (p.Name.Equals("PnlHome") && tab.Name.Equals("tabHome"))
                         {
-                            ToggleTab(tab);
                             p.Show();
                         }
                         else if (p.Name.Equals("PnlStartCashiering") && tab.Name.Equals("tabStartCashiering"))
                         {
-                            ToggleTab(tab);
                             p.Show();
                         }
                         else if (p.Name.Equals("PnlManageInventory") && tab.Name.Equals("tabManageInventory"))
                         {
-                            ToggleTab(tab);
                             p.Show();
                         }
                         else if (p.Name.Equals("PnlHelp") && tab.Name.Equals("tabHelp"))
                         {
-                            ToggleTab(tab);
                             p.Show();
 
                         }
@@ -99,16 +96,6 @@ namespace IPCS.Panels
                     }
                 }
             }
-        }
-
-        private void ToggleTab(PnlTab tab)
-        {
-            /*tabHome.Toggled = false;
-            tabStartCashiering.Toggled = false;
-            tabManageInventory.Toggled = false;
-            tabSettings.Toggled = false;
-            tabHelp.Toggled = false;
-            tab.Toggled = true;*/
         }
         
         private void MinimizeTab()
