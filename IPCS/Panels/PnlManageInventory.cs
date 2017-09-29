@@ -19,8 +19,9 @@ namespace IPCS.Panels
         }
 
         private void UpdateComponents()
-        {
-            //metroGridInventory.DataSource = new 
+        {/*
+            metroGridInventory.Columns[0] = Program.User.Inventory.GetColumn(Data.Columns.ID);
+            metroGridInventory.Columns.*/
         }
     }
 }

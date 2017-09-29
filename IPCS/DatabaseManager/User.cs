@@ -13,6 +13,16 @@ namespace IPCS.DatabaseManager
     {
         #region Constructor
 
+        public User(string username, string password, string recoveryKey, Image profilePic)
+        {
+            _Username = username;
+            _Password = password;
+            _RecoveryKey = recoveryKey;
+            Inventory = new Inventory();
+            ProfilePic = profilePic;
+            StyleManager = new MetroFramework.Components.MetroStyleManager();
+        }
+
         public User(string username, string password, string recoveryKey, Image profilePic, Inventory inventory)
         {
             _Username = username;

@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animations\Transitions.cs" />
+    <Compile Include="Data\_Enums.cs" />
     <Compile Include="Extension.cs" />
     <Compile Include="Forms\CashierForm.cs">
       <SubType>Form</SubType>

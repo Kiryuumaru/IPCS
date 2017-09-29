@@ -25,7 +25,6 @@ namespace IPCS
         static void Main()
         {
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
-            //Application.ThreadException += new ThreadExceptionEventHandler(ErrorHandlerForm.Form1_UIThreadException);
             Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -34,7 +33,7 @@ namespace IPCS
 
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            PrintDebug("something went wrong \n" + e.ToString());
+            PrintDebug("something went wrong desu\n" + e.ToString());
         }
 
         #endregion
@@ -65,8 +64,12 @@ namespace IPCS
         public static bool Signup(string username, string password, string recoveryKey, Image profilePic)
         {
             Product prod = new Product(0, "testName", 100, 99, 10);
+            Product prod2 = new Product(0, "testName2", 100, 99, 10);
+            Product prod3 = new Product(0, "testName3", 100, 99, 10);
             Inventory inv = new Inventory();
-            inv.NewProduct(prod);
+            inv.AddProduct(prod);
+            inv.AddProduct(prod2);
+            inv.AddProduct(prod3);
             User user = new User(username, password, recoveryKey, profilePic, inv);
             return Database.CreateUser(user);
         }

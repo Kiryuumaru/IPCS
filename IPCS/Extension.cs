@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
@@ -39,11 +38,6 @@ namespace IPCS
                 ms.Position = 0;
                 return new BinaryFormatter().Deserialize(ms);
             }
-        }
-
-        public static Data GetData()
-        {
-            DataRow data = new DataRow
         }
     }
 }
