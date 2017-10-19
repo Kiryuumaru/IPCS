@@ -24,7 +24,7 @@ namespace IPCS.Forms
         #endregion
 
         #region Paint Method
-        
+
         protected override void OnPaint(PaintEventArgs e)
         {
             SolidBrush brush = new SolidBrush(StyleMethods.ToSystemColor(Style));
@@ -96,6 +96,19 @@ namespace IPCS.Forms
             set { _DisplayTitle = value; }
         }
 
+        private string _NotifDefaultText = "";
+        [Category("Metro Appearance")]
+        public string NotifDefaultText
+        {
+            get { return _NotifDefaultText; }
+            set
+            {
+                _NotifDefaultText = value;
+                notifLabel.Text = value;
+                RefreshComponents();
+            }
+        }
+
         public new Padding Padding
         {
             get { return base.Padding; }
@@ -111,7 +124,13 @@ namespace IPCS.Forms
         {
             get { return new Padding(2, ControlBox ? 35 : 2, 2, NotificationBox ? 23 : 2); }
         }
-        
+
+        public void NotifSetDefault()
+        {
+            notifLabel.Text = _NotifDefaultText;
+            RefreshComponents();
+        }
+
         public string NotifText
         {
             get { return notifLabel.Text; }
@@ -194,7 +213,7 @@ namespace IPCS.Forms
             // 
             notifLabel.AutoSize = true;
             notifLabel.Anchor = AnchorStyles.Left;
-            notifLabel.Text = "null desu";
+            notifLabel.Text = _NotifDefaultText;
             notifLabel.UseSelectable = true;
             notifLabel.UseCustomBackColor = true;
             notifLabel.UseCustomForeColor = true;

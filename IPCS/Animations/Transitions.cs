@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Activities.Statements;
 
 namespace IPCS.Animations
 {
@@ -11,9 +12,14 @@ namespace IPCS.Animations
     {
 
     }
+    public enum AnimationType
+    {
+        MinimizeWidth,
+        MaximizeWidth
+    }
 
     public class Transitions
     {
-
+        //public 
     }
 }

@@ -8,6 +8,7 @@ namespace IPCS.Data
 {
     public enum Columns
     {
+        None,
         ID,
         ProductName,
         Price,
@@ -16,6 +17,8 @@ namespace IPCS.Data
         CurrentSale,
         ExpextedSale,
         CurrentGain,
-        ExpectedGain
+        ExpectedGain,
+        Cart_ItemQuantity,
+        Cart_ItemTotal
     }
 }

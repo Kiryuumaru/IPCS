@@ -69,6 +69,9 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\Visual Studio 2017\Bunifu UI 1.5.3\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
     <Reference Include="Costura, Version=1.6.2.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
       <HintPath>packages\Costura.Fody.1.6.2\lib\dotnet\Costura.dll</HintPath>
       <Private>True</Private>
@@ -90,6 +93,7 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Activities" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -110,17 +114,29 @@
     <Compile Include="Animations\Transitions.cs" />
     <Compile Include="Data\_Enums.cs" />
     <Compile Include="Extension.cs" />
-    <Compile Include="Forms\CashierForm.cs">
+    <Compile Include="Forms\AddProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CashierForm.Designer.cs">
-      <DependentUpon>CashierForm.cs</DependentUpon>
+    <Compile Include="Forms\AddProductForm.Designer.cs">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\InventoryForm.cs">
+    <Compile Include="Forms\EditProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\InventoryForm.Designer.cs">
-      <DependentUpon>InventoryForm.cs</DependentUpon>
+    <Compile Include="Forms\EditProductForm.Designer.cs">
+      <DependentUpon>EditProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GetQuantityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GetQuantityForm.Designer.cs">
+      <DependentUpon>GetQuantityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReceiptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReceiptForm.Designer.cs">
+      <DependentUpon>ReceiptForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -204,14 +220,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\CashierForm.resx">
-      <DependentUpon>CashierForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AddProductForm.resx">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomForm.resx">
       <DependentUpon>CustomForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\InventoryForm.resx">
-      <DependentUpon>InventoryForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\EditProductForm.resx">
+      <DependentUpon>EditProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GetQuantityForm.resx">
+      <DependentUpon>GetQuantityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReceiptForm.resx">
+      <DependentUpon>ReceiptForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

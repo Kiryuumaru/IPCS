@@ -178,7 +178,7 @@
             this.tabHome.Name = "tabHome";
             this.tabHome.Size = new System.Drawing.Size(175, 35);
             this.tabHome.TabIndex = 2;
-            this.tabHome.TabText = "Home";
+            this.tabHome.TabText = "Profile";
             this.tabHome.Tag = "Home";
             this.tabHome.Toggled = false;
             this.tabHome.Click += new System.EventHandler(this.Tab_Click);
@@ -192,7 +192,7 @@
             this.tabHelp.Name = "tabHelp";
             this.tabHelp.Size = new System.Drawing.Size(174, 35);
             this.tabHelp.TabIndex = 17;
-            this.tabHelp.TabText = "Help";
+            this.tabHelp.TabText = "About Us";
             this.tabHelp.Tag = "Help";
             this.tabHelp.Toggled = false;
             this.tabHelp.Click += new System.EventHandler(this.Tab_Click);
@@ -287,7 +287,6 @@
             // lblUsername
             // 
             this.lblUsername.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblUsername.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblUsername.Location = new System.Drawing.Point(0, 97);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(210, 19);

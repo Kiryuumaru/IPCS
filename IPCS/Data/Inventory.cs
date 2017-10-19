@@ -27,6 +27,22 @@ namespace IPCS.Data
 
         #region Members
 
+        public int ProductCount { get { return Products.Count; } }
+
+        public Product GetProduct(int id)
+        {
+            for (int i = 0; i < Products.Count; i++)
+            {
+                if (Products[i].ID.Equals(id)) return Products[i];
+            }
+            return null;
+        }
+
+        public int GetID(int listIndex)
+        {
+            return listIndex + 1;
+        }
+
         public void AddProduct(Product product)
         {
             Products.Add(product);
@@ -34,15 +50,28 @@ namespace IPCS.Data
 
         public void DeleteProduct(int id)
         {
-            for(int i = 0; i < Products.Count; i++)
+            for (int i = 0; i < Products.Count; i++)
             {
                 if (Products[i].ID.Equals(id)) Products.RemoveAt(i);
             }
+            UpdateId();
         }
 
-        public Product GetRow(int rowId)
+        public void ReplaceProduct(int id, Product product)
         {
-            return Products[rowId];
+            for (int i = 0; i < Products.Count; i++)
+            {
+                if (Products[i].ID.Equals(id)) Products[i] = product;
+            }
+            UpdateId();
+        }
+
+        public void UpdateId()
+        {
+            for (int i = 0; i < Products.Count; i++)
+            {
+                Products[i].ID = i + 1;
+            }
         }
 
         public T GetColumn<T>(Columns columnId)
@@ -83,21 +112,54 @@ namespace IPCS.Data
             }
             return (T)value;
         }
-        
-        public DataTable AddColumn<T>(DataTable data, T[] column)
+
+        public void SetDataGridTable(DataGridView dataGridView)
         {
-            DataColumn tableColumn = new DataColumn("XomeName", typeof(T));
-            data.Columns.Add(tableColumn);
-            return data;
-        }
-
-        public DataTable InventoryTable(params Columns[] columns)
-        {
-            DataTable table = new DataTable();
-
-
-
-            return table;
+            List<object> data;
+            Columns column;
+            dataGridView.Rows.Clear();
+            foreach (Product product in Products)
+            {
+                data = new List<object>();
+                for (int i = 0; i < dataGridView.ColumnCount; i++)
+                {
+                    column = (Columns)dataGridView.Columns[i].Tag;
+                    switch (column)
+                    {
+                        case Columns.ID:
+                            data.Add(product.ID.ToString("0000"));
+                            break;
+                        case Columns.ProductName:
+                            data.Add(product.ProductName);
+                            break;
+                        case Columns.Price:
+                            data.Add(product.Price.ToString("0.00"));
+                            break;
+                        case Columns.Cost:
+                            data.Add(product.Cost.ToString("0.00"));
+                            break;
+                        case Columns.Stock:
+                            data.Add(product.Stock);
+                            break;
+                        case Columns.CurrentGain:
+                            data.Add(product.CurrentGain.ToString("0.00"));
+                            break;
+                        case Columns.CurrentSale:
+                            data.Add(product.CurrentSale.ToString("0.00"));
+                            break;
+                        case Columns.ExpectedGain:
+                            data.Add(product.ExpectedGain.ToString("0.00"));
+                            break;
+                        case Columns.ExpextedSale:
+                            data.Add(product.ExpectedSale.ToString("0.00"));
+                            break;
+                        case Columns.None:
+                            data.Add(null);
+                            break;
+                    }
+                }
+                dataGridView.Rows.Add(data.ToArray());
+            }
         }
         
         #endregion

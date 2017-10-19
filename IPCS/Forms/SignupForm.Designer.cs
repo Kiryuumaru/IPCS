@@ -44,7 +44,7 @@
             // btnSignup
             // 
             this.btnSignup.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSignup.Location = new System.Drawing.Point(370, 228);
+            this.btnSignup.Location = new System.Drawing.Point(363, 228);
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(100, 35);
             this.btnSignup.TabIndex = 3;
@@ -74,6 +74,7 @@
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
+            this.txtPassword.PromptText = "Password";
             this.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtPassword.SelectedText = "";
             this.txtPassword.SelectionLength = 0;
@@ -109,6 +110,7 @@
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
+            this.txtUsername.PromptText = "Username";
             this.txtUsername.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtUsername.SelectedText = "";
             this.txtUsername.SelectionLength = 0;
@@ -143,6 +145,7 @@
             this.txtConfirmPassword.MaxLength = 32767;
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '●';
+            this.txtConfirmPassword.PromptText = "Confirm Password";
             this.txtConfirmPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtConfirmPassword.SelectedText = "";
             this.txtConfirmPassword.SelectionLength = 0;
@@ -159,7 +162,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancel.Location = new System.Drawing.Point(34, 228);
+            this.btnCancel.Location = new System.Drawing.Point(35, 228);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 35);
             this.btnCancel.TabIndex = 18;
@@ -217,6 +220,7 @@
             this.txtRecoveryKey.MaxLength = 32767;
             this.txtRecoveryKey.Name = "txtRecoveryKey";
             this.txtRecoveryKey.PasswordChar = '\0';
+            this.txtRecoveryKey.PromptText = "Recovery key (for recovering lost pass)";
             this.txtRecoveryKey.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtRecoveryKey.SelectedText = "";
             this.txtRecoveryKey.SelectionLength = 0;

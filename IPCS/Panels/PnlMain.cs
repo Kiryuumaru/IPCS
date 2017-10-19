@@ -18,23 +18,36 @@ namespace IPCS.Panels
     {
         #region Constructor
 
-        public PnlMain()
+        public PnlMain(Form parent)
         {
+            Parent = parent;
             InitializeComponent();
-            UpdateComponents();
+            ReInitializeComponent();
+            UpdateComponent();
         }
+
+        #endregion
+
+        #region Properties
+
+        public new Form Parent { get; }
 
         #endregion
 
         #region Threads
 
-        UserControl pnlHome = new PnlHome();
-        UserControl pnlStartCashiering = new PnlStartCashiering();
-        UserControl pnlManageInventory = new PnlManageInventory();
-        UserControl pnlSettings = new PnlSettings();
-        UserControl pnlHelp = new PnlHelp();
-        public void UpdateComponents()
+        UserControl pnlHome;
+        UserControl pnlStartCashiering;
+        UserControl pnlManageInventory;
+        UserControl pnlSettings;
+        UserControl pnlHelp;
+        public void ReInitializeComponent()
         {
+            pnlHome = new PnlHome();
+            pnlStartCashiering = new PnlStartCashiering(Parent);
+            pnlManageInventory = new PnlManageInventory(Parent);
+            pnlSettings = new PnlSettings();
+            pnlHelp = new PnlHelp();
             lblUsername.Text = Program.User.Username;
             profilePicture.Image = Program.User.ProfilePic;
             tabShow.Hide();
@@ -54,17 +67,20 @@ namespace IPCS.Panels
             Tab_Click(tabHome, new EventArgs());
         }
 
+        public void UpdateComponent()
+        {
+
+        }
+
         private void MinimizeTab()
         {
             tabShow.Show();
-            lblUsername.Hide();
             pnlTab.Size = new Size(50, pnlControl.Height);
         }
 
         private void MaximizeTab()
         {
             tabShow.Hide();
-            lblUsername.Show();
             pnlTab.Size = new Size(210, pnlControl.Height);
         }
 
@@ -94,11 +110,30 @@ namespace IPCS.Panels
                 {
                     if (p is UserControl)
                     {
-                        if (p.Name.Equals("PnlHome") && tab.Name.Equals("tabHome")) p.Show();
-                        else if (p.Name.Equals("PnlStartCashiering") && tab.Name.Equals("tabStartCashiering")) p.Show();
-                        else if (p.Name.Equals("PnlManageInventory") && tab.Name.Equals("tabManageInventory")) p.Show();
-                        else if (p.Name.Equals("PnlHelp") && tab.Name.Equals("tabHelp")) p.Show();
-                        else p.Hide();
+                        if (p.Name.Equals("PnlHome") && tab.Name.Equals("tabHome"))
+                        {
+                            p.Show();
+                        }
+                        else if (p.Name.Equals("PnlStartCashiering") && tab.Name.Equals("tabStartCashiering"))
+                        {
+                            p.Show();
+                            PnlStartCashiering panel = (PnlStartCashiering)p;
+                            panel.UpdateComponents();
+                            MinimizeTab();
+                        }
+                        else if (p.Name.Equals("PnlManageInventory") && tab.Name.Equals("tabManageInventory"))
+                        {
+                            p.Show();
+                            MinimizeTab();
+                        }
+                        else if (p.Name.Equals("PnlHelp") && tab.Name.Equals("tabHelp"))
+                        {
+                            p.Show();
+                        }
+                        else
+                        {
+                            p.Hide();
+                        }
                         if (pnlSettings.Visible) pnlSettings.Hide();
                     }
                 }

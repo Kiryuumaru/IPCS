@@ -63,14 +63,7 @@ namespace IPCS
 
         public static bool Signup(string username, string password, string recoveryKey, Image profilePic)
         {
-            Product prod = new Product(0, "testName", 100, 99, 10);
-            Product prod2 = new Product(0, "testName2", 100, 99, 10);
-            Product prod3 = new Product(0, "testName3", 100, 99, 10);
-            Inventory inv = new Inventory();
-            inv.AddProduct(prod);
-            inv.AddProduct(prod2);
-            inv.AddProduct(prod3);
-            User user = new User(username, password, recoveryKey, profilePic, inv);
+            User user = new User(username, password, recoveryKey, profilePic);
             return Database.CreateUser(user);
         }
 
