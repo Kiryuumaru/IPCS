@@ -40,7 +40,16 @@ namespace IPCS.Data
 
         public int GetID(int listIndex)
         {
-            return listIndex + 1;
+            return Products[listIndex].ID;
+        }
+
+        public int GetIndex(int id)
+        {
+            for (int i = 0; i < Products.Count; i++)
+            {
+                if (Products[i].ID.Equals(id)) return i;
+            }
+            return -1;
         }
 
         public void AddProduct(Product product)
@@ -133,25 +142,25 @@ namespace IPCS.Data
                             data.Add(product.ProductName);
                             break;
                         case Columns.Price:
-                            data.Add(product.Price.ToString("0.00"));
+                            data.Add(Defaults.CurrencyChar + product.Price.ToString("0.00"));
                             break;
                         case Columns.Cost:
-                            data.Add(product.Cost.ToString("0.00"));
+                            data.Add(Defaults.CurrencyChar + product.Cost.ToString("0.00"));
                             break;
                         case Columns.Stock:
                             data.Add(product.Stock);
                             break;
                         case Columns.CurrentGain:
-                            data.Add(product.CurrentGain.ToString("0.00"));
+                            data.Add(Defaults.CurrencyChar + product.CurrentGain.ToString("0.00"));
                             break;
                         case Columns.CurrentSale:
-                            data.Add(product.CurrentSale.ToString("0.00"));
+                            data.Add(Defaults.CurrencyChar + product.CurrentSale.ToString("0.00"));
                             break;
                         case Columns.ExpectedGain:
-                            data.Add(product.ExpectedGain.ToString("0.00"));
+                            data.Add(Defaults.CurrencyChar + product.ExpectedGain.ToString("0.00"));
                             break;
                         case Columns.ExpextedSale:
-                            data.Add(product.ExpectedSale.ToString("0.00"));
+                            data.Add(Defaults.CurrencyChar + product.ExpectedSale.ToString("0.00"));
                             break;
                         case Columns.None:
                             data.Add(null);

@@ -113,12 +113,19 @@
   <ItemGroup>
     <Compile Include="Animations\Transitions.cs" />
     <Compile Include="Data\_Enums.cs" />
+    <Compile Include="Defaults.cs" />
     <Compile Include="Extension.cs" />
     <Compile Include="Forms\AddProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\AddProductForm.Designer.cs">
       <DependentUpon>AddProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CartForm.Designer.cs">
+      <DependentUpon>CartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\EditProductForm.cs">
       <SubType>Form</SubType>

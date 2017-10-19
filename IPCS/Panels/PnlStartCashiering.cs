@@ -20,7 +20,6 @@ namespace IPCS.Panels
         {
             Parent = parent;
             InitializeComponent();
-            Cart = new List<Item>();
             ReInitializeComponent();
             UpdateComponents();
         }
@@ -56,10 +55,12 @@ namespace IPCS.Panels
 
         public void ReInitializeComponent()
         {
-            CartColumn1.Tag = Data.Columns.ProductName;
-            CartColumn2.Tag = Data.Columns.Price;
-            CartColumn3.Tag = Data.Columns.Cart_ItemQuantity;
-            CartColumn4.Tag = Data.Columns.Cart_ItemTotal;
+            Cart = new List<Item>();
+            CartColumn1.Tag = Data.Columns.ID;
+            CartColumn2.Tag = Data.Columns.ProductName;
+            CartColumn3.Tag = Data.Columns.Price;
+            CartColumn4.Tag = Data.Columns.Cart_ItemQuantity;
+            CartColumn5.Tag = Data.Columns.Cart_ItemTotal;
 
             ListColumn1.Tag = Data.Columns.ID;
             ListColumn2.Tag = Data.Columns.ProductName;
@@ -86,17 +87,20 @@ namespace IPCS.Panels
                     column = (Data.Columns)dataGridView.Columns[i].Tag;
                     switch (column)
                     {
+                        case Data.Columns.ID:
+                            data.Add(item.Product.ID.ToString("0000"));
+                            break;
                         case Data.Columns.ProductName:
                             data.Add(item.Product.ProductName);
                             break;
                         case Data.Columns.Price:
-                            data.Add(item.Product.Price.ToString("0.00"));
+                            data.Add(Defaults.CurrencyChar + item.Product.Price.ToString("0.00"));
                             break;
                         case Data.Columns.Cart_ItemQuantity:
                             data.Add(item.Quantity);
                             break;
                         case Data.Columns.Cart_ItemTotal:
-                            data.Add(item.Total.ToString("0.00"));
+                            data.Add(Defaults.CurrencyChar + item.Total.ToString("0.00"));
                             break;
                     }
                 }
@@ -113,12 +117,17 @@ namespace IPCS.Panels
                 if(cartItem.Product.ID == item.Product.ID)
                 {
                     cartItem.Quantity = quantity;
-                    UpdateComponents();
                     return;
                 }
             }
             Cart.Add(item);
-            UpdateComponents();
+        }
+
+        private void RefreshPrivControls()
+        {
+            SetCartGridTable(metroGridCart);
+            MainForm form = (MainForm)Parent;
+            form.NotifSetDefault();
         }
 
         #endregion
@@ -134,10 +143,14 @@ namespace IPCS.Panels
                 int id = Convert.ToInt32(selectedRow.Cells[0].Value);
                 Data.Product product = Program.User.Inventory.GetProduct(id);
                 Forms.GetQuantityForm form = new Forms.GetQuantityForm(product);
+                MainForm parent = (MainForm)Parent;
+                form.Theme = parent.Theme;
+                form.Style = parent.Style;
                 if (form.ShowDialog() == DialogResult.OK)
                 {
                     int quantity = form.Value;
                     AddCart(product, quantity);
+                    RefreshPrivControls();
                 }
             }
             catch
@@ -152,18 +165,15 @@ namespace IPCS.Panels
             try
             {
                 int index = metroGridCart.CurrentCell.RowIndex;
-                DataGridViewRow selectedRow = metroGridList.Rows[index];
+                DataGridViewRow selectedRow = metroGridCart.Rows[index];
                 int id = Convert.ToInt32(selectedRow.Cells[0].Value);
-                Program.PrintDebug(id.ToString());
-                foreach (Item item in Cart)
+                for(int i = 0; i < Cart.Count; i++)
                 {
-                    if (item.Product.ID == id)
+                    if (Cart[i].Product.ID == id)
                     {
-                        Program.PrintDebug("SVSV");
-                        Cart.Remove(item);
-                        UpdateComponents();
+                        Cart.Remove(Cart[i]);
+                        RefreshPrivControls();
                     }
-                    Program.PrintDebug(item.Product.ProductName);
                 }
             }
             catch

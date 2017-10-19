@@ -11,6 +11,7 @@ using MetroFramework;
 using MetroFramework.Forms;
 using MetroFramework.Components;
 using MetroFramework.Controls;
+using System.Threading;
 
 namespace IPCS.Panels
 {
@@ -50,7 +51,6 @@ namespace IPCS.Panels
             pnlHelp = new PnlHelp();
             lblUsername.Text = Program.User.Username;
             profilePicture.Image = Program.User.ProfilePic;
-            tabShow.Hide();
 
             pnlHome.Dock = DockStyle.Fill;
             pnlStartCashiering.Dock = DockStyle.Fill;
@@ -63,6 +63,8 @@ namespace IPCS.Panels
             pnlCenter.Controls.Add(pnlManageInventory);
             pnlControl.Controls.Add(pnlSettings);
             pnlCenter.Controls.Add(pnlHelp);
+
+            tabResize.Tag = "Maximized";
             pnlSettings.Hide();
             Tab_Click(tabHome, new EventArgs());
         }
@@ -74,14 +76,28 @@ namespace IPCS.Panels
 
         private void MinimizeTab()
         {
-            tabShow.Show();
+            for (int i = 210; i >= 50; i -= 30)
+            {
+                pnlTab.Size = new Size(i, pnlControl.Height);
+            }
             pnlTab.Size = new Size(50, pnlControl.Height);
+            tabResize.Image = IPCS.Properties.Resources.ic_chevron_right_gray_48pt_2x;
+            tabResize.LightThemeImage = IPCS.Properties.Resources.ic_chevron_right_black_48pt_2x;
+            tabResize.DarkThemeImage = IPCS.Properties.Resources.ic_chevron_right_white_48pt_2x;
+            tabResize.Tag = "Minimized";
         }
 
         private void MaximizeTab()
         {
-            tabShow.Hide();
+            for (int i = 50; i <= 210; i += 30)
+            {
+                pnlTab.Size = new Size(i, pnlControl.Height);
+            }
             pnlTab.Size = new Size(210, pnlControl.Height);
+            tabResize.Image = Properties.Resources.ic_chevron_left_gray_48pt_2x;
+            tabResize.LightThemeImage = Properties.Resources.ic_chevron_left_black_48pt_2x;
+            tabResize.DarkThemeImage = Properties.Resources.ic_chevron_left_white_48pt_2x;
+            tabResize.Tag = "Maximized";
         }
 
         #endregion
@@ -91,17 +107,21 @@ namespace IPCS.Panels
         private void Tab_Click(object sender, EventArgs e)
         {
             PnlTab tab = (PnlTab)sender;
-            if (tab.Name.Equals("tabShow"))
+            if (tab.Name.Equals("tabResize"))
             {
-                MaximizeTab();
-            }
-            else if (tab.Name.Equals("tabHide"))
-            {
-                MinimizeTab();
+                string tag = (string)tab.Tag;
+                if (tag == "Maximized")
+                {
+                    MinimizeTab();
+                }
+                else
+                {
+                    MaximizeTab();
+                }
             }
             else if (tab.Name.Equals("tabSettings"))
             {
-                if(pnlSettings.Visible) pnlSettings.Hide();
+                if (pnlSettings.Visible) pnlSettings.Hide();
                 else pnlSettings.Show();
             }
             else
@@ -118,6 +138,7 @@ namespace IPCS.Panels
                         {
                             p.Show();
                             PnlStartCashiering panel = (PnlStartCashiering)p;
+                            panel.ReInitializeComponent();
                             panel.UpdateComponents();
                             MinimizeTab();
                         }

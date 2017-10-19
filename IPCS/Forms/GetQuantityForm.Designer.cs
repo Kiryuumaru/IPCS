@@ -116,14 +116,16 @@
             this.txtBoxQuantity.UseSelectable = true;
             this.txtBoxQuantity.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtBoxQuantity.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtBoxQuantity.TextChanged += new System.EventHandler(this.txtBoxQuantity_TextChanged);
+            this.txtBoxQuantity.Click += new System.EventHandler(this.txtBoxQuantity_Click);
             this.txtBoxQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.integerTextBox_KeyPress);
-            this.txtBoxQuantity.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBoxQuantity_KeyUp);
             // 
             // GetQuantityForm
             // 
             this.AcceptButton = this.btnOk;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(400, 300);
             this.Controls.Add(this.txtBoxQuantity);

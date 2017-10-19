@@ -36,8 +36,8 @@ namespace IPCS.Panels
 
         private void ReInitializeComponent()
         {
-            pnlAdminPrivelege.Hide();
-            pnlUnlockPrivelege.Show();
+            pnlAdminPrivilege.Hide();
+            pnlUnlockPrivilege.Show();
             InventoryColumn1.Tag = Data.Columns.ID;
             InventoryColumn2.Tag = Data.Columns.ProductName;
             InventoryColumn3.Tag = Data.Columns.Price;
@@ -56,8 +56,8 @@ namespace IPCS.Panels
 
         private void btnHidePrivelege_Click(object sender, EventArgs e)
         {
-            pnlAdminPrivelege.Hide();
-            pnlUnlockPrivelege.Show();
+            pnlAdminPrivilege.Hide();
+            pnlUnlockPrivilege.Show();
             txtBoxPassword.Text = "";
             MainForm form = (MainForm)Parent;
             form.NotifSetDefault();
@@ -82,8 +82,8 @@ namespace IPCS.Panels
         {
             if (Program.User.CheckPassword(txtBoxPassword.Text))
             {
-                pnlAdminPrivelege.Show();
-                pnlUnlockPrivelege.Hide();
+                pnlAdminPrivilege.Show();
+                pnlUnlockPrivilege.Hide();
                 MainForm form = (MainForm)Parent;
                 form.NotifSetDefault();
             }

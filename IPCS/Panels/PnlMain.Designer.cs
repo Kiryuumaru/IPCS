@@ -42,8 +42,7 @@
             this.tabManageInventory = new IPCS.Panels.PnlTab();
             this.tabSettings = new IPCS.Panels.PnlTab();
             this.pnlProfile = new MetroFramework.Controls.MetroPanel();
-            this.tabShow = new IPCS.Panels.PnlTab();
-            this.tabHide = new IPCS.Panels.PnlTab();
+            this.tabResize = new IPCS.Panels.PnlTab();
             this.lblUsername = new MetroFramework.Controls.MetroLabel();
             this.profilePicture = new System.Windows.Forms.PictureBox();
             this.pnlMetro.SuspendLayout();
@@ -242,8 +241,7 @@
             // pnlProfile
             // 
             this.pnlProfile.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.pnlProfile.Controls.Add(this.tabShow);
-            this.pnlProfile.Controls.Add(this.tabHide);
+            this.pnlProfile.Controls.Add(this.tabResize);
             this.pnlProfile.Controls.Add(this.lblUsername);
             this.pnlProfile.Controls.Add(this.profilePicture);
             this.pnlProfile.Dock = System.Windows.Forms.DockStyle.Top;
@@ -258,31 +256,19 @@
             this.pnlProfile.VerticalScrollbarHighlightOnWheel = false;
             this.pnlProfile.VerticalScrollbarSize = 10;
             // 
-            // tabShow
+            // tabResize
             // 
-            this.tabShow.DarkThemeImage = global::IPCS.Properties.Resources.ic_chevron_right_white_48pt_2x;
-            this.tabShow.Image = global::IPCS.Properties.Resources.ic_chevron_right_gray_48pt_2x;
-            this.tabShow.LightThemeImage = global::IPCS.Properties.Resources.ic_chevron_right_black_48pt_2x;
-            this.tabShow.Location = new System.Drawing.Point(8, 0);
-            this.tabShow.Name = "tabShow";
-            this.tabShow.Size = new System.Drawing.Size(35, 35);
-            this.tabShow.TabIndex = 6;
-            this.tabShow.TabText = null;
-            this.tabShow.Toggled = false;
-            this.tabShow.Click += new System.EventHandler(this.Tab_Click);
-            // 
-            // tabHide
-            // 
-            this.tabHide.DarkThemeImage = global::IPCS.Properties.Resources.ic_chevron_left_white_48pt_2x;
-            this.tabHide.Image = global::IPCS.Properties.Resources.ic_chevron_left_gray_48pt_2x;
-            this.tabHide.LightThemeImage = global::IPCS.Properties.Resources.ic_chevron_left_black_48pt_2x;
-            this.tabHide.Location = new System.Drawing.Point(169, 0);
-            this.tabHide.Name = "tabHide";
-            this.tabHide.Size = new System.Drawing.Size(35, 35);
-            this.tabHide.TabIndex = 2;
-            this.tabHide.TabText = null;
-            this.tabHide.Toggled = false;
-            this.tabHide.Click += new System.EventHandler(this.Tab_Click);
+            this.tabResize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabResize.DarkThemeImage = global::IPCS.Properties.Resources.ic_chevron_left_white_48pt_2x;
+            this.tabResize.Image = global::IPCS.Properties.Resources.ic_chevron_left_gray_48pt_2x;
+            this.tabResize.LightThemeImage = global::IPCS.Properties.Resources.ic_chevron_left_black_48pt_2x;
+            this.tabResize.Location = new System.Drawing.Point(168, 0);
+            this.tabResize.Name = "tabResize";
+            this.tabResize.Size = new System.Drawing.Size(35, 35);
+            this.tabResize.TabIndex = 6;
+            this.tabResize.TabText = null;
+            this.tabResize.Toggled = false;
+            this.tabResize.Click += new System.EventHandler(this.Tab_Click);
             // 
             // lblUsername
             // 
@@ -311,6 +297,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlMetro);
+            this.DoubleBuffered = true;
             this.Name = "PnlMain";
             this.Size = new System.Drawing.Size(896, 450);
             this.pnlMetro.ResumeLayout(false);
@@ -340,8 +327,7 @@
         private MetroFramework.Controls.MetroLabel lblUsername;
         private System.Windows.Forms.PictureBox profilePicture;
         private MetroFramework.Controls.MetroPanel pnlMainHolder;
-        private PnlTab tabHide;
-        private PnlTab tabShow;
+        private PnlTab tabResize;
         private MetroFramework.Controls.MetroPanel pnlTab;
         private MetroFramework.Controls.MetroPanel pnlTabHolder;
         private System.Windows.Forms.PictureBox separator;

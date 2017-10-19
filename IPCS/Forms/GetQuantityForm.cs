@@ -62,6 +62,11 @@ namespace IPCS.Forms
 
         #region Events
 
+        private void txtBoxQuantity_Click(object sender, EventArgs e)
+        {
+            txtBoxQuantity.SelectAll();
+        }
+
         private void integerTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -70,19 +75,12 @@ namespace IPCS.Forms
             }
         }
 
-        private void txtBoxQuantity_KeyUp(object sender, KeyEventArgs e)
+        private void txtBoxQuantity_TextChanged(object sender, EventArgs e)
         {
-            if (GetInput() > Product.Stock)
-            {
-                NotifText = "Invalid value!";
-                txtBoxQuantity.Text = Product.Stock.ToString();
-                e.Handled = true;
-            }
-            else if (GetInput() < 1)
+            if (GetInput() > Product.Stock || GetInput() < 1)
             {
                 NotifText = "Invalid value!";
                 txtBoxQuantity.Text = "1";
-                e.Handled = true;
             }
         }
 
