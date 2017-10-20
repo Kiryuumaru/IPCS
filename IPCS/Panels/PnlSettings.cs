@@ -59,7 +59,6 @@ namespace IPCS.Panels
             MetroTile tile = (MetroTile)sender;
             MetroColorStyle colorStyle = (MetroColorStyle)tile.Tag;
             Program.MainStyleManager.Style = colorStyle;
-
         }
 
         private void Toggle_CheckedChanged(object sender, EventArgs e)

@@ -170,7 +170,61 @@ namespace IPCS.Data
                 dataGridView.Rows.Add(data.ToArray());
             }
         }
-        
+
+        public void SetDataGridTable(DataGridView dataGridView, string contains)
+        {
+            List<object> data;
+            Columns column;
+            string text = "";
+            dataGridView.Rows.Clear();
+            foreach (Product product in Products)
+            {
+                text = product.ID.ToString("0000") + " : " + product.ProductName;
+                if (text.Contains(contains))
+                {
+                    data = new List<object>();
+                    for (int i = 0; i < dataGridView.ColumnCount; i++)
+                    {
+                        column = (Columns)dataGridView.Columns[i].Tag;
+                        switch (column)
+                        {
+                            case Columns.ID:
+                                data.Add(product.ID.ToString("0000"));
+                                break;
+                            case Columns.ProductName:
+                                data.Add(product.ProductName);
+                                break;
+                            case Columns.Price:
+                                data.Add(Defaults.CurrencyChar + product.Price.ToString("0.00"));
+                                break;
+                            case Columns.Cost:
+                                data.Add(Defaults.CurrencyChar + product.Cost.ToString("0.00"));
+                                break;
+                            case Columns.Stock:
+                                data.Add(product.Stock);
+                                break;
+                            case Columns.CurrentGain:
+                                data.Add(Defaults.CurrencyChar + product.CurrentGain.ToString("0.00"));
+                                break;
+                            case Columns.CurrentSale:
+                                data.Add(Defaults.CurrencyChar + product.CurrentSale.ToString("0.00"));
+                                break;
+                            case Columns.ExpectedGain:
+                                data.Add(Defaults.CurrencyChar + product.ExpectedGain.ToString("0.00"));
+                                break;
+                            case Columns.ExpextedSale:
+                                data.Add(Defaults.CurrencyChar + product.ExpectedSale.ToString("0.00"));
+                                break;
+                            case Columns.None:
+                                data.Add(null);
+                                break;
+                        }
+                    }
+                    dataGridView.Rows.Add(data.ToArray());
+                }
+            }
+        }
+
         #endregion
     }
 }

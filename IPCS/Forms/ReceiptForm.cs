@@ -9,48 +9,48 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework;
 using MetroFramework.Forms;
+using IPCS.Data;
 
 namespace IPCS.Forms
 {
     public partial class ReceiptForm : CustomForm
     {
-        public ReceiptForm()
+        #region Constructor
+
+        public ReceiptForm(List<Item> cart)
         {
+            Cart = cart;
             InitializeComponent();
-            NotifText = "Initializeing Server...";
-            Program.InitializeServer();
-            NotifText = "Server Ready";
+            ReInitializeComponent();
+            UpdateComponent();
         }
 
-        private void Login_Click(object sender, EventArgs e)
+        #endregion
+
+        #region Properties
+
+        private List<Item> Cart;
+
+        #endregion
+
+        #region Threads
+
+        public void ReInitializeComponent()
         {
-            if (txtUsername.Text.Length <= 0 || txtPassword.Text.Length <= 0)
-            {
-                NotifText = "Please fill up all field";
-                return;
-            }
-            btnLogin.Enabled = false;
-            btnSignup.Enabled = false;
-            NotifText = "Signing in...";
-            if (Program.Login(txtUsername.Text, txtPassword.Text))
-            {
-                new MainForm().Show();
-                Hide();
-            }
-            else
-            {
-                NotifText = "Either username or password is wrong";
-            }
-            btnLogin.Enabled = true;
-            btnSignup.Enabled = true;
+
+        }
+        
+        public void UpdateComponent()
+        {
+
         }
 
-        private void Signup_Click(object sender, EventArgs e)
-        {
-            Hide();
-            new SignupForm().ShowDialog();
-            Show();
-            FocusMe();
-        }
+        #endregion
+
+        #region Events
+
+
+
+        #endregion
     }
 }

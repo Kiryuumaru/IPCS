@@ -56,6 +56,7 @@
             this.MinimumSize = new System.Drawing.Size(900, 500);
             this.Name = "MainForm";
             this.NotifDefaultText = "Ready";
+            this.NotifText = "Ready";
             this.Resizable = false;
             this.Text = "Inventory Program with Cashier System";
             this.Controls.SetChildIndex(this.pnlMain, 0);

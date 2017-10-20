@@ -51,7 +51,7 @@ namespace IPCS.Panels
 
         private void UpdateComponents()
         {
-            Program.User.Inventory.SetDataGridTable(metroGridInventory);
+            Program.User.Inventory.SetDataGridTable(metroGridInventory, txtBoxSearch.Text);
         }
 
         private void btnHidePrivelege_Click(object sender, EventArgs e)
@@ -78,6 +78,17 @@ namespace IPCS.Panels
 
         #region Events
 
+        private void txtBoxSearch_Click(object sender, EventArgs e)
+        {
+            txtBoxSearch.SelectAll();
+            Program.User.Inventory.SetDataGridTable(metroGridInventory);
+        }
+
+        private void txtBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            UpdateComponents();
+        }
+
         private void btnUnlock_Click(object sender, EventArgs e)
         {
             if (Program.User.CheckPassword(txtBoxPassword.Text))
@@ -103,11 +114,12 @@ namespace IPCS.Panels
                 int id = Convert.ToInt32(selectedRow.Cells[0].Value);
                 Data.Product product = Program.User.Inventory.GetProduct(id);
                 EditProductForm form = new EditProductForm(product);
-                MainForm formParent = (MainForm)Parent;
-                form.Theme = formParent.Theme;
-                form.Style = formParent.Style;
-                form.ShowDialog();
-                RefreshPrivControls();
+                form.StyleManager = Program.MainStyleManager;
+                if(form.ShowDialog() == DialogResult.OK)
+                {
+                    MetroMessageBox.Show(this, "You successfully saved product changes!", "Edit product", MessageBoxButtons.OK, 150);
+                    RefreshPrivControls();
+                }
             }
             catch
             {
@@ -119,9 +131,7 @@ namespace IPCS.Panels
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
             AddProductForm form = new AddProductForm();
-            MainForm formParent = (MainForm)Parent;
-            form.Theme = formParent.Theme;
-            form.Style = formParent.Style;
+            form.StyleManager = Program.MainStyleManager;
             if (form.ShowDialog() == DialogResult.OK)
             {
                 RefreshPrivControls();

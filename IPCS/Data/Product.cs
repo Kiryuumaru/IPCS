@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace IPCS.Data
 {
@@ -11,7 +12,7 @@ namespace IPCS.Data
     {
         #region Constructor
 
-        public Product(int id, string productName, double price, double cost, int quantity)
+        public Product(int id, string productName, double price, double cost, int quantity, Image productPicture)
         {
             ID = id;
             ProductName = productName;
@@ -19,6 +20,7 @@ namespace IPCS.Data
             Cost = cost;
             Quantity = quantity;
             NumSold = 0;
+            ProductPicture = productPicture;
         }
 
         #endregion
@@ -36,6 +38,8 @@ namespace IPCS.Data
         public int Quantity { get; set; }
 
         public int NumSold { get; set; }
+
+        public Image ProductPicture { get; set; }
 
         #endregion
 

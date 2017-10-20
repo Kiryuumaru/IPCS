@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using MetroFramework;
 using MetroFramework.Forms;
 using MetroFramework.Controls;
+using MetroFramework.Interfaces;
 
 namespace IPCS.Forms
 {
@@ -24,6 +25,36 @@ namespace IPCS.Forms
         #endregion
 
         #region Paint Method
+
+        public void WireStyleManager(Control cont)
+        {
+            foreach (Control ctl in cont.Controls)
+            {
+                try
+                {
+                    IMetroControl metroctl = (IMetroControl)ctl;
+                    metroctl.StyleManager = Program.MainStyleManager;
+                    if (ctl.HasChildren)
+                    {
+                        WireStyleManager((Control)metroctl);
+                    }
+                }
+                catch
+                {
+                    if (ctl.HasChildren)
+                    {
+                        WireStyleManager(ctl);
+                    }
+                }
+            }
+        }
+
+        public new DialogResult ShowDialog()
+        {
+            WireStyleManager(this);
+            titleLabel.StyleManager = this.StyleManager;
+            return base.ShowDialog();
+        }
 
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -115,14 +146,14 @@ namespace IPCS.Forms
             set
             {
                 value.Top = Math.Max(value.Top, ControlBox ? 35 : 2);
-                value.Bottom = Math.Max(value.Bottom, NotificationBox ? 23 : 2);
+                value.Bottom = Math.Max(value.Bottom, NotificationBox ? 25 : 2);
                 base.Padding = value;
             }
         }
 
         protected override Padding DefaultPadding
         {
-            get { return new Padding(2, ControlBox ? 35 : 2, 2, NotificationBox ? 23 : 2); }
+            get { return new Padding(2, ControlBox ? 35 : 2, 2, NotificationBox ? 25 : 2); }
         }
 
         public void NotifSetDefault()

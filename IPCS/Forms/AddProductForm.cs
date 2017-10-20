@@ -87,7 +87,7 @@ namespace IPCS.Forms
                 double cost = Convert.ToDouble(txtBoxCost.Text);
                 int quantity = Convert.ToInt32(txtBoxQuantity.Text);
                 if (price <= 0 || cost <= 0 || quantity <= 0) throw new Exception();
-                Data.Product prod = new Data.Product(id, name, price, cost, quantity);
+                Data.Product prod = new Data.Product(id, name, price, cost, quantity, productPicture.Image);
                 Program.User.Inventory.AddProduct(prod);
                 NotifText = "New product added";
                 DialogResult = DialogResult.OK;
@@ -96,6 +96,15 @@ namespace IPCS.Forms
             catch
             {
                 NotifText = "Invalid input: input must be non-negative and non-zero integer";
+            }
+        }
+
+        private void btnBrowsePic_Click(object sender, EventArgs e)
+        {
+            DialogResult result = openFileDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                productPicture.Image = Image.FromFile(openFileDialog.FileName);
             }
         }
 

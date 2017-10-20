@@ -112,6 +112,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animations\Transitions.cs" />
+    <Compile Include="Data\Item.cs" />
     <Compile Include="Data\_Enums.cs" />
     <Compile Include="Defaults.cs" />
     <Compile Include="Extension.cs" />
@@ -121,17 +122,17 @@
     <Compile Include="Forms\AddProductForm.Designer.cs">
       <DependentUpon>AddProductForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CartForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\CartForm.Designer.cs">
-      <DependentUpon>CartForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\EditProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\EditProductForm.Designer.cs">
       <DependentUpon>EditProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GetCashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GetCashForm.Designer.cs">
+      <DependentUpon>GetCashForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\GetQuantityForm.cs">
       <SubType>Form</SubType>
@@ -181,6 +182,12 @@
     </Compile>
     <Compile Include="Panels\PnlProfileSettings.Designer.cs">
       <DependentUpon>PnlProfileSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\PnlSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\PnlSearch.Designer.cs">
+      <DependentUpon>PnlSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="Panels\PnlSettings.cs">
       <SubType>UserControl</SubType>
@@ -236,6 +243,9 @@
     <EmbeddedResource Include="Forms\EditProductForm.resx">
       <DependentUpon>EditProductForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GetCashForm.resx">
+      <DependentUpon>GetCashForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\GetQuantityForm.resx">
       <DependentUpon>GetQuantityForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +275,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Panels\PnlProfileSettings.resx">
       <DependentUpon>PnlProfileSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\PnlSearch.resx">
+      <DependentUpon>PnlSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panels\PnlSettings.resx">
       <DependentUpon>PnlSettings.cs</DependentUpon>

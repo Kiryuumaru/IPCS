@@ -15,11 +15,13 @@ namespace IPCS.Forms
     {
         #region Constructor
 
-        public GetQuantityForm(Product product)
+        public GetQuantityForm(Product product, int quantity)
         {
             Product = product;
             InitializeComponent();
             ReInitializeComponent();
+            txtBoxQuantity.Text = quantity.ToString();
+            productPicture.Image = product.ProductPicture;
             UpdateComponent();
         }
 
@@ -38,7 +40,11 @@ namespace IPCS.Forms
 
         public void ReInitializeComponent()
         {
-
+            lblId.Text = Product.ID.ToString("0000");
+            lblName.Text = Product.ProductName;
+            lblPrice.Text = Defaults.CurrencyChar + Product.Price.ToString("0.00");
+            lblStock.Text = Product.Stock.ToString();
+            lblQuantity.Text = "Quantity ( 1 - " + Product.Stock + " ) :";
         }
 
         public void UpdateComponent()

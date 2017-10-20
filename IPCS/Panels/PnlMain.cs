@@ -76,20 +76,24 @@ namespace IPCS.Panels
 
         private void MinimizeTab()
         {
-            for (int i = 210; i >= 50; i -= 30)
+            string tag = (string)tabResize.Tag;
+            if (tag == "Minimized") return;
+            for (int i = 210; i >= 50; i -= 50)
             {
                 pnlTab.Size = new Size(i, pnlControl.Height);
             }
             pnlTab.Size = new Size(50, pnlControl.Height);
-            tabResize.Image = IPCS.Properties.Resources.ic_chevron_right_gray_48pt_2x;
-            tabResize.LightThemeImage = IPCS.Properties.Resources.ic_chevron_right_black_48pt_2x;
-            tabResize.DarkThemeImage = IPCS.Properties.Resources.ic_chevron_right_white_48pt_2x;
+            tabResize.Image = Properties.Resources.ic_chevron_right_gray_48pt_2x;
+            tabResize.LightThemeImage = Properties.Resources.ic_chevron_right_black_48pt_2x;
+            tabResize.DarkThemeImage = Properties.Resources.ic_chevron_right_white_48pt_2x;
             tabResize.Tag = "Minimized";
         }
 
         private void MaximizeTab()
         {
-            for (int i = 50; i <= 210; i += 30)
+            string tag = (string)tabResize.Tag;
+            if (tag == "Maximized") return;
+            for (int i = 50; i <= 210; i += 50)
             {
                 pnlTab.Size = new Size(i, pnlControl.Height);
             }
@@ -136,10 +140,10 @@ namespace IPCS.Panels
                         }
                         else if (p.Name.Equals("PnlStartCashiering") && tab.Name.Equals("tabStartCashiering"))
                         {
-                            p.Show();
                             PnlStartCashiering panel = (PnlStartCashiering)p;
                             panel.ReInitializeComponent();
                             panel.UpdateComponents();
+                            p.Show();
                             MinimizeTab();
                         }
                         else if (p.Name.Equals("PnlManageInventory") && tab.Name.Equals("tabManageInventory"))

@@ -40,6 +40,7 @@ namespace IPCS.Forms
             txtBoxPrice.Text = Product.Price.ToString("0.00");
             txtBoxCost.Text = Product.Cost.ToString("0.00");
             txtBoxQuantity.Text = Product.Quantity.ToString();
+            productPicture.Image = Product.ProductPicture;
         }
 
         #endregion
@@ -77,6 +78,7 @@ namespace IPCS.Forms
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.Cancel;
             Dispose();
         }
 
@@ -91,17 +93,26 @@ namespace IPCS.Forms
                 double cost = Convert.ToDouble(txtBoxCost.Text);
                 int quantity = Convert.ToInt32(txtBoxQuantity.Text);
                 if (price <= 0 || cost <= 0 || quantity <= 0) throw new Exception();
-                Data.Product prod = new Data.Product(id, name, price, cost, quantity);
+                Product prod = new Product(id, name, price, cost, quantity, productPicture.Image);
                 Program.User.Inventory.ReplaceProduct(Product.ID, prod);
                 NotifText = "Product changes saved";
-                MetroMessageBox.Show(this, "You successfully saved product changes!", "Edit product", MessageBoxButtons.OK, 150);
+                this.DialogResult = DialogResult.OK;
                 Dispose();
             }
             catch
             {
-                NotifText = "Invalid input: input must be non-negative and non-zero integer";
+                NotifText = "Invalid input(s)!";
             }
             Dispose();
+        }
+
+        private void btnBrowsePic_Click(object sender, EventArgs e)
+        {
+            DialogResult result = openFileDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                productPicture.Image = Image.FromFile(openFileDialog.FileName);
+            }
         }
 
         #endregion

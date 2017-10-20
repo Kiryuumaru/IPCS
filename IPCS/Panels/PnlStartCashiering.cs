@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework;
 using MetroFramework.Controls;
+using IPCS.Data;
 
 namespace IPCS.Panels
 {
@@ -22,24 +23,6 @@ namespace IPCS.Panels
             InitializeComponent();
             ReInitializeComponent();
             UpdateComponents();
-        }
-
-        #endregion
-
-        #region Objects
-
-        private class Item
-        {
-            public Item(Data.Product product, int quantity)
-            {
-                Product = product;
-                Quantity = quantity;
-                Total = quantity * product.Price;
-            }
-
-            public Data.Product Product;
-            public int Quantity;
-            public double Total;
         }
 
         #endregion
@@ -62,15 +45,18 @@ namespace IPCS.Panels
             CartColumn4.Tag = Data.Columns.Cart_ItemQuantity;
             CartColumn5.Tag = Data.Columns.Cart_ItemTotal;
 
-            ListColumn1.Tag = Data.Columns.ID;
-            ListColumn2.Tag = Data.Columns.ProductName;
-            ListColumn3.Tag = Data.Columns.Stock;
-            ListColumn4.Tag = Data.Columns.Price;
+            AutoCompleteStringCollection itemList = new AutoCompleteStringCollection();
+            foreach (Data.Product item in Program.User.Inventory.Products)
+            {
+                itemList.Add(item.ID.ToString("0000") + " : " + item.ProductName);
+            }
+            pnlSearch.AutoCompleteSource = itemList;
+            RefreshItemViewer();
         }
 
         public void UpdateComponents()
         {
-            Program.User.Inventory.SetDataGridTable(metroGridList);
+            RefreshItemViewer();
             SetCartGridTable(metroGridCart);
         }
         
@@ -128,24 +114,112 @@ namespace IPCS.Panels
             SetCartGridTable(metroGridCart);
             MainForm form = (MainForm)Parent;
             form.NotifSetDefault();
+            RefreshItemViewer();
+        }
+
+        private void RefreshItemViewer()
+        {
+            try
+            {
+                int index = metroGridCart.CurrentCell.RowIndex;
+                DataGridViewRow selectedRow = metroGridCart.Rows[index];
+                int id = Convert.ToInt32(selectedRow.Cells[0].Value);
+                for (int i = 0; i < Cart.Count; i++)
+                {
+                    if (Cart[i].Product.ID == id)
+                    {
+                        productPicture.Image = Cart[i].Product.ProductPicture;
+                        lblId.Text = Cart[i].Product.ID.ToString("0000");
+                        lblName.Text = Cart[i].Product.ProductName;
+                        lblPrice.Text = Defaults.CurrencyChar + Cart[i].Product.Price.ToString("0.00");
+                        lblQuantity.Text = Cart[i].Quantity.ToString();
+                        lblStock.Text = Cart[i].Product.Stock.ToString();
+                        lblTotal.Text = Defaults.CurrencyChar + Cart[i].Total.ToString("0.00");
+                        break;
+                    }
+                }
+            }
+            catch
+            {
+                productPicture.Image = null;
+                lblId.Text = "N/A";
+                lblName.Text = "N/A";
+                lblPrice.Text = "N/A";
+                lblQuantity.Text = "N/A";
+                lblStock.Text = "N/A";
+                lblTotal.Text = "N/A";
+            }
+            double total = 0;
+            foreach(Item item in Cart)
+            {
+                total += item.Total;
+            }
+            lblTotalCash.Text = "Total :  " + Defaults.CurrencyChar + total.ToString("0.00");
+            int newWidth = (int)((metroPanelTotal.Width / 2) - (lblTotalCash.Width / 2));
+            lblTotalCash.Location = new Point(newWidth, 18);
         }
 
         #endregion
 
         #region Events
 
+        private void metroGridCart_SelectionChanged(object sender, EventArgs e)
+        {
+            RefreshItemViewer();
+        }
+
+        private void btnInvoice_Click(object sender, EventArgs e)
+        {
+            MainForm parent = (MainForm)Parent;
+            if (Cart.Count != 0)
+            {
+                Forms.ReceiptForm form = new Forms.ReceiptForm(Cart);
+                form.StyleManager = Program.MainStyleManager;
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    Cart.Clear();
+                    RefreshPrivControls();
+                }
+            }
+            else
+            {
+                parent.NotifText = "Cart is empty!";
+            }
+        }
+
+        private void btnChangeQuantity_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = Convert.ToInt32(lblId.Text.ToString());
+                Data.Product product = Program.User.Inventory.GetProduct(id);
+                int currentQuantity = 1;
+                foreach(Item item in Cart) if (item.Product.ID == product.ID) currentQuantity = item.Quantity;
+                Forms.GetQuantityForm form = new Forms.GetQuantityForm(product, currentQuantity);
+                form.StyleManager = Program.MainStyleManager;
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    int quantity = form.Value;
+                    AddCart(product, quantity);
+                    RefreshPrivControls();
+                }
+            }
+            catch
+            {
+                MainForm form = (MainForm)Parent;
+                form.NotifText = "Select product first";
+            }
+        }
+
         private void btnAddItem_Click(object sender, EventArgs e)
         {
             try
             {
-                int index = metroGridList.CurrentCell.RowIndex;
-                DataGridViewRow selectedRow = metroGridList.Rows[index];
-                int id = Convert.ToInt32(selectedRow.Cells[0].Value);
+                string text = pnlSearch.Text.Substring(0, pnlSearch.Text.IndexOf(':') - 1);
+                int id = Convert.ToInt32(text);
                 Data.Product product = Program.User.Inventory.GetProduct(id);
-                Forms.GetQuantityForm form = new Forms.GetQuantityForm(product);
-                MainForm parent = (MainForm)Parent;
-                form.Theme = parent.Theme;
-                form.Style = parent.Style;
+                Forms.GetQuantityForm form = new Forms.GetQuantityForm(product, 1);
+                form.StyleManager = Program.MainStyleManager;
                 if (form.ShowDialog() == DialogResult.OK)
                 {
                     int quantity = form.Value;
@@ -173,6 +247,7 @@ namespace IPCS.Panels
                     {
                         Cart.Remove(Cart[i]);
                         RefreshPrivControls();
+                        break;
                     }
                 }
             }
@@ -181,6 +256,12 @@ namespace IPCS.Panels
                 MainForm form = (MainForm)Parent;
                 form.NotifText = "Select product first";
             }
+        }
+
+        private void btnClearCart_Click(object sender, EventArgs e)
+        {
+            Cart.Clear();
+            RefreshPrivControls();
         }
 
         #endregion
