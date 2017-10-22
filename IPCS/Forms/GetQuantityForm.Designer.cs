@@ -125,7 +125,7 @@
             this.txtBoxQuantity.SelectionStart = 0;
             this.txtBoxQuantity.ShortcutsEnabled = true;
             this.txtBoxQuantity.Size = new System.Drawing.Size(39, 25);
-            this.txtBoxQuantity.TabIndex = 26;
+            this.txtBoxQuantity.TabIndex = 1;
             this.txtBoxQuantity.Text = "1";
             this.txtBoxQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBoxQuantity.UseSelectable = true;

@@ -42,9 +42,10 @@ namespace IPCS.Forms
         {
             lblId.Text = Product.ID.ToString("0000");
             lblName.Text = Product.ProductName;
-            lblPrice.Text = Defaults.CurrencyChar + Product.Price.ToString("0.00");
+            lblPrice.Text = Defaults.CurrencyChar + Product.Price.ToString("N");
             lblStock.Text = Product.Stock.ToString();
             lblQuantity.Text = "Quantity ( 1 - " + Product.Stock + " ) :";
+            ActiveControl = txtBoxQuantity;
         }
 
         public void UpdateComponent()
@@ -67,6 +68,15 @@ namespace IPCS.Forms
         #endregion
 
         #region Events
+
+        protected override void OnKeyPress(KeyPressEventArgs e)
+        {
+            base.OnKeyPress(e);
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                btnOk.PerformClick();
+            }
+        }
 
         private void txtBoxQuantity_Click(object sender, EventArgs e)
         {

@@ -142,25 +142,25 @@ namespace IPCS.Data
                             data.Add(product.ProductName);
                             break;
                         case Columns.Price:
-                            data.Add(Defaults.CurrencyChar + product.Price.ToString("0.00"));
+                            data.Add(Defaults.CurrencyChar + product.Price.ToString("N"));
                             break;
                         case Columns.Cost:
-                            data.Add(Defaults.CurrencyChar + product.Cost.ToString("0.00"));
+                            data.Add(Defaults.CurrencyChar + product.Cost.ToString("N"));
                             break;
                         case Columns.Stock:
                             data.Add(product.Stock);
                             break;
                         case Columns.CurrentGain:
-                            data.Add(Defaults.CurrencyChar + product.CurrentGain.ToString("0.00"));
+                            data.Add(Defaults.CurrencyChar + product.CurrentGain.ToString("N"));
                             break;
                         case Columns.CurrentSale:
-                            data.Add(Defaults.CurrencyChar + product.CurrentSale.ToString("0.00"));
+                            data.Add(Defaults.CurrencyChar + product.CurrentSale.ToString("N"));
                             break;
                         case Columns.ExpectedGain:
-                            data.Add(Defaults.CurrencyChar + product.ExpectedGain.ToString("0.00"));
+                            data.Add(Defaults.CurrencyChar + product.ExpectedGain.ToString("N"));
                             break;
                         case Columns.ExpextedSale:
-                            data.Add(Defaults.CurrencyChar + product.ExpectedSale.ToString("0.00"));
+                            data.Add(Defaults.CurrencyChar + product.ExpectedSale.ToString("N"));
                             break;
                         case Columns.None:
                             data.Add(null);
@@ -195,25 +195,25 @@ namespace IPCS.Data
                                 data.Add(product.ProductName);
                                 break;
                             case Columns.Price:
-                                data.Add(Defaults.CurrencyChar + product.Price.ToString("0.00"));
+                                data.Add(Defaults.CurrencyChar + product.Price.ToString("N"));
                                 break;
                             case Columns.Cost:
-                                data.Add(Defaults.CurrencyChar + product.Cost.ToString("0.00"));
+                                data.Add(Defaults.CurrencyChar + product.Cost.ToString("N"));
                                 break;
                             case Columns.Stock:
                                 data.Add(product.Stock);
                                 break;
                             case Columns.CurrentGain:
-                                data.Add(Defaults.CurrencyChar + product.CurrentGain.ToString("0.00"));
+                                data.Add(Defaults.CurrencyChar + product.CurrentGain.ToString("N"));
                                 break;
                             case Columns.CurrentSale:
-                                data.Add(Defaults.CurrencyChar + product.CurrentSale.ToString("0.00"));
+                                data.Add(Defaults.CurrencyChar + product.CurrentSale.ToString("N"));
                                 break;
                             case Columns.ExpectedGain:
-                                data.Add(Defaults.CurrencyChar + product.ExpectedGain.ToString("0.00"));
+                                data.Add(Defaults.CurrencyChar + product.ExpectedGain.ToString("N"));
                                 break;
                             case Columns.ExpextedSale:
-                                data.Add(Defaults.CurrencyChar + product.ExpectedSale.ToString("0.00"));
+                                data.Add(Defaults.CurrencyChar + product.ExpectedSale.ToString("N"));
                                 break;
                             case Columns.None:
                                 data.Add(null);

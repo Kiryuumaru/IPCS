@@ -145,8 +145,8 @@ namespace IPCS.Forms
             get { return base.Padding; }
             set
             {
-                value.Top = Math.Max(value.Top, ControlBox ? 35 : 2);
-                value.Bottom = Math.Max(value.Bottom, NotificationBox ? 25 : 2);
+                value.Top = ControlBox ? 35 : 2;
+                value.Bottom = NotificationBox ? 25 : 2;
                 base.Padding = value;
             }
         }

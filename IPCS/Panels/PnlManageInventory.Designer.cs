@@ -33,15 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlMetro = new MetroFramework.Controls.MetroPanel();
             this.metroGridInventory = new MetroFramework.Controls.MetroGrid();
-            this.InventoryColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InventoryColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InventoryColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InventoryColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InventoryColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InventoryColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InventoryColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InventoryColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InventoryColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroPanelInventoryHeader = new MetroFramework.Controls.MetroPanel();
             this.txtBoxSearch = new MetroFramework.Controls.MetroTextBox();
             this.metroLabelSearch2 = new MetroFramework.Controls.MetroLabel();
@@ -56,6 +47,15 @@
             this.btnUnlock = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txtBoxPassword = new MetroFramework.Controls.MetroTextBox();
+            this.InventoryColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InventoryColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InventoryColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InventoryColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InventoryColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InventoryColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InventoryColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InventoryColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InventoryColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlMetro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGridInventory)).BeginInit();
             this.metroPanelInventoryHeader.SuspendLayout();
@@ -145,85 +145,6 @@
             this.metroGridInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGridInventory.Size = new System.Drawing.Size(896, 387);
             this.metroGridInventory.TabIndex = 12;
-            // 
-            // InventoryColumn1
-            // 
-            this.InventoryColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.InventoryColumn1.HeaderText = "ID";
-            this.InventoryColumn1.Name = "InventoryColumn1";
-            this.InventoryColumn1.ReadOnly = true;
-            this.InventoryColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.InventoryColumn1.Width = 50;
-            // 
-            // InventoryColumn2
-            // 
-            this.InventoryColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.InventoryColumn2.HeaderText = "Label Name";
-            this.InventoryColumn2.Name = "InventoryColumn2";
-            this.InventoryColumn2.ReadOnly = true;
-            this.InventoryColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // InventoryColumn3
-            // 
-            this.InventoryColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.InventoryColumn3.HeaderText = "Price";
-            this.InventoryColumn3.Name = "InventoryColumn3";
-            this.InventoryColumn3.ReadOnly = true;
-            this.InventoryColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.InventoryColumn3.Width = 66;
-            // 
-            // InventoryColumn4
-            // 
-            this.InventoryColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.InventoryColumn4.HeaderText = "Cost";
-            this.InventoryColumn4.Name = "InventoryColumn4";
-            this.InventoryColumn4.ReadOnly = true;
-            this.InventoryColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.InventoryColumn4.Width = 65;
-            // 
-            // InventoryColumn5
-            // 
-            this.InventoryColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.InventoryColumn5.HeaderText = "Stock";
-            this.InventoryColumn5.Name = "InventoryColumn5";
-            this.InventoryColumn5.ReadOnly = true;
-            this.InventoryColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.InventoryColumn5.Width = 70;
-            // 
-            // InventoryColumn6
-            // 
-            this.InventoryColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.InventoryColumn6.HeaderText = "Current Sale";
-            this.InventoryColumn6.Name = "InventoryColumn6";
-            this.InventoryColumn6.ReadOnly = true;
-            this.InventoryColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.InventoryColumn6.Width = 97;
-            // 
-            // InventoryColumn7
-            // 
-            this.InventoryColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.InventoryColumn7.HeaderText = "Expected Sale";
-            this.InventoryColumn7.Name = "InventoryColumn7";
-            this.InventoryColumn7.ReadOnly = true;
-            this.InventoryColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.InventoryColumn7.Width = 104;
-            // 
-            // InventoryColumn8
-            // 
-            this.InventoryColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.InventoryColumn8.HeaderText = "Current Gain";
-            this.InventoryColumn8.Name = "InventoryColumn8";
-            this.InventoryColumn8.ReadOnly = true;
-            this.InventoryColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // InventoryColumn9
-            // 
-            this.InventoryColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.InventoryColumn9.HeaderText = "Expected Gain";
-            this.InventoryColumn9.Name = "InventoryColumn9";
-            this.InventoryColumn9.ReadOnly = true;
-            this.InventoryColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.InventoryColumn9.Width = 106;
             // 
             // metroPanelInventoryHeader
             // 
@@ -451,6 +372,85 @@
             this.txtBoxPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtBoxPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // InventoryColumn1
+            // 
+            this.InventoryColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.InventoryColumn1.HeaderText = "ID";
+            this.InventoryColumn1.Name = "InventoryColumn1";
+            this.InventoryColumn1.ReadOnly = true;
+            this.InventoryColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.InventoryColumn1.Width = 50;
+            // 
+            // InventoryColumn2
+            // 
+            this.InventoryColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.InventoryColumn2.HeaderText = "Label Name";
+            this.InventoryColumn2.Name = "InventoryColumn2";
+            this.InventoryColumn2.ReadOnly = true;
+            this.InventoryColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // InventoryColumn3
+            // 
+            this.InventoryColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.InventoryColumn3.HeaderText = "Price";
+            this.InventoryColumn3.Name = "InventoryColumn3";
+            this.InventoryColumn3.ReadOnly = true;
+            this.InventoryColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.InventoryColumn3.Width = 66;
+            // 
+            // InventoryColumn4
+            // 
+            this.InventoryColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.InventoryColumn4.HeaderText = "Cost";
+            this.InventoryColumn4.Name = "InventoryColumn4";
+            this.InventoryColumn4.ReadOnly = true;
+            this.InventoryColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.InventoryColumn4.Width = 65;
+            // 
+            // InventoryColumn5
+            // 
+            this.InventoryColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.InventoryColumn5.HeaderText = "Stock";
+            this.InventoryColumn5.Name = "InventoryColumn5";
+            this.InventoryColumn5.ReadOnly = true;
+            this.InventoryColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.InventoryColumn5.Width = 70;
+            // 
+            // InventoryColumn6
+            // 
+            this.InventoryColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.InventoryColumn6.HeaderText = "Current Sale";
+            this.InventoryColumn6.Name = "InventoryColumn6";
+            this.InventoryColumn6.ReadOnly = true;
+            this.InventoryColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.InventoryColumn6.Width = 97;
+            // 
+            // InventoryColumn7
+            // 
+            this.InventoryColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.InventoryColumn7.HeaderText = "Current Gain";
+            this.InventoryColumn7.Name = "InventoryColumn7";
+            this.InventoryColumn7.ReadOnly = true;
+            this.InventoryColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // InventoryColumn8
+            // 
+            this.InventoryColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.InventoryColumn8.HeaderText = "Expected Sale";
+            this.InventoryColumn8.Name = "InventoryColumn8";
+            this.InventoryColumn8.ReadOnly = true;
+            this.InventoryColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.InventoryColumn8.Width = 104;
+            // 
+            // InventoryColumn9
+            // 
+            this.InventoryColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.InventoryColumn9.HeaderText = "Expected Gain";
+            this.InventoryColumn9.Name = "InventoryColumn9";
+            this.InventoryColumn9.ReadOnly = true;
+            this.InventoryColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.InventoryColumn9.Width = 106;
+            // 
             // PnlManageInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,6 +489,7 @@
         private MetroFramework.Controls.MetroButton btnHidePrivilege;
         private MetroFramework.Controls.MetroButton btnDeleteProduct;
         private MetroFramework.Controls.MetroPanel pnlAdminPrivilege;
+        private MetroFramework.Controls.MetroTextBox txtBoxSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn InventoryColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn InventoryColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn InventoryColumn3;
@@ -498,6 +499,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn InventoryColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn InventoryColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn InventoryColumn9;
-        private MetroFramework.Controls.MetroTextBox txtBoxSearch;
     }
 }

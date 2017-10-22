@@ -41,10 +41,6 @@ namespace IPCS.Data
 
         public Image ProductPicture { get; set; }
 
-        #endregion
-
-        #region Members
-
         public int Stock { get { return Quantity - NumSold; } }
 
         public double CurrentSale { get { return Price * NumSold; } }
@@ -56,6 +52,22 @@ namespace IPCS.Data
         public double ExpectedGain { get { return (Price - Cost) * Quantity; } }
 
         public double TotalCost { get { return Cost * Quantity; } }
+
+        #endregion
+
+        #region Members
+
+        public void SoldQuantity(int quantity)
+        {
+            if(quantity <= Stock)
+            {
+                NumSold += quantity;
+            }
+            else
+            {
+                Program.PrintDebug("error SoldQuantity: qty=" + quantity + "stock=" + Stock);
+            }
+        }
 
         #endregion
     }

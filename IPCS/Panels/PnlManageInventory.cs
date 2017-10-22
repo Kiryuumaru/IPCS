@@ -34,7 +34,7 @@ namespace IPCS.Panels
 
         #region Threads
 
-        private void ReInitializeComponent()
+        public void ReInitializeComponent()
         {
             pnlAdminPrivilege.Hide();
             pnlUnlockPrivilege.Show();
@@ -44,12 +44,12 @@ namespace IPCS.Panels
             InventoryColumn4.Tag = Data.Columns.Cost;
             InventoryColumn5.Tag = Data.Columns.Stock;
             InventoryColumn6.Tag = Data.Columns.CurrentSale;
-            InventoryColumn7.Tag = Data.Columns.ExpextedSale;
-            InventoryColumn8.Tag = Data.Columns.CurrentGain;
+            InventoryColumn7.Tag = Data.Columns.CurrentGain;
+            InventoryColumn8.Tag = Data.Columns.ExpextedSale;
             InventoryColumn9.Tag = Data.Columns.ExpectedGain;
         }
 
-        private void UpdateComponents()
+        public void UpdateComponents()
         {
             Program.User.Inventory.SetDataGridTable(metroGridInventory, txtBoxSearch.Text);
         }

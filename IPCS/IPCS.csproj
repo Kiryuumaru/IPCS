@@ -249,11 +249,11 @@
     <EmbeddedResource Include="Forms\GetQuantityForm.resx">
       <DependentUpon>GetQuantityForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ReceiptForm.resx">
-      <DependentUpon>ReceiptForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReceiptForm.resx">
+      <DependentUpon>ReceiptForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SignupForm.resx">
       <DependentUpon>SignupForm.cs</DependentUpon>

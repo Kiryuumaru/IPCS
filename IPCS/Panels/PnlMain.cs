@@ -148,6 +148,9 @@ namespace IPCS.Panels
                         }
                         else if (p.Name.Equals("PnlManageInventory") && tab.Name.Equals("tabManageInventory"))
                         {
+                            PnlManageInventory panel = (PnlManageInventory)p;
+                            panel.ReInitializeComponent();
+                            panel.UpdateComponents();
                             p.Show();
                             MinimizeTab();
                         }

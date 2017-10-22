@@ -31,9 +31,11 @@
             this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.btnOk = new MetroFramework.Controls.MetroButton();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.lblId = new MetroFramework.Controls.MetroLabel();
-            this.txtBoxQuantity = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.lblTotal = new MetroFramework.Controls.MetroLabel();
+            this.txtBoxCash = new MetroFramework.Controls.MetroTextBox();
+            this.lblCash = new MetroFramework.Controls.MetroLabel();
+            this.lblTotalCurr = new MetroFramework.Controls.MetroLabel();
+            this.lblCashCurr = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -54,6 +56,7 @@
             this.btnOk.TabIndex = 24;
             this.btnOk.Text = "Ok";
             this.btnOk.UseSelectable = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // metroLabel5
             // 
@@ -65,63 +68,85 @@
             this.metroLabel5.TabIndex = 28;
             this.metroLabel5.Text = "Total : ";
             // 
-            // lblId
+            // lblTotal
             // 
-            this.lblId.AutoSize = true;
-            this.lblId.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblId.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblId.Location = new System.Drawing.Point(195, 61);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(52, 25);
-            this.lblId.TabIndex = 27;
-            this.lblId.Text = "000x";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblTotal.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblTotal.Location = new System.Drawing.Point(207, 61);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(52, 25);
+            this.lblTotal.TabIndex = 27;
+            this.lblTotal.Text = "000x";
             // 
-            // txtBoxQuantity
-            // 
-            // 
+            // txtBoxCash
             // 
             // 
-            this.txtBoxQuantity.CustomButton.Image = null;
-            this.txtBoxQuantity.CustomButton.Location = new System.Drawing.Point(69, 1);
-            this.txtBoxQuantity.CustomButton.Name = "";
-            this.txtBoxQuantity.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.txtBoxQuantity.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtBoxQuantity.CustomButton.TabIndex = 1;
-            this.txtBoxQuantity.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtBoxQuantity.CustomButton.UseSelectable = true;
-            this.txtBoxQuantity.CustomButton.Visible = false;
-            this.txtBoxQuantity.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtBoxQuantity.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtBoxQuantity.Lines = new string[] {
+            // 
+            // 
+            this.txtBoxCash.CustomButton.Image = null;
+            this.txtBoxCash.CustomButton.Location = new System.Drawing.Point(65, 2);
+            this.txtBoxCash.CustomButton.Name = "";
+            this.txtBoxCash.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtBoxCash.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtBoxCash.CustomButton.TabIndex = 1;
+            this.txtBoxCash.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtBoxCash.CustomButton.UseSelectable = true;
+            this.txtBoxCash.CustomButton.Visible = false;
+            this.txtBoxCash.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtBoxCash.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtBoxCash.Lines = new string[] {
         "1"};
-            this.txtBoxQuantity.Location = new System.Drawing.Point(195, 98);
-            this.txtBoxQuantity.MaxLength = 32767;
-            this.txtBoxQuantity.Name = "txtBoxQuantity";
-            this.txtBoxQuantity.PasswordChar = '\0';
-            this.txtBoxQuantity.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtBoxQuantity.SelectedText = "";
-            this.txtBoxQuantity.SelectionLength = 0;
-            this.txtBoxQuantity.SelectionStart = 0;
-            this.txtBoxQuantity.ShortcutsEnabled = true;
-            this.txtBoxQuantity.Size = new System.Drawing.Size(93, 25);
-            this.txtBoxQuantity.TabIndex = 29;
-            this.txtBoxQuantity.Text = "1";
-            this.txtBoxQuantity.UseSelectable = true;
-            this.txtBoxQuantity.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtBoxQuantity.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtBoxQuantity.TextChanged += new System.EventHandler(this.txtBoxQuantity_TextChanged);
-            this.txtBoxQuantity.Click += new System.EventHandler(this.txtBoxQuantity_Click);
-            this.txtBoxQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxQuantity_KeyPress);
+            this.txtBoxCash.Location = new System.Drawing.Point(207, 95);
+            this.txtBoxCash.MaxLength = 32767;
+            this.txtBoxCash.Name = "txtBoxCash";
+            this.txtBoxCash.PasswordChar = '\0';
+            this.txtBoxCash.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBoxCash.SelectedText = "";
+            this.txtBoxCash.SelectionLength = 0;
+            this.txtBoxCash.SelectionStart = 0;
+            this.txtBoxCash.ShortcutsEnabled = true;
+            this.txtBoxCash.Size = new System.Drawing.Size(93, 30);
+            this.txtBoxCash.TabIndex = 29;
+            this.txtBoxCash.Text = "1";
+            this.txtBoxCash.UseSelectable = true;
+            this.txtBoxCash.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBoxCash.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtBoxCash.TextChanged += new System.EventHandler(this.txtBoxCash_TextChanged);
+            this.txtBoxCash.Click += new System.EventHandler(this.txtBoxCash_Click);
+            this.txtBoxCash.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxCash_KeyPress);
             // 
-            // metroLabel1
+            // lblCash
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(126, 98);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(63, 25);
-            this.metroLabel1.TabIndex = 30;
-            this.metroLabel1.Text = "Cash : ";
+            this.lblCash.AutoSize = true;
+            this.lblCash.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblCash.Location = new System.Drawing.Point(126, 98);
+            this.lblCash.Name = "lblCash";
+            this.lblCash.Size = new System.Drawing.Size(63, 25);
+            this.lblCash.TabIndex = 30;
+            this.lblCash.Text = "Cash : ";
+            // 
+            // lblTotalCurr
+            // 
+            this.lblTotalCurr.AutoSize = true;
+            this.lblTotalCurr.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblTotalCurr.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblTotalCurr.Location = new System.Drawing.Point(179, 61);
+            this.lblTotalCurr.Name = "lblTotalCurr";
+            this.lblTotalCurr.Size = new System.Drawing.Size(22, 25);
+            this.lblTotalCurr.TabIndex = 31;
+            this.lblTotalCurr.Text = "$";
+            // 
+            // lblCashCurr
+            // 
+            this.lblCashCurr.AutoSize = true;
+            this.lblCashCurr.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblCashCurr.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblCashCurr.Location = new System.Drawing.Point(179, 98);
+            this.lblCashCurr.Name = "lblCashCurr";
+            this.lblCashCurr.Size = new System.Drawing.Size(22, 25);
+            this.lblCashCurr.TabIndex = 32;
+            this.lblCashCurr.Text = "$";
             // 
             // GetCashForm
             // 
@@ -129,10 +154,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(400, 234);
-            this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.txtBoxQuantity);
+            this.Controls.Add(this.lblCashCurr);
+            this.Controls.Add(this.lblTotalCurr);
+            this.Controls.Add(this.lblCash);
+            this.Controls.Add(this.txtBoxCash);
             this.Controls.Add(this.metroLabel5);
-            this.Controls.Add(this.lblId);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
             this.MaximizeBox = false;
@@ -144,10 +171,12 @@
             this.Text = "Cash";
             this.Controls.SetChildIndex(this.btnOk, 0);
             this.Controls.SetChildIndex(this.btnCancel, 0);
-            this.Controls.SetChildIndex(this.lblId, 0);
+            this.Controls.SetChildIndex(this.lblTotal, 0);
             this.Controls.SetChildIndex(this.metroLabel5, 0);
-            this.Controls.SetChildIndex(this.txtBoxQuantity, 0);
-            this.Controls.SetChildIndex(this.metroLabel1, 0);
+            this.Controls.SetChildIndex(this.txtBoxCash, 0);
+            this.Controls.SetChildIndex(this.lblCash, 0);
+            this.Controls.SetChildIndex(this.lblTotalCurr, 0);
+            this.Controls.SetChildIndex(this.lblCashCurr, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,8 +187,10 @@
         private MetroFramework.Controls.MetroButton btnCancel;
         private MetroFramework.Controls.MetroButton btnOk;
         private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroLabel lblId;
-        private MetroFramework.Controls.MetroTextBox txtBoxQuantity;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel lblTotal;
+        private MetroFramework.Controls.MetroTextBox txtBoxCash;
+        private MetroFramework.Controls.MetroLabel lblCash;
+        private MetroFramework.Controls.MetroLabel lblTotalCurr;
+        private MetroFramework.Controls.MetroLabel lblCashCurr;
     }
 }

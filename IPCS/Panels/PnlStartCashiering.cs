@@ -19,6 +19,7 @@ namespace IPCS.Panels
 
         public PnlStartCashiering(Form parent)
         {
+            Total = 0;
             Parent = parent;
             InitializeComponent();
             ReInitializeComponent();
@@ -30,6 +31,7 @@ namespace IPCS.Panels
         #region Properties
 
         private List<Item> Cart;
+        public double Total;
         public new Form Parent;
 
         #endregion
@@ -80,13 +82,13 @@ namespace IPCS.Panels
                             data.Add(item.Product.ProductName);
                             break;
                         case Data.Columns.Price:
-                            data.Add(Defaults.CurrencyChar + item.Product.Price.ToString("0.00"));
+                            data.Add(Defaults.CurrencyChar + item.Product.Price.ToString("N"));
                             break;
                         case Data.Columns.Cart_ItemQuantity:
                             data.Add(item.Quantity);
                             break;
                         case Data.Columns.Cart_ItemTotal:
-                            data.Add(Defaults.CurrencyChar + item.Total.ToString("0.00"));
+                            data.Add(Defaults.CurrencyChar + item.Total.ToString("N"));
                             break;
                     }
                 }
@@ -131,10 +133,10 @@ namespace IPCS.Panels
                         productPicture.Image = Cart[i].Product.ProductPicture;
                         lblId.Text = Cart[i].Product.ID.ToString("0000");
                         lblName.Text = Cart[i].Product.ProductName;
-                        lblPrice.Text = Defaults.CurrencyChar + Cart[i].Product.Price.ToString("0.00");
+                        lblPrice.Text = Defaults.CurrencyChar + Cart[i].Product.Price.ToString("N");
                         lblQuantity.Text = Cart[i].Quantity.ToString();
                         lblStock.Text = Cart[i].Product.Stock.ToString();
-                        lblTotal.Text = Defaults.CurrencyChar + Cart[i].Total.ToString("0.00");
+                        lblTotal.Text = Defaults.CurrencyChar + Cart[i].Total.ToString("N");
                         break;
                     }
                 }
@@ -149,12 +151,12 @@ namespace IPCS.Panels
                 lblStock.Text = "N/A";
                 lblTotal.Text = "N/A";
             }
-            double total = 0;
-            foreach(Item item in Cart)
+            Total = 0;
+            foreach (Item item in Cart)
             {
-                total += item.Total;
+                Total += item.Total;
             }
-            lblTotalCash.Text = "Total :  " + Defaults.CurrencyChar + total.ToString("0.00");
+            lblTotalCash.Text = "Total :  " + Defaults.CurrencyChar + Total.ToString("N");
             int newWidth = (int)((metroPanelTotal.Width / 2) - (lblTotalCash.Width / 2));
             lblTotalCash.Location = new Point(newWidth, 18);
         }
@@ -173,10 +175,26 @@ namespace IPCS.Panels
             MainForm parent = (MainForm)Parent;
             if (Cart.Count != 0)
             {
-                Forms.ReceiptForm form = new Forms.ReceiptForm(Cart);
-                form.StyleManager = Program.MainStyleManager;
-                if (form.ShowDialog() == DialogResult.OK)
+                Forms.GetCashForm cashForm = new Forms.GetCashForm(Total);
+                cashForm.StyleManager = Program.MainStyleManager;
+                if (cashForm.ShowDialog() == DialogResult.OK)
                 {
+                    Forms.ReceiptForm receiptForm = new Forms.ReceiptForm(Cart, cashForm.Cash);
+                    receiptForm.StyleManager = Program.MainStyleManager;
+                    receiptForm.ShowDialog();
+
+                    foreach(Item item in Cart)
+                    {
+                        foreach (Product product in Program.User.Inventory.Products)
+                        {
+                            if(product.ID == item.Product.ID)
+                            {
+                                product.SoldQuantity(item.Quantity);
+                                break;
+                            }
+                        }
+                    }
+
                     Cart.Clear();
                     RefreshPrivControls();
                 }
@@ -218,13 +236,20 @@ namespace IPCS.Panels
                 string text = pnlSearch.Text.Substring(0, pnlSearch.Text.IndexOf(':') - 1);
                 int id = Convert.ToInt32(text);
                 Data.Product product = Program.User.Inventory.GetProduct(id);
-                Forms.GetQuantityForm form = new Forms.GetQuantityForm(product, 1);
-                form.StyleManager = Program.MainStyleManager;
-                if (form.ShowDialog() == DialogResult.OK)
+                if (product.Stock != 0)
                 {
-                    int quantity = form.Value;
-                    AddCart(product, quantity);
-                    RefreshPrivControls();
+                    Forms.GetQuantityForm form = new Forms.GetQuantityForm(product, 1);
+                    form.StyleManager = Program.MainStyleManager;
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        int quantity = form.Value;
+                        AddCart(product, quantity);
+                        RefreshPrivControls();
+                    }
+                }
+                else
+                {
+                    MetroMessageBox.Show(this, product.ProductName + " is out of stock!", "Out of stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch
