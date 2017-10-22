@@ -87,7 +87,6 @@
             this.txtBoxQuantity.MaxLength = 32767;
             this.txtBoxQuantity.Name = "txtBoxQuantity";
             this.txtBoxQuantity.PasswordChar = '\0';
-            this.txtBoxQuantity.PromptText = "Quantity";
             this.txtBoxQuantity.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBoxQuantity.SelectedText = "";
             this.txtBoxQuantity.SelectionLength = 0;
@@ -120,7 +119,6 @@
             this.txtBoxCost.MaxLength = 32767;
             this.txtBoxCost.Name = "txtBoxCost";
             this.txtBoxCost.PasswordChar = '\0';
-            this.txtBoxCost.PromptText = "Cost";
             this.txtBoxCost.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBoxCost.SelectedText = "";
             this.txtBoxCost.SelectionLength = 0;
@@ -153,7 +151,6 @@
             this.txtBoxPrice.MaxLength = 32767;
             this.txtBoxPrice.Name = "txtBoxPrice";
             this.txtBoxPrice.PasswordChar = '\0';
-            this.txtBoxPrice.PromptText = "Price";
             this.txtBoxPrice.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBoxPrice.SelectedText = "";
             this.txtBoxPrice.SelectionLength = 0;
@@ -186,7 +183,6 @@
             this.txtBoxName.MaxLength = 32767;
             this.txtBoxName.Name = "txtBoxName";
             this.txtBoxName.PasswordChar = '\0';
-            this.txtBoxName.PromptText = "Product name";
             this.txtBoxName.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBoxName.SelectedText = "";
             this.txtBoxName.SelectionLength = 0;

@@ -185,7 +185,6 @@
             this.txtBoxSearch.MaxLength = 32767;
             this.txtBoxSearch.Name = "txtBoxSearch";
             this.txtBoxSearch.PasswordChar = '\0';
-            this.txtBoxSearch.PromptText = "ID or label name";
             this.txtBoxSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBoxSearch.SelectedText = "";
             this.txtBoxSearch.SelectionLength = 0;
@@ -358,7 +357,6 @@
             this.txtBoxPassword.MaxLength = 32767;
             this.txtBoxPassword.Name = "txtBoxPassword";
             this.txtBoxPassword.PasswordChar = '●';
-            this.txtBoxPassword.PromptText = "Admin password";
             this.txtBoxPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBoxPassword.SelectedText = "";
             this.txtBoxPassword.SelectionLength = 0;

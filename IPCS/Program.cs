@@ -29,11 +29,6 @@ namespace IPCS
             Application.Run(new LoginForm());
         }
 
-        private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
-        {
-            PrintDebug("something went wrong desu\n" + e.ToString());
-        }
-
         #endregion
 
         #region Fields
