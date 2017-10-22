@@ -135,6 +135,7 @@ namespace IPCS.Panels
         private void txtBoxSearch_Click(object sender, EventArgs e)
         {
             comboBoxSearch.DroppedDown = true;
+            System.Threading.Thread.Sleep(100);
             txtBoxSearch.SelectAll();
         }
 

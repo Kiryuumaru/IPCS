@@ -72,22 +72,22 @@ namespace IPCS.Panels
                 data = new List<object>();
                 for (int i = 0; i < dataGridView.ColumnCount; i++)
                 {
-                    column = (Data.Columns)dataGridView.Columns[i].Tag;
+                    column = (Columns)dataGridView.Columns[i].Tag;
                     switch (column)
                     {
-                        case Data.Columns.ID:
+                        case Columns.ID:
                             data.Add(item.Product.ID.ToString("0000"));
                             break;
-                        case Data.Columns.ProductName:
+                        case Columns.ProductName:
                             data.Add(item.Product.ProductName);
                             break;
-                        case Data.Columns.Price:
+                        case Columns.Price:
                             data.Add(Defaults.CurrencyChar + item.Product.Price.ToString("N"));
                             break;
-                        case Data.Columns.Cart_ItemQuantity:
+                        case Columns.Cart_ItemQuantity:
                             data.Add(item.Quantity);
                             break;
-                        case Data.Columns.Cart_ItemTotal:
+                        case Columns.Cart_ItemTotal:
                             data.Add(Defaults.CurrencyChar + item.Total.ToString("N"));
                             break;
                     }
