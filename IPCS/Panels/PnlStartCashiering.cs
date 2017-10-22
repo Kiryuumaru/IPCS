@@ -249,7 +249,7 @@ namespace IPCS.Panels
                 }
                 else
                 {
-                    MetroMessageBox.Show(this, product.ProductName + " is out of stock!", "Out of stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this, product.ProductName + " is out of stock!", "Out of stock", MessageBoxButtons.OK);
                 }
             }
             catch

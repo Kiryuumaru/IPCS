@@ -21,6 +21,7 @@ namespace IPCS.Forms
         {
             Product = product;
             InitializeComponent();
+            ReInitializeComponent();
             UpdateComponent();
         }
 
@@ -34,13 +35,20 @@ namespace IPCS.Forms
 
         #region Threads
 
-        public void UpdateComponent()
+        public void ReInitializeComponent()
         {
+            lblPriceCurr.Text = Defaults.CurrencyChar;
+            lblCostCurr.Text = Defaults.CurrencyChar;
             txtBoxName.Text = Product.ProductName;
-            txtBoxPrice.Text = Product.Price.ToString("0.00");
-            txtBoxCost.Text = Product.Cost.ToString("0.00");
+            txtBoxPrice.Text = Product.Price.ToString("N");
+            txtBoxCost.Text = Product.Cost.ToString("N");
             txtBoxQuantity.Text = Product.Quantity.ToString();
             productPicture.Image = Product.ProductPicture;
+        }
+
+        public void UpdateComponent()
+        {
+
         }
 
         #endregion

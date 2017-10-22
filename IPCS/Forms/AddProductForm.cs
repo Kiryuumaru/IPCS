@@ -19,18 +19,25 @@ namespace IPCS.Forms
         public AddProductForm()
         {
             InitializeComponent();
+            ReInitializeComponent();
             UpdateComponent();
         }
 
         #endregion
 
         #region Properties
-        
+
 
 
         #endregion
 
         #region Threads
+
+        public void ReInitializeComponent()
+        {
+            lblPriceCurr.Text = Defaults.CurrencyChar;
+            lblCostCurr.Text = Defaults.CurrencyChar;
+        }
 
         public void UpdateComponent()
         {

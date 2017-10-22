@@ -41,6 +41,8 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.lblPriceCurr = new MetroFramework.Controls.MetroLabel();
+            this.lblCostCurr = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.productPicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +74,7 @@
             // 
             // 
             this.txtBoxQuantity.CustomButton.Image = null;
-            this.txtBoxQuantity.CustomButton.Location = new System.Drawing.Point(227, 2);
+            this.txtBoxQuantity.CustomButton.Location = new System.Drawing.Point(152, 2);
             this.txtBoxQuantity.CustomButton.Name = "";
             this.txtBoxQuantity.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txtBoxQuantity.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -105,7 +107,7 @@
             // 
             // 
             this.txtBoxCost.CustomButton.Image = null;
-            this.txtBoxCost.CustomButton.Location = new System.Drawing.Point(227, 2);
+            this.txtBoxCost.CustomButton.Location = new System.Drawing.Point(130, 2);
             this.txtBoxCost.CustomButton.Name = "";
             this.txtBoxCost.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txtBoxCost.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -114,7 +116,7 @@
             this.txtBoxCost.CustomButton.UseSelectable = true;
             this.txtBoxCost.CustomButton.Visible = false;
             this.txtBoxCost.Lines = new string[0];
-            this.txtBoxCost.Location = new System.Drawing.Point(292, 129);
+            this.txtBoxCost.Location = new System.Drawing.Point(314, 129);
             this.txtBoxCost.MaxLength = 32767;
             this.txtBoxCost.Name = "txtBoxCost";
             this.txtBoxCost.PasswordChar = '\0';
@@ -124,7 +126,7 @@
             this.txtBoxCost.SelectionLength = 0;
             this.txtBoxCost.SelectionStart = 0;
             this.txtBoxCost.ShortcutsEnabled = true;
-            this.txtBoxCost.Size = new System.Drawing.Size(178, 28);
+            this.txtBoxCost.Size = new System.Drawing.Size(156, 28);
             this.txtBoxCost.TabIndex = 26;
             this.txtBoxCost.UseSelectable = true;
             this.txtBoxCost.WaterMark = "Cost";
@@ -138,7 +140,7 @@
             // 
             // 
             this.txtBoxPrice.CustomButton.Image = null;
-            this.txtBoxPrice.CustomButton.Location = new System.Drawing.Point(227, 2);
+            this.txtBoxPrice.CustomButton.Location = new System.Drawing.Point(130, 2);
             this.txtBoxPrice.CustomButton.Name = "";
             this.txtBoxPrice.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txtBoxPrice.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -147,7 +149,7 @@
             this.txtBoxPrice.CustomButton.UseSelectable = true;
             this.txtBoxPrice.CustomButton.Visible = false;
             this.txtBoxPrice.Lines = new string[0];
-            this.txtBoxPrice.Location = new System.Drawing.Point(292, 95);
+            this.txtBoxPrice.Location = new System.Drawing.Point(314, 95);
             this.txtBoxPrice.MaxLength = 32767;
             this.txtBoxPrice.Name = "txtBoxPrice";
             this.txtBoxPrice.PasswordChar = '\0';
@@ -157,7 +159,7 @@
             this.txtBoxPrice.SelectionLength = 0;
             this.txtBoxPrice.SelectionStart = 0;
             this.txtBoxPrice.ShortcutsEnabled = true;
-            this.txtBoxPrice.Size = new System.Drawing.Size(178, 28);
+            this.txtBoxPrice.Size = new System.Drawing.Size(156, 28);
             this.txtBoxPrice.TabIndex = 25;
             this.txtBoxPrice.UseSelectable = true;
             this.txtBoxPrice.WaterMark = "Price";
@@ -171,7 +173,7 @@
             // 
             // 
             this.txtBoxName.CustomButton.Image = null;
-            this.txtBoxName.CustomButton.Location = new System.Drawing.Point(227, 2);
+            this.txtBoxName.CustomButton.Location = new System.Drawing.Point(152, 2);
             this.txtBoxName.CustomButton.Name = "";
             this.txtBoxName.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txtBoxName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -261,12 +263,32 @@
             this.metroLabel4.TabIndex = 33;
             this.metroLabel4.Text = "Quantity : ";
             // 
+            // lblPriceCurr
+            // 
+            this.lblPriceCurr.AutoSize = true;
+            this.lblPriceCurr.Location = new System.Drawing.Point(292, 95);
+            this.lblPriceCurr.Name = "lblPriceCurr";
+            this.lblPriceCurr.Size = new System.Drawing.Size(16, 19);
+            this.lblPriceCurr.TabIndex = 34;
+            this.lblPriceCurr.Text = "$";
+            // 
+            // lblCostCurr
+            // 
+            this.lblCostCurr.AutoSize = true;
+            this.lblCostCurr.Location = new System.Drawing.Point(292, 129);
+            this.lblCostCurr.Name = "lblCostCurr";
+            this.lblCostCurr.Size = new System.Drawing.Size(16, 19);
+            this.lblCostCurr.TabIndex = 35;
+            this.lblCostCurr.Text = "$";
+            // 
             // EditProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(500, 300);
+            this.Controls.Add(this.lblCostCurr);
+            this.Controls.Add(this.lblPriceCurr);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
@@ -296,6 +318,8 @@
             this.Controls.SetChildIndex(this.metroLabel2, 0);
             this.Controls.SetChildIndex(this.metroLabel3, 0);
             this.Controls.SetChildIndex(this.metroLabel4, 0);
+            this.Controls.SetChildIndex(this.lblPriceCurr, 0);
+            this.Controls.SetChildIndex(this.lblCostCurr, 0);
             ((System.ComponentModel.ISupportInitialize)(this.productPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -317,5 +341,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel lblPriceCurr;
+        private MetroFramework.Controls.MetroLabel lblCostCurr;
     }
 }
