@@ -304,6 +304,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EditProductForm";
+            this.NotifDefaultText = "Ready";
+            this.NotifText = "Ready";
             this.Resizable = false;
             this.Text = "Edit Product";
             this.Controls.SetChildIndex(this.btnSave, 0);

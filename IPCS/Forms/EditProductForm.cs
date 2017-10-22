@@ -104,20 +104,18 @@ namespace IPCS.Forms
                 Product prod = new Product(id, name, price, cost, quantity, productPicture.Image);
                 Program.User.Inventory.ReplaceProduct(Product.ID, prod);
                 NotifText = "Product changes saved";
-                this.DialogResult = DialogResult.OK;
+                DialogResult = DialogResult.OK;
                 Dispose();
             }
             catch
             {
                 NotifText = "Invalid input(s)!";
             }
-            Dispose();
         }
 
         private void btnBrowsePic_Click(object sender, EventArgs e)
         {
-            DialogResult result = openFileDialog.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 productPicture.Image = Image.FromFile(openFileDialog.FileName);
             }

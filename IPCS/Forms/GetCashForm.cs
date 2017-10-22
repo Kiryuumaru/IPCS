@@ -80,7 +80,10 @@ namespace IPCS.Forms
 
         private void txtBoxCash_TextChanged(object sender, EventArgs e)
         {
-            Cash = Convert.ToDouble(txtBoxCash.Text);
+            try
+            {
+                Cash = Convert.ToDouble(txtBoxCash.Text);
+            } catch { }
             NotifSetDefault();
         }
 

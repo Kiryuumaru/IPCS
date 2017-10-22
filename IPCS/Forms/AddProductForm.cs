@@ -102,7 +102,7 @@ namespace IPCS.Forms
             }
             catch
             {
-                NotifText = "Invalid input: input must be non-negative and non-zero integer";
+                NotifText = "Invalid input(s)!";
             }
         }
 

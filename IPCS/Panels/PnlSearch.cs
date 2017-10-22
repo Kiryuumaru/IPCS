@@ -139,6 +139,16 @@ namespace IPCS.Panels
             txtBoxSearch.SelectAll();
         }
 
+        private void txtBoxSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                comboBoxSearch.SelectedIndex = 0;
+                System.Threading.Thread.Sleep(100);
+                txtBoxSearch.SelectAll();
+            }
+        }
+
         private void txtBoxSearch_KeyUp(object sender, KeyEventArgs e)
         {
             comboBoxSearch.Items.Clear();
