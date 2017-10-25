@@ -61,6 +61,15 @@ namespace IPCS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Copyright © 2017 Reverse harem.
+        /// </summary>
+        public static string Copyright {
+            get {
+                return ResourceManager.GetString("Copyright", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap drect_black {
@@ -477,6 +486,15 @@ namespace IPCS.Properties {
             get {
                 object obj = ResourceManager.GetObject("separator", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://kiryuumaru.github.io.
+        /// </summary>
+        public static string Website {
+            get {
+                return ResourceManager.GetString("Website", resourceCulture);
             }
         }
         

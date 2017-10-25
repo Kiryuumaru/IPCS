@@ -177,7 +177,7 @@
             this.tabHome.Name = "tabHome";
             this.tabHome.Size = new System.Drawing.Size(175, 35);
             this.tabHome.TabIndex = 2;
-            this.tabHome.TabText = "Profile";
+            this.tabHome.TabText = "Home";
             this.tabHome.Tag = "Home";
             this.tabHome.Toggled = false;
             this.tabHome.Click += new System.EventHandler(this.Tab_Click);
@@ -284,7 +284,7 @@
             // 
             this.profilePicture.BackColor = System.Drawing.Color.Transparent;
             this.profilePicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.profilePicture.Image = global::IPCS.Properties.Resources.logo;
+            this.profilePicture.Image = ((System.Drawing.Image)(resources.GetObject("profilePicture.Image")));
             this.profilePicture.Location = new System.Drawing.Point(76, 34);
             this.profilePicture.Name = "profilePicture";
             this.profilePicture.Size = new System.Drawing.Size(60, 60);

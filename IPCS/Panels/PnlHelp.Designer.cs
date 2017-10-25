@@ -28,14 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PnlHelp));
             this.pnlMetro = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.lblLink = new MetroFramework.Controls.MetroLink();
+            this.lblCopyright = new MetroFramework.Controls.MetroLabel();
+            this.lblVersion = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.pnlMetro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMetro
             // 
-            this.pnlMetro.Controls.Add(this.metroLabel4);
+            this.pnlMetro.Controls.Add(this.lblLink);
+            this.pnlMetro.Controls.Add(this.lblCopyright);
+            this.pnlMetro.Controls.Add(this.lblVersion);
+            this.pnlMetro.Controls.Add(this.metroLabel1);
+            this.pnlMetro.Controls.Add(this.pictureBoxLogo);
             this.pnlMetro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMetro.HorizontalScrollbarBarColor = true;
             this.pnlMetro.HorizontalScrollbarHighlightOnWheel = false;
@@ -48,16 +58,58 @@
             this.pnlMetro.VerticalScrollbarHighlightOnWheel = false;
             this.pnlMetro.VerticalScrollbarSize = 10;
             // 
-            // metroLabel4
+            // lblLink
             // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel4.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(52, 25);
-            this.metroLabel4.TabIndex = 32;
-            this.metroLabel4.Text = "Help";
+            this.lblLink.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblLink.Location = new System.Drawing.Point(297, 291);
+            this.lblLink.Name = "lblLink";
+            this.lblLink.Size = new System.Drawing.Size(113, 23);
+            this.lblLink.TabIndex = 6;
+            this.lblLink.Text = "Check for updates";
+            this.lblLink.UseSelectable = true;
+            this.lblLink.Click += new System.EventHandler(this.lblLink_Click);
+            // 
+            // lblCopyright
+            // 
+            this.lblCopyright.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCopyright.Location = new System.Drawing.Point(176, 269);
+            this.lblCopyright.Name = "lblCopyright";
+            this.lblCopyright.Size = new System.Drawing.Size(350, 19);
+            this.lblCopyright.TabIndex = 5;
+            this.lblCopyright.Text = "Copyright © 2017 Someone";
+            this.lblCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblVersion
+            // 
+            this.lblVersion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblVersion.Location = new System.Drawing.Point(383, 250);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(41, 19);
+            this.lblVersion.TabIndex = 4;
+            this.lblVersion.Text = "000x";
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(283, 250);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(103, 19);
+            this.metroLabel1.TabIndex = 3;
+            this.metroLabel1.Text = "Product version:";
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.BackgroundImage")));
+            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(176, 47);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(350, 200);
+            this.pictureBoxLogo.TabIndex = 2;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // PnlHelp
             // 
@@ -69,6 +121,7 @@
             this.Size = new System.Drawing.Size(696, 442);
             this.pnlMetro.ResumeLayout(false);
             this.pnlMetro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -76,6 +129,10 @@
         #endregion
 
         private MetroFramework.Controls.MetroPanel pnlMetro;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private MetroFramework.Controls.MetroLabel lblVersion;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel lblCopyright;
+        private MetroFramework.Controls.MetroLink lblLink;
     }
 }
