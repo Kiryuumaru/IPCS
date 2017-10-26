@@ -24,11 +24,36 @@ namespace IPCS.DatabaseManager
 
         #region Properties
 
-        private string FILEPATH;
+        private string FILEPATH = "";
+        private string FILEDIR = "";
+        private string FILENAME = "IPCSData.bin";
+        private string STARTLINE = ">>START";
+        private string ENDLINE = ">>END";
+        private string USERSTARTLINE = ">>STARTUSER";
+        private string USERENDLINE = ">>ENDUSER";
 
         #endregion
 
         #region Threads
+
+        private void SetDir()
+        {
+            try
+            {
+                if (Environment.GetEnvironmentVariable("USERPROFILE").Length >= 1)
+                {
+                    FILEDIR = Environment.GetEnvironmentVariable("USERPROFILE") + "//AppData//Roaming//IPSCData//";
+                }
+                else
+                {
+                    FILEDIR = "data//";
+                }
+            }
+            catch
+            {
+                FILEDIR = "data//";
+            }
+        }
 
         public bool CreateUser(User user)
         {
@@ -78,32 +103,6 @@ namespace IPCS.DatabaseManager
         #endregion
 
         #region FileManager
-
-        private string FILEDIR = "";
-        private string FILENAME = "IPCSData.bin";
-        private string STARTLINE = ">>START";
-        private string ENDLINE = ">>END";
-        private string USERSTARTLINE = ">>STARTUSER";
-        private string USERENDLINE = ">>ENDUSER";
-
-        private void SetDir()
-        {
-            try
-            {
-                if (Environment.GetEnvironmentVariable("USERPROFILE").Length >= 1)
-                {
-                    FILEDIR = Environment.GetEnvironmentVariable("USERPROFILE") + "//AppData//Roaming//IPSCData//";
-                }
-                else
-                {
-                    FILEDIR = "data//";
-                }
-            }
-            catch
-            {
-                FILEDIR = "data//";
-            }
-        }
 
         private void NewData(string[] data)
         {

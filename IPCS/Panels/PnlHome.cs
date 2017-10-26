@@ -50,7 +50,7 @@ namespace IPCS.Panels
             lblTotalSale.Text = "Total sale: " + Defaults.CurrencyChar + totalSale.ToString("N");
             lblTotalGain.Text = "Total gain: " + Defaults.CurrencyChar + totalGain.ToString("N");
 
-            if (lblWarnings.Text == "")
+            if (warnings == "")
             {
                 lblWarnings.Hide();
             }
