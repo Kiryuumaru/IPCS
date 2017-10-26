@@ -14,6 +14,8 @@ namespace IPCS.DatabaseManager
 
         public TestDatabase()
         {
+            SetDir();
+            FILEPATH = FILEDIR + FILENAME;
             FileInfo file = new FileInfo(FILEPATH);
             file.Directory.Create();
         }
@@ -22,7 +24,7 @@ namespace IPCS.DatabaseManager
 
         #region Properties
 
-        private const string FILEPATH = FILEDIR + FILENAME;
+        private string FILEPATH;
 
         #endregion
 
@@ -77,12 +79,31 @@ namespace IPCS.DatabaseManager
 
         #region FileManager
 
-        private const string FILEDIR = "Data\\";
-        private const string FILENAME = "IPCSData.bin";
-        private const string STARTLINE = ">>START";
-        private const string ENDLINE = ">>END";
-        private const string USERSTARTLINE = ">>STARTUSER";
-        private const string USERENDLINE = ">>ENDUSER";
+        private string FILEDIR = "";
+        private string FILENAME = "IPCSData.bin";
+        private string STARTLINE = ">>START";
+        private string ENDLINE = ">>END";
+        private string USERSTARTLINE = ">>STARTUSER";
+        private string USERENDLINE = ">>ENDUSER";
+
+        private void SetDir()
+        {
+            try
+            {
+                if (Environment.GetEnvironmentVariable("USERPROFILE").Length >= 1)
+                {
+                    FILEDIR = Environment.GetEnvironmentVariable("USERPROFILE") + "//AppData//Roaming//IPSCData//";
+                }
+                else
+                {
+                    FILEDIR = "data//";
+                }
+            }
+            catch
+            {
+                FILEDIR = "data//";
+            }
+        }
 
         private void NewData(string[] data)
         {
