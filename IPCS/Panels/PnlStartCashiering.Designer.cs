@@ -71,10 +71,10 @@
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.pnlMetro.SuspendLayout();
             this.metroPanelCart.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGridCart)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.metroGridCart)).BeginInit();
             this.metroPanelWestHeader.SuspendLayout();
             this.metroPaneCashierBottom.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerBottomCenter)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.splitContainerBottomCenter)).BeginInit();
             this.splitContainerBottomCenter.Panel1.SuspendLayout();
             this.splitContainerBottomCenter.Panel2.SuspendLayout();
             this.splitContainerBottomCenter.SuspendLayout();
@@ -82,7 +82,7 @@
             this.metroPanelTotal.SuspendLayout();
             this.pnlBottomWest.SuspendLayout();
             this.pnlItemInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productPicture)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.productPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMetro
@@ -603,13 +603,11 @@
             this.Size = new System.Drawing.Size(896, 442);
             this.pnlMetro.ResumeLayout(false);
             this.metroPanelCart.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.metroGridCart)).EndInit();
             this.metroPanelWestHeader.ResumeLayout(false);
             this.metroPanelWestHeader.PerformLayout();
             this.metroPaneCashierBottom.ResumeLayout(false);
             this.splitContainerBottomCenter.Panel1.ResumeLayout(false);
             this.splitContainerBottomCenter.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerBottomCenter)).EndInit();
             this.splitContainerBottomCenter.ResumeLayout(false);
             this.pnlCheckout.ResumeLayout(false);
             this.metroPanelTotal.ResumeLayout(false);
@@ -617,7 +615,6 @@
             this.pnlBottomWest.ResumeLayout(false);
             this.pnlItemInfo.ResumeLayout(false);
             this.pnlItemInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
