@@ -136,6 +136,9 @@ namespace IPCS.Panels
                     {
                         if (p.Name.Equals("PnlHome") && tab.Name.Equals("tabHome"))
                         {
+                            PnlHome panel = (PnlHome)p;
+                            panel.ReInitializeComponent();
+                            panel.UpdateComponent();
                             p.Show();
                         }
                         else if (p.Name.Equals("PnlStartCashiering") && tab.Name.Equals("tabStartCashiering"))

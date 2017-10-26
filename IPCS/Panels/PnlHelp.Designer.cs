@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PnlHelp));
             this.pnlMetro = new MetroFramework.Controls.MetroPanel();
-            this.lblLink = new MetroFramework.Controls.MetroLink();
+            this.btnCheckUpdates = new MetroFramework.Controls.MetroButton();
             this.lblCopyright = new MetroFramework.Controls.MetroLabel();
             this.lblVersion = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.pnlMetro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMetro
             // 
-            this.pnlMetro.Controls.Add(this.lblLink);
+            this.pnlMetro.Controls.Add(this.btnCheckUpdates);
+            this.pnlMetro.Controls.Add(this.metroLabel2);
             this.pnlMetro.Controls.Add(this.lblCopyright);
             this.pnlMetro.Controls.Add(this.lblVersion);
-            this.pnlMetro.Controls.Add(this.metroLabel1);
             this.pnlMetro.Controls.Add(this.pictureBoxLogo);
             this.pnlMetro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMetro.HorizontalScrollbarBarColor = true;
@@ -58,21 +58,21 @@
             this.pnlMetro.VerticalScrollbarHighlightOnWheel = false;
             this.pnlMetro.VerticalScrollbarSize = 10;
             // 
-            // lblLink
+            // btnCheckUpdates
             // 
-            this.lblLink.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblLink.Location = new System.Drawing.Point(297, 291);
-            this.lblLink.Name = "lblLink";
-            this.lblLink.Size = new System.Drawing.Size(113, 23);
-            this.lblLink.TabIndex = 6;
-            this.lblLink.Text = "Check for updates";
-            this.lblLink.UseSelectable = true;
-            this.lblLink.Click += new System.EventHandler(this.lblLink_Click);
+            this.btnCheckUpdates.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCheckUpdates.Location = new System.Drawing.Point(293, 320);
+            this.btnCheckUpdates.Name = "btnCheckUpdates";
+            this.btnCheckUpdates.Size = new System.Drawing.Size(112, 23);
+            this.btnCheckUpdates.TabIndex = 8;
+            this.btnCheckUpdates.Text = "Check for updates";
+            this.btnCheckUpdates.UseSelectable = true;
+            this.btnCheckUpdates.Click += new System.EventHandler(this.btnCheckUpdates_Click);
             // 
             // lblCopyright
             // 
             this.lblCopyright.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCopyright.Location = new System.Drawing.Point(176, 269);
+            this.lblCopyright.Location = new System.Drawing.Point(176, 275);
             this.lblCopyright.Name = "lblCopyright";
             this.lblCopyright.Size = new System.Drawing.Size(350, 19);
             this.lblCopyright.TabIndex = 5;
@@ -82,23 +82,13 @@
             // lblVersion
             // 
             this.lblVersion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblVersion.AutoSize = true;
             this.lblVersion.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblVersion.Location = new System.Drawing.Point(383, 250);
+            this.lblVersion.Location = new System.Drawing.Point(176, 250);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(41, 19);
+            this.lblVersion.Size = new System.Drawing.Size(350, 25);
             this.lblVersion.TabIndex = 4;
-            this.lblVersion.Text = "000x";
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(283, 250);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(103, 19);
-            this.metroLabel1.TabIndex = 3;
-            this.metroLabel1.Text = "Product version:";
+            this.lblVersion.Text = "Product version: 9.9.9.9";
+            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBoxLogo
             // 
@@ -111,6 +101,16 @@
             this.pictureBoxLogo.TabIndex = 2;
             this.pictureBoxLogo.TabStop = false;
             // 
+            // metroLabel2
+            // 
+            this.metroLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel2.Location = new System.Drawing.Point(176, 294);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(350, 19);
+            this.metroLabel2.TabIndex = 7;
+            this.metroLabel2.Text = "All rights reserved";
+            this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // PnlHelp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,7 +120,6 @@
             this.Name = "PnlHelp";
             this.Size = new System.Drawing.Size(696, 442);
             this.pnlMetro.ResumeLayout(false);
-            this.pnlMetro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
@@ -131,8 +130,8 @@
         private MetroFramework.Controls.MetroPanel pnlMetro;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private MetroFramework.Controls.MetroLabel lblVersion;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel lblCopyright;
-        private MetroFramework.Controls.MetroLink lblLink;
+        private MetroFramework.Controls.MetroButton btnCheckUpdates;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
     }
 }

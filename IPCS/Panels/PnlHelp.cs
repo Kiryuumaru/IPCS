@@ -33,9 +33,8 @@ namespace IPCS.Panels
 
         public void ReInitializeComponent()
         {
-            lblVersion.Text = Application.ProductVersion;
+            lblVersion.Text = "Product version: " + Application.ProductVersion;
             lblCopyright.Text = Properties.Resources.Copyright;
-
         }
 
         public void UpdateComponent()
@@ -47,7 +46,7 @@ namespace IPCS.Panels
 
         #region Events
 
-        private void lblLink_Click(object sender, EventArgs e)
+        private void btnCheckUpdates_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start(Properties.Resources.Website);
         }

@@ -22,7 +22,7 @@ namespace IPCS.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Resources {
+    internal class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace IPCS.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager {
+        internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("IPCS.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace IPCS.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture {
+        internal static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Copyright © 2017 Reverse harem.
         /// </summary>
-        public static string Copyright {
+        internal static string Copyright {
             get {
                 return ResourceManager.GetString("Copyright", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap drect_black {
+        internal static System.Drawing.Bitmap drect_black {
             get {
                 object obj = ResourceManager.GetObject("drect_black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -82,7 +82,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap drect_gray {
+        internal static System.Drawing.Bitmap drect_gray {
             get {
                 object obj = ResourceManager.GetObject("drect_gray", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -92,7 +92,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap drect_white {
+        internal static System.Drawing.Bitmap drect_white {
             get {
                 object obj = ResourceManager.GetObject("drect_white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -102,7 +102,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_assessment_black_48dp_2x {
+        internal static System.Drawing.Bitmap ic_assessment_black_48dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_assessment_black_48dp_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -112,7 +112,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_assessment_gray_48dp_2x {
+        internal static System.Drawing.Bitmap ic_assessment_gray_48dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_assessment_gray_48dp_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -122,7 +122,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_assessment_white_48dp_2x {
+        internal static System.Drawing.Bitmap ic_assessment_white_48dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_assessment_white_48dp_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -132,7 +132,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_build_black_48dp_2x {
+        internal static System.Drawing.Bitmap ic_build_black_48dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_build_black_48dp_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -142,7 +142,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_build_gray_48dp_2x {
+        internal static System.Drawing.Bitmap ic_build_gray_48dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_build_gray_48dp_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -152,7 +152,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_build_white_48dp_2x {
+        internal static System.Drawing.Bitmap ic_build_white_48dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_build_white_48dp_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -162,7 +162,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_chevron_left_black_48pt_2x {
+        internal static System.Drawing.Bitmap ic_chevron_left_black_48pt_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_chevron_left_black_48pt_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -172,7 +172,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_chevron_left_gray_48pt_2x {
+        internal static System.Drawing.Bitmap ic_chevron_left_gray_48pt_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_chevron_left_gray_48pt_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -182,7 +182,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_chevron_left_white_48pt_2x {
+        internal static System.Drawing.Bitmap ic_chevron_left_white_48pt_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_chevron_left_white_48pt_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -192,7 +192,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_chevron_right_black_48pt_2x {
+        internal static System.Drawing.Bitmap ic_chevron_right_black_48pt_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_chevron_right_black_48pt_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -202,7 +202,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_chevron_right_gray_48pt_2x {
+        internal static System.Drawing.Bitmap ic_chevron_right_gray_48pt_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_chevron_right_gray_48pt_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -212,7 +212,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_chevron_right_white_48pt_2x {
+        internal static System.Drawing.Bitmap ic_chevron_right_white_48pt_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_chevron_right_white_48pt_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -222,7 +222,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_close_black_48dp {
+        internal static System.Drawing.Bitmap ic_close_black_48dp {
             get {
                 object obj = ResourceManager.GetObject("ic_close_black_48dp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -232,7 +232,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_close_gray_48dp {
+        internal static System.Drawing.Bitmap ic_close_gray_48dp {
             get {
                 object obj = ResourceManager.GetObject("ic_close_gray_48dp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -242,7 +242,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_close_white_48dp {
+        internal static System.Drawing.Bitmap ic_close_white_48dp {
             get {
                 object obj = ResourceManager.GetObject("ic_close_white_48dp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -252,7 +252,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_help_black_48dp_2x {
+        internal static System.Drawing.Bitmap ic_help_black_48dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_help_black_48dp_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -262,7 +262,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_help_gray_48dp_2x {
+        internal static System.Drawing.Bitmap ic_help_gray_48dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_help_gray_48dp_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -272,7 +272,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_help_white_48dp_2x {
+        internal static System.Drawing.Bitmap ic_help_white_48dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_help_white_48dp_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -282,7 +282,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_home_black_48dp_2x {
+        internal static System.Drawing.Bitmap ic_home_black_48dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_home_black_48dp_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -292,7 +292,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_home_gray_48dp_2x {
+        internal static System.Drawing.Bitmap ic_home_gray_48dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_home_gray_48dp_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -302,7 +302,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_home_white_48dp_2x {
+        internal static System.Drawing.Bitmap ic_home_white_48dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_home_white_48dp_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -312,7 +312,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_menu_48pt_2x {
+        internal static System.Drawing.Bitmap ic_menu_48pt_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_menu_48pt_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -322,7 +322,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_menu_black_48dp {
+        internal static System.Drawing.Bitmap ic_menu_black_48dp {
             get {
                 object obj = ResourceManager.GetObject("ic_menu_black_48dp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -332,7 +332,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_menu_black_48pt_2x {
+        internal static System.Drawing.Bitmap ic_menu_black_48pt_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_menu_black_48pt_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -342,7 +342,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_menu_gray_48pt_2x {
+        internal static System.Drawing.Bitmap ic_menu_gray_48pt_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_menu_gray_48pt_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -352,7 +352,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_menu_white_48pt_2x {
+        internal static System.Drawing.Bitmap ic_menu_white_48pt_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_menu_white_48pt_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -362,7 +362,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_menu_white_48pt_3x {
+        internal static System.Drawing.Bitmap ic_menu_white_48pt_3x {
             get {
                 object obj = ResourceManager.GetObject("ic_menu_white_48pt_3x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -372,7 +372,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_monetization_on_black_48dp_2x {
+        internal static System.Drawing.Bitmap ic_monetization_on_black_48dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_monetization_on_black_48dp_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -382,7 +382,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_monetization_on_gray_48dp_2x {
+        internal static System.Drawing.Bitmap ic_monetization_on_gray_48dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_monetization_on_gray_48dp_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -392,7 +392,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_monetization_on_white_48dp_2x {
+        internal static System.Drawing.Bitmap ic_monetization_on_white_48dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_monetization_on_white_48dp_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -402,7 +402,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ic_selected_gray_48dp_2x {
+        internal static System.Drawing.Bitmap ic_selected_gray_48dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_selected_gray_48dp_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -412,7 +412,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap line_black {
+        internal static System.Drawing.Bitmap line_black {
             get {
                 object obj = ResourceManager.GetObject("line_black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -422,7 +422,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap line_gray {
+        internal static System.Drawing.Bitmap line_gray {
             get {
                 object obj = ResourceManager.GetObject("line_gray", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -432,7 +432,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap line_white {
+        internal static System.Drawing.Bitmap line_white {
             get {
                 object obj = ResourceManager.GetObject("line_white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -442,7 +442,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap logo {
+        internal static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -452,7 +452,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap rect_black {
+        internal static System.Drawing.Bitmap rect_black {
             get {
                 object obj = ResourceManager.GetObject("rect_black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -462,7 +462,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap rect_gray {
+        internal static System.Drawing.Bitmap rect_gray {
             get {
                 object obj = ResourceManager.GetObject("rect_gray", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -472,7 +472,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap rect_white {
+        internal static System.Drawing.Bitmap rect_white {
             get {
                 object obj = ResourceManager.GetObject("rect_white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -482,7 +482,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap separator {
+        internal static System.Drawing.Bitmap separator {
             get {
                 object obj = ResourceManager.GetObject("separator", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -490,9 +490,18 @@ namespace IPCS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 0.5.3.
+        /// </summary>
+        internal static string Version {
+            get {
+                return ResourceManager.GetString("Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://kiryuumaru.github.io.
         /// </summary>
-        public static string Website {
+        internal static string Website {
             get {
                 return ResourceManager.GetString("Website", resourceCulture);
             }
@@ -501,7 +510,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap x_black {
+        internal static System.Drawing.Bitmap x_black {
             get {
                 object obj = ResourceManager.GetObject("x_black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -511,7 +520,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap x_gray {
+        internal static System.Drawing.Bitmap x_gray {
             get {
                 object obj = ResourceManager.GetObject("x_gray", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -521,7 +530,7 @@ namespace IPCS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap x_white {
+        internal static System.Drawing.Bitmap x_white {
             get {
                 object obj = ResourceManager.GetObject("x_white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
